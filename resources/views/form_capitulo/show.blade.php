@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2o. Encuentro de CA's</title>
+    <title>3ro Encuentro de CA's</title>
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,14 +25,10 @@
             </p>
         @endif
         <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
-            Registro de capítulo de libro
+            Registro {{ $dato->id }} del capitulo de libro
         </h1>
 
-        <p class="text-center text-sm text-gray-600 mb-6">
-            Completa los siguientes campos para registrar tu participación.
-        </p>
-
-        <form action="{{ route('formulario_capitulo.store') }}" id="myForm" method="POST"
+        <form action="" id="myForm" method="POST"
             enctype="multipart/form-data" class="flex flex-col gap-4">
             @csrf
             <!-- Autores -->
@@ -68,11 +64,6 @@
                 </label>
             </div>
         </form>
-
-        <p class="text-xs text-gray-500 text-center mt-4">
-            * Todos los campos son obligatorios
-        </p>
-
     </div>
 
 </body>

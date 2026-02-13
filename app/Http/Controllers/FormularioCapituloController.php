@@ -64,9 +64,9 @@ class FormularioCapituloController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FormularioCapitulo $formularioCapitulo)
+    public function edit(FormularioCapitulo $dato)
     {
-        //
+        return view('form_capitulo.edit', compact('dato'));
     }
 
     /**

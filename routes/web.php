@@ -22,4 +22,6 @@ Route::get('/capitulos-registrados', [FormularioCapituloController::class, 'inde
 Route::get('/formulario-capitulo/create', [FormularioCapituloController::class, 'create'])->name('formulario_capitulo.create');
 Route::post('/formulario-capitulo/create', [FormularioCapituloController::class, 'store'])->name('formulario_capitulo.store');
 Route::get('/capitulo/{dato}', [FormularioCapituloController::class, 'show'])->name('formulario_capitulo.show');
+Route::get('/capitulo/{dato}/edit', [FormularioCapituloController::class, 'edit'])->name('formulario_capitulo.edit');
+Route::put('/capitulo', [FormularioCapituloController::class, 'update'])->name('formulario_capitulo.update');
 require __DIR__.'/auth.php';
