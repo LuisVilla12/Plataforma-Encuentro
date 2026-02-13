@@ -24,7 +24,10 @@ class DatabaseSeeder extends Seeder
         // ]);
  User::create([
             'name' => 'Luis Villa',
+            'area' => 'Ciencias de la Salud',
+            'institucion' => 'Universidad Nacional de Colombia',
             'email' => 'admin@gmail.com',
+            'tipo' => 1,
             'password' => Hash::make('qazqazqaz9')
         ]);
         // UserSeeder::class;

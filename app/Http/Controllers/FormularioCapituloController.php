@@ -39,8 +39,8 @@ class FormularioCapituloController extends Controller
             'url_capitulo' => 'required|file|mimes:docx|max:2048',
             'url_resumen' => 'required|file|mimes:docx|max:2048',
         ]);
-        $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'capitulos');
-        $ruta_resumen = $request->file('url_resumen')->store('documentos', 'capitulos');
+        $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'public');
+        $ruta_resumen = $request->file('url_resumen')->store('documentos', 'public');
         FormularioCapitulo::create([
             'autores' => $request->autores,
             'institucion' => $request->institucion,

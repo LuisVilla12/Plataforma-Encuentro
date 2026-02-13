@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200">
-            Registro de capitulos de libros
+            Revisores registrados
         </h2>
     </x-slot>
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
@@ -10,10 +10,9 @@
                 <table class="w-full border bg-white shadow rounded">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="p-2">Autores </th>
+                            <th class="p-2">Nombre completo </th>
                             <th class="p-2">Instituto</th>
-                            <th class="p-2">Capitulo</th>
-                            <th class="p-2">Resumen</th>
+                            <th class="p-2">Área</th>
                             <th class="p-2">Acciones</th>
                         </tr>
                     </thead>
@@ -21,30 +20,25 @@
                         @foreach ($datos as $dato)
                             <tr class="border-t">
                                 <td class="p-2 text-center">
-                                    {{ $dato->autores }}
+                                    {{ $dato->name }}
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_capitulo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" />
-</a>
-                                </td>
-                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" />
-</a>
+                                    {{ $dato->area }}
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
                                         {{-- Ver --}}
-                                        <a href="{{ route('formulario_capitulo.show', ['dato' => $dato]) }}"
+                                        <a href=""
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
                                             <x-heroicon-o-eye class="w-4 h-4" />
                                             <span class="hidden sm:inline">Ver</span>
                                         </a>
                                         <span class="hidden sm:inline text-gray-300">•</span>
                                         {{-- Editar --}}
-                                        <a href="{{ route('formulario_capitulo.edit', ['dato' => $dato]) }}"
+                                        <a href=""
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                             <x-heroicon-o-pencil-square class="w-4 h-4" />
                                             <span class="hidden sm:inline">Editar</span>
@@ -76,15 +70,22 @@
                     <div class="border rounded-lg shadow bg-white p-4">
                         <div class="mt-2">
                             <div class="mb-2 text-sm text-gray-500">
-                                <span>Autores:</span>
+                                <span>Nombre:</span>
                                 <span class="font-medium text-gray-800">
-                                    {{ $dato->autores }}
+                                    {{ $dato->name }}
                                 </span>
                             </div>
                             <div class="">
                                 <p class="mb-2 text-sm">Institución:
                                     <span class="font-semibold">
                                         {{ $dato->institucion }}
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="">
+                                <p class="mb-2 text-sm">Área:
+                                    <span class="font-semibold">
+                                        {{ $dato->area }}
                                     </span>
                                 </p>
                             </div>

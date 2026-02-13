@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200">
-            Registro de capitulos de libros
+            Registrados a cursos Pre-Congreso Virtuales
         </h2>
     </x-slot>
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
@@ -10,10 +10,9 @@
                 <table class="w-full border bg-white shadow rounded">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="p-2">Autores </th>
+                            <th class="p-2">Nombre completo </th>
                             <th class="p-2">Instituto</th>
-                            <th class="p-2">Capitulo</th>
-                            <th class="p-2">Resumen</th>
+                            <th class="p-2">Curso</th>
                             <th class="p-2">Acciones</th>
                         </tr>
                     </thead>
@@ -21,30 +20,24 @@
                         @foreach ($datos as $dato)
                             <tr class="border-t">
                                 <td class="p-2 text-center">
-                                    {{ $dato->autores }}
+                                    {{ $dato->nombre }}
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_capitulo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" />
-</a>
-                                </td>
-                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" />
-</a>
+                                    @if ($dato->curso == 1)
+                                        Redacción de Artículos científicos
+                                    @elseif ($dato->curso == 2)
+                                        Metodología para la potencialización de proyectos innovadores
+                                    @else
+                                        {{ $dato->curso }}
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
-                                        {{-- Ver --}}
-                                        <a href="{{ route('formulario_capitulo.show', ['dato' => $dato]) }}"
-                                            class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
-                                            <x-heroicon-o-eye class="w-4 h-4" />
-                                            <span class="hidden sm:inline">Ver</span>
-                                        </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span>
                                         {{-- Editar --}}
-                                        <a href="{{ route('formulario_capitulo.edit', ['dato' => $dato]) }}"
+                                        <a href="{{ route('formulario_cursos.edit', ['dato' => $dato]) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                             <x-heroicon-o-pencil-square class="w-4 h-4" />
                                             <span class="hidden sm:inline">Editar</span>
@@ -52,7 +45,7 @@
                                         <span class="hidden sm:inline text-gray-300">•</span>
 
                                         {{-- Eliminar --}}
-                                        <form action="" method="POST" class="inline">
+                                        <form action="{{ route('formulario_cursos.destroy', ['dato' => $dato]) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
 
@@ -76,9 +69,9 @@
                     <div class="border rounded-lg shadow bg-white p-4">
                         <div class="mt-2">
                             <div class="mb-2 text-sm text-gray-500">
-                                <span>Autores:</span>
+                                <span>Nombre completo:</span>
                                 <span class="font-medium text-gray-800">
-                                    {{ $dato->autores }}
+                                    {{ $dato->nombre }}
                                 </span>
                             </div>
                             <div class="">
@@ -88,28 +81,26 @@
                                     </span>
                                 </p>
                             </div>
+                            <div class="">
+                                <p class="mb-2 text-sm">Curso:
+                                    <span class="font-semibold">
+                                        {{ $dato->curso }}
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                         <div class="flex flex-wrap items-center justify-end mt-4 gap-4">
-                            {{-- Ver --}}
-                            <a href=""
-                                class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
-                                <x-heroicon-o-eye class="w-4 h-4" />
-                                <span class="hidden sm:inline">Ver</span>
-                            </a>
-                            <span class="hidden sm:inline text-gray-300">•</span>
                             {{-- Editar --}}
-                            <a href=""
+                            <a href="{{ route('formulario_cursos.edit', ['dato' => $dato]) }}"
                                 class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                 <x-heroicon-o-pencil-square class="w-4 h-4" />
                                 <span class="hidden sm:inline">Editar</span>
                             </a>
                             <span class="hidden sm:inline text-gray-300">•</span>
-
                             {{-- Eliminar --}}
-                            <form action="" method="POST" class="inline">
+                            <form action="{{ route('formulario_cursos.destroy', ['dato' => $dato]) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
-
                                 <button type="submit"
                                     class="inline-flex items-center gap-1 text-gray-500 hover:text-red-600 transition"
                                     onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
@@ -123,7 +114,7 @@
             </div>
         @else
             <div class="bg-white py-4 mt-3">
-                <p class="text-sm text-gray-600 ml-6 text-center"> No hay capitulos registrados</p>
+                <p class="text-sm text-gray-600 ml-6 text-center"> No hay registros de cursos registrados</p>
             </div>
         @endif
         {{-- @if ($almacenes->count() > 0)
