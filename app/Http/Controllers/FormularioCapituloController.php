@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormularioCapitulo;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class FormularioCapituloController extends Controller
@@ -57,7 +58,14 @@ class FormularioCapituloController extends Controller
     public function show(FormularioCapitulo $dato)
     {
         //
-        return view('form_capitulo.show', compact('dato'));
+        $revisores=User::where('tipo', '2')->get();
+//         foreach ($dato->asignacionesRevision as $asignacion) {
+//     echo $asignacion->revisor->name;
+// }
+        $dato->load('asignacionesRevision.revisor');
+        // dd($dato);
+
+        return view('form_capitulo.show',['dato'=>$dato, 'revisores'=>$revisores]);
 
     }
 

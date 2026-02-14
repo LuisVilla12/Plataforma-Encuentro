@@ -38,7 +38,7 @@
             <!-- Autores -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
-                    Indica los nombres de los autores *
+                    Indica los nombres de los autores: *
                 </label>
                 <input type="text" name="autores" id="autores" required
                     placeholder="Villa-Juárez, Jazmin; Alemán-Gutiérrez, María Rebeca..."
@@ -51,7 +51,7 @@
             <!-- Institución -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
-                    Institución de procedencia *
+                    Institución de procedencia: *
                 </label>
                 <input type="text" name="institucion" id="institucion" required
                     placeholder="Nombre de la institución"

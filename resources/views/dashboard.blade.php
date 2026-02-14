@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    {{ __("¡Bienvenido al panel de administración del Encuentro Nacional de Investigación en Educación Superior!") }}
+                    {{ __("¡Bienvenido al panel de administración del 3er Encuentro de Cuerpos Academicos!") }}
                 </div>
 
         {{-- <x-dashboard-card href="{{ route('proveedores.index') }}" bg="bg-blue-50 dark:bg-blue-900/20" title="Proveedores"
