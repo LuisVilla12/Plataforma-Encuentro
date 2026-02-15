@@ -25,15 +25,16 @@
             </p>
         @endif
         <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
-            Registro de cursos Pre-Congreso Virtuales
+            Actualizar registro de curso
         </h1>
 
         <p class="text-center text-sm text-gray-600 mb-6">
             Completa los siguientes campos para registrar tu participación.
         </p>
 
-        <form action="{{ route('formulario_cursos.store') }}" id="" method="POST" class="flex flex-col gap-4">
+        <form action="{{ route('formulario_cursos.update', $dato->id) }}" id="" method="POST" class="flex flex-col gap-4">
             @csrf
+            @method('PUT')
             <!-- nombre -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre completo: *</label>
@@ -56,7 +57,17 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
+<div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Correo electronico: *
+                </label>
+                <input type="email" name="correo" id="correo" required
+                    value="{{$dato->correo }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('correo')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             <!-- Curso -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
@@ -71,12 +82,17 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
-            <!-- Botón -->
-            <button type="submit"
-                class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
-                Registrar
-            </button>
+            <div class="flex justify-between">
+                 <a href="{{ route('formulario_cursos.index') }}"
+                class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                Regresar
+            </a>
+                <!-- Botón -->
+                <button type="submit"
+                    class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white  px-4 py-2 rounded-md text-sm transition duration-200">
+                    Actualizar
+                </button>
+            </div>
 
         </form>
         <p class="text-xs text-gray-500 text-center mt-4">

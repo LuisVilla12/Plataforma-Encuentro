@@ -86,7 +86,19 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            <div class="mb-4">
+                <label class="flex items-center">
+                    <input type="checkbox" name="confirmacion" value="1" required
+                        class="mr-2 rounded border-gray-300 text-blue-600 shadow-sm focus:ring-blue-500">
 
+                    <span class="text-sm text-gray-700">
+                        Confirmo que los datos ingresados son correctos
+                    </span>
+                </label>
+                @error('confirmacion')
+                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
+            </div>
             <!-- Botón -->
             <button type="submit"
                 class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">

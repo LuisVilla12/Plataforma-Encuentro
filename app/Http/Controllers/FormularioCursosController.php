@@ -29,12 +29,24 @@ class FormularioCursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Obtener lugares restantes
+        $lugaresRestantesCurso1 =FormularioCursos::where('curso', '1')->count();
+        $lugaresRestantesCurso2 = FormularioCursos::where('curso', '2')->count();
+
+        if ($request->curso == 1 && $lugaresRestantesCurso1 >= 30) {
+            return redirect()->back()->with('error', 'No hay lugares disponibles para este curso.');
+        }
+        if ($request->curso == 2 && $lugaresRestantesCurso2 >= 30) {
+            return redirect()->back()->with('error', 'No hay lugares disponibles para este curso.');
+        }
+
         $request->validate([
-            'nombre' => 'required|max:255|min:5',
+            'nombre' => 'required|max:255|min:5|unique:formulario_cursos,nombre',
             'institucion' => 'required|max:255|min:5',
+            'correo' => 'required|email|unique:formulario_cursos,correo',
             'curso' => 'required',
-        ]);
+            'confirmacion' => 'accepted',
+            ]);
         FormularioCursos::create($request->all());
         return redirect()->route('formulario_cursos.create')->with('success', 'Registro guardado exitosamente');
     }
@@ -59,9 +71,17 @@ class FormularioCursosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FormularioCursos $formularioCursos)
+    public function update(Request $request, FormularioCursos $dato)
     {
         //
+        $request->validate([
+            'nombre' => 'required|max:255|min:5|unique:formulario_cursos,nombre,' . $dato->id,
+            'institucion' => 'required|max:255|min:5',
+            'correo' => 'required|email|unique:formulario_cursos,correo,' . $dato->id,
+            'curso' => 'required',
+        ]);
+        $dato->update($request->all());
+        return redirect()->route('formulario_cursos.index')->with('success', 'Registro actualizado exitosamente');
     }
 
     /**

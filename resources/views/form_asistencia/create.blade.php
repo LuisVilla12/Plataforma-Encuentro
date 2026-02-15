@@ -31,19 +31,21 @@
             </p>
         @endif
         <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
-            Registro de cursos Pre-Congreso Virtuales
+            Registro de asistencia al 3er. Encuentro de CA's
         </h1>
 
         <p class="text-center text-sm text-gray-600 mb-6">
             Completa los siguientes campos para registrar tu participación.
         </p>
 
-        <form action="{{ route('formulario_cursos.store') }}" id="" method="POST" class="flex flex-col gap-4">
+        <form action="{{ route('formulario_asistencia.store') }}" id="" method="POST"
+            class="flex flex-col gap-4">
             @csrf
             <!-- nombre -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre completo: *</label>
-                <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required placeholder="Ingrese su nombre completo"
+                <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required
+                    placeholder="Ingrese su nombre completo"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('nombre')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
@@ -67,25 +69,60 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Correo electrónico: *
                 </label>
-                <input type="email" name="correo" id="correo" required
-                    placeholder="Correo electrónico" value="{{ old('correo') }}"
+                <input type="email" name="correo" id="correo" required placeholder="Correo electrónico"
+                    value="{{ old('correo') }}"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('correo')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Telefono: *
+                </label>
+                <input type="tel" name="celular" id="celular" required placeholder="Número de teléfono"
+                    value="{{ old('celular') }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('celular')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Nombre del cuerpo academico: *
+                </label>
+                <input type="text" name="nombre_ca" id="nombre_ca" required placeholder="Nombre del cuerpo academico"
+                    value="{{ old('nombre_ca') }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('nombre_ca')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Clave del cuerpo academico: *
+                </label>
+                <input type="text" name="clave_ca" id="clave_ca" required placeholder="Clave del cuerpo academico"
+                    value="{{ old('clave_ca') }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('clave_ca')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
             <!-- Curso -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
-                    Curso: *
+                    ¿Como te enteraste del evento?: *
                 </label>
-                <select name="curso" id="curso" required
+                <select name="interes" id="interes" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
-                    <option value="" disabled selected>Selecciona el curso</option>
-                    <option value="1">Redacción de Artículos científicos</option>
-                    <option value="2">Metodología para la potencialización de proyectos innovadores </option>
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="1">Red social</option>
+                    <option value="2">Medios de comunicación</option>
+                    <option value="3">Amigos o familiares</option>
+                    <option value="4">Otro</option>
                 </select>
-                @error('curso')
+                @error('interes')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>

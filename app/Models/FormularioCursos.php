@@ -9,6 +9,7 @@ class FormularioCursos extends Model
     protected $fillable = [
         'nombre',
         'institucion',
+        'correo',
         'curso',
     ];
 }

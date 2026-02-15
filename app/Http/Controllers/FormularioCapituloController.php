@@ -39,6 +39,7 @@ class FormularioCapituloController extends Controller
             'institucion' => 'required|string|max:255|min:5',
             'url_capitulo' => 'required|file|mimes:docx|max:2048',
             'url_resumen' => 'required|file|mimes:docx|max:2048',
+            'confirmacion' => 'accepted',
         ]);
         $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('documentos', 'public');

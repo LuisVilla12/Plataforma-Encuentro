@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('formulario_cursos', function (Blueprint $table) {
+        Schema::create('formulario_asistencias', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('nombre');
             $table->string('institucion');
             $table->string('correo');
-            $table->string('curso');
+            $table->string('celular');
+            $table->string('nombre_ca');
+            $table->string('clave_ca');
+            $table->string('interes');
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('formulario_cursos');
+        Schema::dropIfExists('formulario_asistencias');
     }
 };

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AsignacionRevisionController;
+use App\Http\Controllers\FormularioAsistenciaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormularioCapituloController;
 use App\Http\Controllers\FormularioCursosController;
@@ -47,7 +48,13 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/revisores/{dato}', action: [RevisoresController::class, 'show'])->name('revisores.show');
     //Asignar capitulo a revisor
     Route::post('/asignar-revisor', [AsignacionRevisionController::class, 'store'])->name('asignar.create');
-});
+    //Litado de asistentes
+    Route::get('/asistentes', [FormularioAsistenciaController::class, 'index'])->name('formulario_asistencia.index');
+    Route::get('/asistentes/{dato}', [FormularioAsistenciaController::class, 'show'])->name('formulario_asistencia.show');
+    Route::delete('/asistentes/{dato}', [FormularioAsistenciaController::class, 'destroy'])->name('formulario_asistencia.destroy');
+    Route::get('/asistentes/{dato}/edit', [FormularioAsistenciaController::class, 'edit'])->name('formulario_asistencia.edit');
+    Route::put('/asistentes/{dato}', [FormularioAsistenciaController::class, 'update'])->name('formulario_asistencia.update');
+    });
 
 // Rutas para formulario de capitulos
 Route::get('/registrar-capitulo/create', [FormularioCapituloController::class, 'create'])->name('formulario_capitulo.create');
@@ -55,6 +62,9 @@ Route::post('/registrar-capitulo/create', [FormularioCapituloController::class, 
 //Formulario para registro de cursos
 Route::get('/formulario-cursos/create', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
 Route::post('/formulario-cursos/create', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');
+//Formulario para registro de asistencia al evento
+Route::get('/formulario-asistencia/create', [FormularioAsistenciaController::class, 'create'])->name('formulario_asistencia.create');
+Route::post('/formulario-asistencia/create', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
 
 
 require __DIR__ . '/auth.php';
