@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormularioAsistencia;
+use App\Models\Instituto;
 use Illuminate\Http\Request;
 
 class FormularioAsistenciaController extends Controller
@@ -23,7 +24,9 @@ class FormularioAsistenciaController extends Controller
     public function create()
     {
         //
-        return view('form_asistencia.create');
+                $instituciones = Instituto::all();
+
+        return view('form_asistencia.create', compact('instituciones'));
     }
 
     /**
