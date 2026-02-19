@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\FormularioPrototipo;
+use App\Models\Instituto;
+use Illuminate\Http\Request;
+
+class FormularioPrototipoController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
+        $datos = FormularioPrototipo::all();
+        return view('form_prototipo.index', [
+            'datos' =>$datos
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+        $instituciones=Instituto::all();
+        return view('form_prototipo.create', compact('instituciones'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+        $request->validate([
+            'autores' => 'required|string|min:5',
+            'institucion' => 'required|string|max:255',
+            'url_prototipo' => 'required|file|mimes:docx',
+            'url_resumen' => 'required|file|mimes:docx',
+            'observaciones' => 'nullable|string|max:255',
+            'confirmacion' => 'accepted',
+        ]);
+
+        $ruta_prototipo = $request->file('url_prototipo')->store('prototipos', 'public');
+        $ruta_resumen = $request->file('url_resumen')->store('prototipos', 'public');
+        FormularioPrototipo::create([
+            'autores' => $request->autores,
+            'institucion' => $request->institucion,
+            'url_prototipo' => $ruta_prototipo,
+            'observaciones' => $request->observaciones,
+            'url_resumen' => $ruta_resumen,
+        ]);
+            return redirect()->back()->with('success', 'Registro guardado correctamente');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(FormularioPrototipo $dato)
+    {
+        return view('form_prototipo.show', compact('dato'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(FormularioPrototipo $formularioPrototipo)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, FormularioPrototipo $formularioPrototipo)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(FormularioPrototipo $dato)
+    {
+        $dato->delete();
+        $datos=FormularioPrototipo::all();
+        return redirect()
+            ->route('formulario_prototipo.index', compact('datos'))
+            ->with(
+                'success', 'El registro se ha eliminado correctamente.'
+        );
+        }
+}

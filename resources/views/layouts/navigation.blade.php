@@ -22,19 +22,31 @@
                         {{ __('Cursos') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('formulario_asistencia.index')" :active="request()->routeIs('formulario_asistencia.index')">
+                            {{ __('Asistentes') }}
+                        </x-nav-link>
+                    </div>
+                                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('formulario_capitulo.index')" :active="request()->routeIs('formulario_capitulo.index')">
                         {{ __('Capítulos') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('formulario_prototipo.index')" :active="request()->routeIs('formulario_prototipo.index')">
+                            {{ __('Prototipos') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('formulario_cartel.index')" :active="request()->routeIs('formulario_cartel.index')">
+                            {{ __('Carteles') }}
+                        </x-nav-link>
+                    </div>
+                                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('revisores.index')" :active="request()->routeIs('revisores.index')">
                         {{ __('Revisores') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('formulario_asistencia.index')" :active="request()->routeIs('formulario_asistencia.index')">
-                        {{ __('Asistentes') }}
                     </x-nav-link>
                 </div>
                 @endif

@@ -35,10 +35,10 @@ class FormularioCapituloController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'autores' => 'required|string|max:255|min:5',
+            'autores' => 'required|string|min:5',
             'institucion' => 'required|string|max:255|min:5',
-            'url_capitulo' => 'required|file|mimes:docx|max:2048',
-            'url_resumen' => 'required|file|mimes:docx|max:2048',
+            'url_capitulo' => 'required|file|mimes:docx',
+            'url_resumen' => 'required|file|mimes:docx',
             'confirmacion' => 'accepted',
         ]);
         $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'public');

@@ -4,7 +4,9 @@ use App\Http\Controllers\AsignacionRevisionController;
 use App\Http\Controllers\FormularioAsistenciaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormularioCapituloController;
+use App\Http\Controllers\FormularioCartelController;
 use App\Http\Controllers\FormularioCursosController;
+use App\Http\Controllers\FormularioPrototipoController;
 use App\Http\Controllers\ObservacionesDocumentoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RevisoresController;
@@ -38,6 +40,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/capitulos-registrados', [FormularioCapituloController::class, 'index'])->name('formulario_capitulo.index');
     Route::get('/capitulo/{dato}/edit', [FormularioCapituloController::class, 'edit'])->name('formulario_capitulo.edit');
     Route::put('/capitulo', [FormularioCapituloController::class, 'update'])->name('formulario_capitulo.update');
+    //Prototipos de investigación
+    Route::get('/prototipos-registrados', [FormularioPrototipoController::class, 'index'])->name('formulario_prototipo.index');
+    Route::get('/prototipo/{dato}', [FormularioPrototipoController::class, 'show'])->name('formulario_prototipo.show');
+    Route::delete('/prototipos-registrados/{dato}', [FormularioPrototipoController::class, 'destroy'])->name('formulario_prototipo.destroy');
+
+    //Carteles
+    Route::get('/carteles-registrados', [FormularioCartelController::class, 'index'])->name('formulario_cartel.index');
+    Route::get('/cartel/{dato}', [FormularioCartelController::class, 'show'])->name('formulario_cartel.show');
+    Route::delete('/carteles/{dato}', [FormularioCartelController::class, 'destroy'])->name('formulario_cartel.destroy');
+
     //Rutas para cursos
     Route::get('/cursos', action: [FormularioCursosController::class, 'index'])->name('formulario_cursos.index');
     Route::get('/cursos/{dato}/edit', [FormularioCursosController::class, 'edit'])->name('formulario_cursos.edit');
@@ -59,6 +71,13 @@ Route::middleware(['auth', 'admin'])->group(function () {
 // Rutas para formulario de capitulos
 Route::get('/registrar-capitulo/create', [FormularioCapituloController::class, 'create'])->name('formulario_capitulo.create');
 Route::post('/registrar-capitulo/create', [FormularioCapituloController::class, 'store'])->name('formulario_capitulo.store');
+//Formulario para registro de prototipo de investigación
+Route::get('/formulario-prototipo/create', [FormularioPrototipoController::class, 'create'])->name('formulario_prototipo.create');
+Route::post('/formulario-prototipo/create', [FormularioPrototipoController::class, 'store'])->name('formulario_prototipo.store');
+//Formulario para registro de carteles
+Route::get('/formulario-cartel/create', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
+Route::post('/formulario-cartel/create', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
+
 //Formulario para registro de cursos
 Route::get('/formulario-cursos/create', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
 Route::post('/formulario-cursos/create', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');

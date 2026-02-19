@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3ro Encuentro de CA's</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <div class="max-w-xl mx-auto mt-12 bg-white shadow-md rounded-lg px-8 py-6">
+
+        {{-- <img src="Encabezado.jpeg" alt="encabezado" class="w-full h-20 object-cover my-4"> --}}
+        @if (session('success'))
+            <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 4000)"
+                class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-4">
+                {{ session('success') }}
+            </p>
+        @endif
+        <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
+            Registro {{ $dato->id }} del cartel de investigación
+        </h1>
+
+        <div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    Indica los nombres de los autores *
+                </label>
+                <input type="text" name="autores" id="autores" value="{{ $dato->autores }}" readonly
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 mb-2">
+            </div>
+
+            <!-- Institución -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    Institución de procedencia *
+                </label>
+                <input type="text" name="institucion" id="institucion" readonly value="{{ $dato->institucion }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 mb-2">
+            </div>
+
+            <!-- Archivo word capitulo -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <a href="{{ asset('storage/' . $dato->url_cartel) }}" class="flex items-center mb-2"
+                        target="_blank">
+                        <x-heroicon-o-document-text class="w-6 h-6" /> Cartel
+                    </a>
+                </label>
+
+            </div>
+
+            <!-- Archivo word resumen -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" class="flex items-center mb-2"
+                        target="_blank">
+                        <x-heroicon-o-document-text class="w-6 h-6" /> Resumen del cartel
+                    </a>
+                </label>
+            </div>
+
+        </div>
+            <div class="flex justify-end">
+            <a href="{{ route('formulario_cartel.index') }}"
+                class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                Regresar
+            </a>
+    </div>
+
+</body>
+
+</html>

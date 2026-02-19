@@ -25,14 +25,14 @@
             </p>
         @endif
         <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
-            Registro de capítulo de libro
+            Registro prototipo de investigación
         </h1>
 
         <p class="text-center text-sm text-gray-600 mb-6">
             Completa los siguientes campos para registrar tu participación.
         </p>
 
-        <form action="{{ route('formulario_capitulo.store') }}" id="myForm" method="POST"
+        <form action="{{ route('formulario_prototipo.store') }}" id="myForm" method="POST"
             enctype="multipart/form-data" class="flex flex-col gap-4">
             @csrf
             <!-- Autores -->
@@ -49,27 +49,41 @@
             </div>
 
             <!-- Institución -->
-            <div>
+           <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Institución de procedencia: *
                 </label>
-                <input type="text" name="institucion" id="institucion" required
-                    placeholder="Nombre de la institución"
+                 <select name="institucion" id="institucion" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <option value="" disabled selected>Selecciona tu institución</option>
+                    @foreach ($instituciones as $institucion)
+                        <option value="{{ $institucion->nombre }}">{{ $institucion->nombre }}</option>
+                    @endforeach
+                </select>
                 @error('institucion')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Observaciones:
+                </label>
+                <textarea name="observaciones" id="observaciones" rows="4"
+                    placeholder="Escribe aquí cualquier observación adicional sobre tu prototipo..."
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+                @error('observaciones')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             <!-- Archivo word capitulo -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu capitulo del libro en formato word:*
+                    Sube tu prototipo en formato word:*
                 </label>
-                <input type="file" name="url_capitulo" id="url_capitulo" required
+                <input type="file" name="url_prototipo" id="url_prototipo" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
-                @error('url_capitulo')
+                @error('url_prototipo')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
@@ -77,7 +91,7 @@
             <!-- Archivo word resumen -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu resumen del capitulo del libro en formato word:*
+                    Sube tu resumen del prototipo en formato word:*
                 </label>
                 <input type="file" name="url_resumen" id="url_resumen" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
