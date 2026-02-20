@@ -42,7 +42,26 @@
             @csrf
             <!-- nombre -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre completo: *</label>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido paterno: *</label>
+                <input type="text" name="apellidoP" id="apellidoP" value="{{ old('apellidoP') }}" required placeholder="Ingrese su apellido paterno"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('apellidoP')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <!-- nombre -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido materno: *</label>
+                <input type="text" name="apellidoM" id="apellidoM" value="{{ old('apellidoM') }}" required placeholder="Ingrese su apellido materno"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('apellidoM')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <!-- nombre -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nombres: *</label>
                 <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required placeholder="Ingrese su nombre completo"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('nombre')

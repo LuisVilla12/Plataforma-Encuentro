@@ -45,6 +45,8 @@ class FormularioCursosController extends Controller
 
         $request->validate([
             'nombre' => 'required|max:255|min:5|unique:formulario_cursos,nombre',
+            'apellidoP' => 'required|max:255|min:5|unique:formulario_cursos,apellidoP',
+            'apellidoM' => 'required|max:255|min:5|unique:formulario_cursos,apellidoM',
             'institucion' => 'required|max:255|min:5',
             'correo' => 'required|email|unique:formulario_cursos,correo',
             'curso' => 'required',
@@ -79,6 +81,8 @@ class FormularioCursosController extends Controller
         //
         $request->validate([
             'nombre' => 'required|max:255|min:5|unique:formulario_cursos,nombre,' . $dato->id,
+            'apellidoP' => 'required|max:255|min:5|unique:formulario_cursos,nombre,' ,
+            'apellidoM' => 'required|max:255|min:5|unique:formulario_cursos,nombre,',
             'institucion' => 'required|max:255|min:5',
             'correo' => 'required|email|unique:formulario_cursos,correo,' . $dato->id,
             'curso' => 'required',

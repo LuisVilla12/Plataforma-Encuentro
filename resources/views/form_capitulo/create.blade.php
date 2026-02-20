@@ -53,18 +53,33 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Institución de procedencia: *
                 </label>
-                <input type="text" name="institucion" id="institucion" required
-                    placeholder="Nombre de la institución"
+                <select name="institucion" id="institucion" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <option value="" disabled selected>Selecciona tu institución</option>
+                    @foreach ($instituciones as $institucion)
+                        <option value="{{ $institucion->nombre }}">{{ $institucion->nombre }}</option>
+                    @endforeach
+                </select>
                 @error('institucion')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
-            <!-- Archivo word capitulo -->
+            <!-- Archivo word resumen -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu capitulo del libro en formato word:*
+                    Sube tu resumen formato word:*
+                </label>
+                <input type="file" name="url_resumen" id="url_resumen" required
+                    accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                @error('url_resumen')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+                        <!-- Archivo word capitulo -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">
+                    Sube tu resumen en extenso en formato word:*
                 </label>
                 <input type="file" name="url_capitulo" id="url_capitulo" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -74,18 +89,6 @@
                 @enderror
             </div>
 
-            <!-- Archivo word resumen -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu resumen del capitulo del libro en formato word:*
-                </label>
-                <input type="file" name="url_resumen" id="url_resumen" required
-                    accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
-                @error('url_resumen')
-                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
             <div class="mb-4">
                 <label class="flex items-center">
                     <input type="checkbox" name="confirmacion" value="1" required

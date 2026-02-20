@@ -75,18 +75,6 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-            <!-- Archivo word capitulo -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu prototipo en formato word:*
-                </label>
-                <input type="file" name="url_prototipo" id="url_prototipo" required
-                    accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
-                @error('url_prototipo')
-                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
 
             <!-- Archivo word resumen -->
             <div>
@@ -100,6 +88,19 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            <!-- Archivo word capitulo -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">
+                    Sube tu ficha técnica en formato word:*
+                </label>
+                <input type="file" name="url_prototipo" id="url_prototipo" required
+                    accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                @error('url_prototipo')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
             <div class="mb-4">
                 <label class="flex items-center">
                     <input type="checkbox" name="confirmacion" value="1" required

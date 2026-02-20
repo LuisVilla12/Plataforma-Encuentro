@@ -12,5 +12,6 @@ class FormularioCartel extends Model
         'institucion',
         'url_cartel',
         'url_resumen',
+        'url_zip'
     ];
 }

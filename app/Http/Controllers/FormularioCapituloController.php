@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FormularioCapitulo;
 use App\Models\User;
+use App\Models\Instituto;
 use Illuminate\Http\Request;
 
 class FormularioCapituloController extends Controller
@@ -26,7 +27,8 @@ class FormularioCapituloController extends Controller
     public function create()
     {
         //
-        return view('form_capitulo.create');
+        $instituciones=Instituto::all();
+        return view('form_capitulo.create',['instituciones'=>$instituciones]);
     }
 
     /**

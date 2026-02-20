@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
+            $table->string('apellidoP');
+            $table->string('apellidoM');
             $table->string('institucion');
             $table->string('correo');
             $table->string('curso');

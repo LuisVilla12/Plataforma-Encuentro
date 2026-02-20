@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('autores');
             $table->string('institucion');
             $table->string('url_cartel');
-            $table->string('url_resumen');
+            $table->string(column: 'url_resumen');
+            $table->string(column: 'url_zip');
         });
     }
 

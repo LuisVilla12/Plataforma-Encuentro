@@ -9,6 +9,8 @@ class FormularioAsistencia extends Model
     //
      protected $fillable = [
         'nombre',
+        'apellidoP',
+        'apellidoM',
         'institucion',
         'correo',
         'celular',
