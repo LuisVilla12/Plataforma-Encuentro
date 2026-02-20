@@ -31,6 +31,7 @@ class FormularioCapituloController extends Controller
         return view('form_capitulo.create',['instituciones'=>$instituciones]);
     }
 
+
     /**
      * Store a newly created resource in storage.
      */
