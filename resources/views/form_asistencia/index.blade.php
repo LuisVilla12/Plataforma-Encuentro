@@ -8,12 +8,12 @@
         @if ($datos->count() > 0)
             <div class="hidden md:block">
                 <table class="w-full border bg-white shadow rounded">
-                    <thead class="bg-gray-100">
+                    <thead class="bg-[#611232]">
                         <tr>
-                            <th class="p-2">Nombre completo </th>
-                            <th class="p-2">Instituto</th>
-                            <th class="p-2">Correo electronico</th>
-                            <th class="p-2">Acciones</th>
+                            <th class="p-2 text-white">Nombre completo </th>
+                            <th class="p-2 text-white">Instituto</th>
+                            <th class="p-2 text-white">Correo electronico</th>
+                            <th class="p-2 text-white">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
