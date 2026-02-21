@@ -63,7 +63,7 @@
                 <label class="block text-sm font-semibold text-gray-700"> En caso de subir un actualizar el capitulo del libro en formato word:*</label>
                 <input type="file" name="url_capitulo" id="url_capitulo"
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
             </div>
 
             <!-- Archivo word resumen -->
@@ -75,15 +75,15 @@
                 <label class="block text-sm font-semibold text-gray-700 mt-2"> En caso de subir un actualizar el resumen del capitulo del libro en formato word:*</label>
                 <input type="file" name="url_resumen" id="url_resumen"
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
             </div>
             <div class="flex justify-between">
                 <a href="{{ route('formulario_capitulo.index') }}"
-                    class="block text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-6 py-2 rounded-md text-sm transition duration-200">
+                    class="block text-center  bg-[#611232] hover:bg-gray-800 text-white px-6 py-2 rounded-md text-sm transition duration-200">
                     Regresar
                 </a>
                 <button type="submit"
-                    class="block px-6 py-2 mt-4 bg-[#051a39] hover:bg-gray-800 text-white  rounded-md text-sm transition duration-200">
+                    class="block px-6 py-2  bg-[#611232] hover:bg-gray-800 text-white  rounded-md text-sm transition duration-200">
                     Actualizar
                 </button>
             </div>

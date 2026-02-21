@@ -139,7 +139,7 @@
                     <!-- Botón -->
                     <div class="flex justify-end">
                         <button type="submit"
-                            class="mt-4 px-6 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
+                            class="mt-4 px-6 bg-[#611232] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
                             Asignar revisor
                         </button>
                     </div>
@@ -150,13 +150,13 @@
         @if(auth()->user()->tipo == 1)
             <div class="flex justify-end">
             <a href="{{ route('formulario_capitulo.index') }}"
-                class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                class="text-center mt-4 bg-[#611232] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
                 Regresar
             </a>
         @else
             <div class="">
             <a href="{{ route('asignar.index') }}"
-                class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                class="text-center mt-4 bg-[#611232] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
                 Regresar
             </a>
         @endif

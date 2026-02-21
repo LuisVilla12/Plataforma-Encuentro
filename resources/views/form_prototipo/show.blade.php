@@ -80,7 +80,7 @@
         </div>
             <div class="flex justify-end">
             <a href="{{ route('formulario_prototipo.index') }}"
-                class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                class="text-center mt-4 bg-[#611232] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
                 Regresar
             </a>
     </div>

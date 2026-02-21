@@ -83,7 +83,7 @@
                 </label>
                 <input type="file" name="url_resumen" id="url_resumen" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
                 @error('url_resumen')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -95,7 +95,7 @@
                 </label>
                 <input type="file" name="url_prototipo" id="url_prototipo" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-blue-900 file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
                 @error('url_prototipo')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -116,7 +116,7 @@
             </div>
             <!-- Botón -->
             <button type="submit"
-                class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
+                class=" bg-[#611232] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
                 Enviar
             </button>
 
@@ -131,3 +131,84 @@
 </body>
 
 </html>
+<script>
+const form = document.getElementById('myForm');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // obtener valores
+    const autores = document.getElementById('autores').value;
+    const institucion = document.getElementById('institucion').value;
+    const observaciones = document.getElementById('observaciones').value;
+    const resumenFile = document.getElementById('url_resumen').files[0];
+    const prototipoFile = document.getElementById('url_prototipo').files[0];
+    const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
+
+    // validar checkbox
+    if (!confirmacion) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Debes confirmar los datos',
+            confirmButtonColor: '#611232'
+        });
+        return;
+    }
+
+    // nombres de archivos
+    const resumenNombre = resumenFile ? resumenFile.name : "No seleccionado";
+    const prototipoNombre = prototipoFile ? prototipoFile.name : "No seleccionado";
+
+    // construir html del modal
+    const htmlPreview = `
+        <div style="text-align:left; font-size:14px">
+
+            <p class="text-sm text-gray-700 font-bold">Autores: <span class='font-normal'>${autores}</span></p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Institución: <span class='font-normal'>${institucion}</span>
+            </p>
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Observaciones: <span class='font-normal'>${observaciones}</span>
+            </p>
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Archivo resumen: <span class='font-normal'>${resumenNombre}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Archivo prototipo: <span class='font-normal'>${prototipoNombre}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px; color:green">
+            ✔ Datos confirmados por el usuario
+            </p>
+
+        </div>
+    `;
+
+    // mostrar modal
+    Swal.fire({
+        title: 'Confirmar registro',
+        html: htmlPreview,
+        width: 600,
+        showCancelButton: true,
+        confirmButtonText: 'Enviar',
+        cancelButtonText: 'Editar',
+        confirmButtonColor: '#611232',
+        cancelButtonColor: '#6b7280'
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+
+            Swal.fire({
+                title: 'Enviando...',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: () => Swal.showLoading()
+            });
+
+            form.submit();
+        }
+
+    });
+
+});
+</script>

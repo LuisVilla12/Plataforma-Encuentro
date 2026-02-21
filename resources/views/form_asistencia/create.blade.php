@@ -38,26 +38,48 @@
             Completa los siguientes campos para registrar tu participación.
         </p>
 
-        <form action="{{ route('formulario_asistencia.store') }}" id="" method="POST"
+        <form action="{{ route('formulario_asistencia.store') }}" id="myForm" method="POST"
             class="flex flex-col gap-4">
             @csrf
+            <!-- apellido P -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido paterno: *</label>
+                <input type="text" name="apellidoP" id="apellidoP" value="{{ old('apellidoP') }}" required
+                    placeholder="Ingrese su apellido paterno"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('apellidoP')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <!-- apellido M -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido materno: *</label>
+                <input type="text" name="apellidoM" id="apellidoM" value="{{ old('apellidoM') }}" required
+                    placeholder="Ingrese su apellido materno"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('apellidoM')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
             <!-- nombre -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre completo: *</label>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nombres: *</label>
                 <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required
-                    placeholder="Ingrese su nombre completo"
+                    placeholder="Ingrese su nombre"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('nombre')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
 
+
             <!-- Institución -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Institución de procedencia: *
                 </label>
-                 <select name="institucion" id="institucion" required
+                <select name="institucion" id="institucion" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                     <option value="" disabled selected>Selecciona tu institución</option>
                     @foreach ($instituciones as $institucion)
@@ -145,9 +167,10 @@
             </div>
             <!-- Botón -->
             <button type="submit"
-                class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
+                class=" bg-[#611232]  text-white py-2 rounded-md text-sm transition duration-200">
                 Registrar
             </button>
+
 
         </form>
 
@@ -160,3 +183,93 @@
 </body>
 
 </html>
+<script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // obtener valores
+        const nombre = document.getElementById('nombre').value;
+        const apellidoP = document.getElementById('apellidoP').value;
+        const apellidoM = document.getElementById('apellidoM').value;
+        const correo = document.getElementById('correo').value;
+        const celular = document.getElementById('celular').value;
+        const clave_ca = document.getElementById('clave_ca').value;
+        const nombre_ca = document.getElementById('nombre_ca').value;
+        const institucion = document.getElementById('institucion').value;
+        const interes = document.getElementById('interes').value;
+        const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
+
+        // validar checkbox
+        if (!confirmacion) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Debes confirmar los datos',
+                confirmButtonColor: '#611232'
+            });
+            return;
+        }
+
+
+
+        // construir html del modal
+        const htmlPreview = `
+        <div style="text-align:left; font-size:14px">
+
+            <p class="text-sm text-gray-700 font-bold">Autores: <span class='font-normal'>${nombre} ${apellidoP} ${apellidoM}</span></p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Institución: <span class='font-normal'>${institucion}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Correo electrónico: <span class='font-normal'>${correo}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Celular: <span class='font-normal'>${celular}</span>
+            </p>
+
+                            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Nombre CA: <span class='font-normal'>${nombre_ca}</span>
+            </p>
+
+                        <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Clave CA: <span class='font-normal'>${clave_ca}</span>
+            </p>
+
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px; color:green">
+            ✔ Datos confirmados por el usuario
+            </p>
+
+        </div>
+    `;
+
+        // mostrar modal
+        Swal.fire({
+            title: 'Confirmar registro',
+            html: htmlPreview,
+            width: 600,
+            showCancelButton: true,
+            confirmButtonText: 'Enviar',
+            cancelButtonText: 'Editar',
+            confirmButtonColor: '#611232',
+            cancelButtonColor: '#6b7280'
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                Swal.fire({
+                    title: 'Enviando...',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    didOpen: () => Swal.showLoading()
+                });
+
+                form.submit();
+            }
+
+        });
+
+    });
+</script>

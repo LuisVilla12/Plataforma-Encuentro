@@ -142,11 +142,11 @@
             <!-- Botón -->
             <div class="flex justify-between">
                 <a href="{{ route('formulario_asistencia.index') }}"
-                    class="text-center mt-4 bg-[#051a39] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
+                    class="text-center mt-4 bg-[#611232] hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition duration-200">
                     Regresar
                 </a>
                 <button type="submit"
-                    class="mt-4 bg-[#051a39] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
+                    class="mt-4 bg-[#611232] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
                     Actualizar registro
                 </button>
             </div>
