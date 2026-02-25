@@ -62,9 +62,6 @@ Instituto::create([
         Instituto::create([
             'nombre' => 'Legión de Paz, Medio Ambiente y Justicia Social A.C.'
         ]);
-        Instituto::create([
-            'nombre' => 'Otros'
-        ]);
         User::create([
             'name' => 'Luis Villa',
             'area' => 'Ciencias de la Salud',

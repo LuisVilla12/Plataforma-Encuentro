@@ -14,9 +14,7 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
-
     <div class="max-w-xl mx-auto mt-12 bg-white shadow-md rounded-lg px-8 py-6">
-
         {{-- <img src="Encabezado.jpeg" alt="encabezado" class="w-full h-20 object-cover my-4"> --}}
         @if (session('success'))
             <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 4000)"
@@ -72,8 +70,6 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
-
             <!-- Institución -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
@@ -85,10 +81,17 @@
                     @foreach ($instituciones as $institucion)
                         <option value="{{ $institucion->nombre }}">{{ $institucion->nombre }}</option>
                     @endforeach
+                    <option value="Otra">Otra</option>
                 </select>
                 @error('institucion')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
+            </div>
+            <div id="otraInstitucionContainer" class="mt-2 hidden">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Especifica tu institución: *</label>
+                <input type="text" name="otra_institucion" id="otra_institucion"
+                    value="{{ old('otra_institucion') }}" placeholder="Ingrese el nombre de su institución"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
             </div>
             <!-- Correo electronico -->
             <div>
@@ -115,6 +118,20 @@
             </div>
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Modalidad de participación: *
+                </label>
+                <select name="modalidad_participacion" id="modalidad_participacion" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Asistente">Asistente </option>
+                    <option value="Ponente">Ponente </option>
+                </select>
+                @error('modalidad_participacion')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Nombre del cuerpo academico: *
                 </label>
                 <input type="text" name="nombre_ca" id="nombre_ca" required placeholder="Nombre del cuerpo academico"
@@ -135,7 +152,33 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-            <!-- Curso -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Requiere oficio: *
+                </label>
+                <select name="requiere_oficio" id="requiere_oficio" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                @error('requiere_oficio')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            {{-- Nombre de oficio --}}
+            <div id="nombreOficioContainer" class="hidden">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Nombre a quien va dirigido el oficio: *
+                </label>
+<input type="text" name="nombre_oficio" id="nombre_oficio"
+                    value="{{ old('nombre_oficio') }}" placeholder="Ingrese el nombre de su institución"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('nombre_oficio')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <!-- EVENTO -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     ¿Como te enteraste del evento?: *
@@ -166,8 +209,7 @@
                 @enderror
             </div>
             <!-- Botón -->
-            <button type="submit"
-                class=" bg-[#611232]  text-white py-2 rounded-md text-sm transition duration-200">
+            <button type="submit" class=" bg-[#611232]  text-white py-2 rounded-md text-sm transition duration-200">
                 Registrar
             </button>
 
@@ -184,6 +226,32 @@
 
 </html>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const selectInstitucion = document.getElementById("institucion");
+        const otraContainer = document.getElementById("otraInstitucionContainer");
+        const otraInput = document.getElementById("otra_institucion");
+        const selecOficio = document.getElementById("requiere_oficio");
+        const nombreOficioContainer = document.getElementById("nombreOficioContainer");
+        const nombreOficioInput = document.getElementById("nombreOficio");
+
+        selectInstitucion.addEventListener("change", function() {
+            if (this.value === "Otra") {
+                otraContainer.classList.remove("hidden");
+                otraInput.setAttribute("required", "required");
+            } else {
+                otraContainer.classList.add("hidden");
+                otraInput.removeAttribute("required");
+                otraInput.value = "";
+            }
+        });
+        selecOficio.addEventListener("change", function() {
+            if (this.value === "Si") {
+                nombreOficioContainer.classList.remove("hidden");
+            } else {
+                nombreOficioContainer.classList.add("hidden");
+            }
+        });
+    });
     const form = document.getElementById('myForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -196,6 +264,7 @@
         const clave_ca = document.getElementById('clave_ca').value;
         const nombre_ca = document.getElementById('nombre_ca').value;
         const institucion = document.getElementById('institucion').value;
+        const otra_institucion = document.getElementById('otra_institucion').value;
         const interes = document.getElementById('interes').value;
         const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
 
@@ -220,6 +289,7 @@
             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
             Institución: <span class='font-normal'>${institucion}</span>
             </p>
+            ${otra_institucion ? `<p class="text-sm text-gray-700 font-bold" style="margin-top:10px">Otra institución: <span class='font-normal'>${otra_institucion}</span></p>` : ''}
 
             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
             Correo electrónico: <span class='font-normal'>${correo}</span>

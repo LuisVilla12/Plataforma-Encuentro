@@ -35,15 +35,26 @@ class FormularioAsistenciaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required|string|max:255|unique:formulario_asistencias,nombre',
+            'nombre' => 'required|string|max:255',
+            'apellidoP' => 'required|string|max:255',
+            'apellidoM' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
             'correo' => 'required|email|max:255',
             'celular' => 'required|string|max:20',
             'nombre_ca' => 'required|string|max:255',
             'clave_ca' => 'required|string|max:255',
             'interes' => 'required|string|max:255',
+            'modalidad_participacion' => 'required',
+            'requiere_oficio' => 'required|string|max:3',
             'confirmacion' => 'accepted',
         ]);
+        if($request->institucion=='Otra')
+        Instituto::create(attributes: [
+            'nombre' => $request->otra_institucion,
+        ]);
+        if($request->institucion === "Otra"){
+            $request->merge(['institucion' => $request->otra_institucion]);
+        }
 
         FormularioAsistencia::create($request->all());
         return redirect()->route('formulario_asistencia.create')->with('success', 'Formulario de asistencia registrado exitosamente.');

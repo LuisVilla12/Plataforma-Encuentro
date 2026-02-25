@@ -18,6 +18,9 @@ class FormularioAsistencia extends Model
         'clave_ca',
         'interes',
         'confirmacion',
+        'modalidad_participacion',
+        'requiere_oficio',
+        'nombre_oficio',
     ];
 }
 
