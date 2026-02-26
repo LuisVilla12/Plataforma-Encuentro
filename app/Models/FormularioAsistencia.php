@@ -22,5 +22,8 @@ class FormularioAsistencia extends Model
         'requiere_oficio',
         'nombre_oficio',
     ];
+    protected $casts = [
+    'modalidad_participacion' => 'array',
+];
 }
 

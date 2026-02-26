@@ -47,11 +47,18 @@ class FormularioCursosController extends Controller
             'nombre' => 'required|max:255|min:5|unique:formulario_cursos,nombre',
             'apellidoP' => 'required|max:255|min:5|unique:formulario_cursos,apellidoP',
             'apellidoM' => 'required|max:255|min:5|unique:formulario_cursos,apellidoM',
-            'institucion' => 'required|max:255|min:5',
+            'institucion' => 'required|max:255',
             'correo' => 'required|email|unique:formulario_cursos,correo',
             'curso' => 'required',
             'confirmacion' => 'accepted',
             ]);
+        if($request->institucion=='Otra')
+        Instituto::create(attributes: [
+            'nombre' => $request->otra_institucion,
+        ]);
+        if($request->institucion === "Otra"){
+            $request->merge(['institucion' => $request->otra_institucion]);
+        }
         FormularioCursos::create($request->all());
         return redirect()->route('formulario_cursos.create')->with('success', 'Registro guardado exitosamente');
     }

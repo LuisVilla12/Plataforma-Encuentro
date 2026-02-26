@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('nombre_ca');
             $table->string('clave_ca');
             $table->string('interes');
-            $table->string('modalidad_participacion');
+            $table->json('modalidad_participacion');
             $table->string('requiere_oficio');
             $table->string('nombre_oficio')->nullable();
             $table->integer('confirmacion')->default(0)->nullable();

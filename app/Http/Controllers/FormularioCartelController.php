@@ -38,16 +38,23 @@ class FormularioCartelController extends Controller
         //
         $request->validate([
             'autores' => 'required',
-            'institucion' => 'required|string|max:255|min:5',
+            'institucion' => 'required|string|max:255',
             'url_cartel' => 'required|file',
             'url_resumen' => 'required|file',
             'url_zip' => 'required',
             'confirmacion' => 'accepted',
         ]);
+
         $ruta_cartel = $request->file('url_cartel')->store('carteles', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('carteles', 'public');
         $ruta_zip = $request->file('url_zip')->store('carteles', 'public');
-
+        if($request->institucion=='Otra')
+        Instituto::create(attributes: [
+            'nombre' => $request->otra_institucion,
+        ]);
+        if($request->institucion === "Otra"){
+            $request->merge(['institucion' => $request->otra_institucion]);
+        }
         FormularioCartel::create([
             'autores' => $request->autores,
             'institucion' => $request->institucion,

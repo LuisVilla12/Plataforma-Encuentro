@@ -44,7 +44,7 @@ class FormularioAsistenciaController extends Controller
             'nombre_ca' => 'required|string|max:255',
             'clave_ca' => 'required|string|max:255',
             'interes' => 'required|string|max:255',
-            'modalidad_participacion' => 'required',
+            'modalidad_participacion' => 'required|array|min:1',
             'requiere_oficio' => 'required|string|max:3',
             'confirmacion' => 'accepted',
         ]);

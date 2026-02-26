@@ -69,21 +69,21 @@ Route::middleware(['auth', 'admin'])->group(function () {
     });
 
 // Rutas para formulario de capitulos
-Route::get('/registrar-capitulo/create', [FormularioCapituloController::class, 'create'])->name('formulario_capitulo.create');
-Route::post('/registrar-capitulo/create', [FormularioCapituloController::class, 'store'])->name('formulario_capitulo.store');
+Route::get('/registrar-capitulo', [FormularioCapituloController::class, 'create'])->name('formulario_capitulo.create');
+Route::post('/registrar-capitulo', [FormularioCapituloController::class, 'store'])->name('formulario_capitulo.store');
 //Formulario para registro de prototipo de investigación
-Route::get('/formulario-prototipo/create', [FormularioPrototipoController::class, 'create'])->name('formulario_prototipo.create');
-Route::post('/formulario-prototipo/create', [FormularioPrototipoController::class, 'store'])->name('formulario_prototipo.store');
+Route::get('/registrar-prototipo', [FormularioPrototipoController::class, 'create'])->name('formulario_prototipo.create');
+Route::post('/registrar-prototipo', [FormularioPrototipoController::class, 'store'])->name('formulario_prototipo.store');
 //Formulario para registro de carteles
-Route::get('/formulario-cartel/create', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
-Route::post('/formulario-cartel/create', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
+Route::get('/registrar-cartel', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
+Route::post('/registrar-cartel', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
 
 //Formulario para registro de cursos
-Route::get('/formulario-cursos/create', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
-Route::post('/formulario-cursos/create', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');
+Route::get('/registrar-cursos', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
+Route::post('/registrar-cursos', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');
 //Formulario para registro de asistencia al evento
-Route::get('/formulario-asistencia/create', [FormularioAsistenciaController::class, 'create'])->name('formulario_asistencia.create');
-Route::post('/formulario-asistencia/create', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
+Route::get('/registrar-asistencia', [FormularioAsistenciaController::class, 'create'])->name('formulario_asistencia.create');
+Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
 
 
 require __DIR__ . '/auth.php';

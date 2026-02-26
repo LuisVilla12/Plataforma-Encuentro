@@ -39,13 +39,20 @@ class FormularioCapituloController extends Controller
     {
         $request->validate([
             'autores' => 'required|string|min:5',
-            'institucion' => 'required|string|max:255|min:5',
+            'institucion' => 'required|string|max:255',
             'url_capitulo' => 'required|file|mimes:docx',
             'url_resumen' => 'required|file|mimes:docx',
             'confirmacion' => 'accepted',
         ]);
         $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('documentos', 'public');
+        if($request->institucion=='Otra')
+        Instituto::create(attributes: [
+            'nombre' => $request->otra_institucion,
+        ]);
+        if($request->institucion === "Otra"){
+            $request->merge(['institucion' => $request->otra_institucion]);
+        }
         FormularioCapitulo::create([
             'autores' => $request->autores,
             'institucion' => $request->institucion,

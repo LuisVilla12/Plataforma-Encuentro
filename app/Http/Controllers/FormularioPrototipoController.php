@@ -44,9 +44,15 @@ class FormularioPrototipoController extends Controller
             'observaciones' => 'nullable|string|max:255',
             'confirmacion' => 'accepted',
         ]);
-
         $ruta_prototipo = $request->file('url_prototipo')->store('prototipos', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('prototipos', 'public');
+        if($request->institucion=='Otra')
+        Instituto::create(attributes: [
+            'nombre' => $request->otra_institucion,
+        ]);
+        if($request->institucion === "Otra"){
+            $request->merge(['institucion' => $request->otra_institucion]);
+        }
         FormularioPrototipo::create([
             'autores' => $request->autores,
             'institucion' => $request->institucion,

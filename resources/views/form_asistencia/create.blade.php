@@ -117,15 +117,30 @@
                 @enderror
             </div>
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
                     Modalidad de participación: *
                 </label>
-                <select name="modalidad_participacion" id="modalidad_participacion" required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
-                    <option value="" disabled selected>Seleccionar</option>
-                    <option value="Asistente">Asistente </option>
-                    <option value="Ponente">Ponente </option>
-                </select>
+
+                <div class="flex items-center space-x-6">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="modalidad_participacion[]" value="Asistente"
+                            class="rounded border-gray-300 text-blue-900 focus:ring-blue-900">
+                        <span class="text-sm text-gray-700">Asistente</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="modalidad_participacion[]" value="Ponente de cartel"
+                            class="rounded border-gray-300 text-blue-900 focus:ring-blue-900">
+                        <span class="text-sm text-gray-700">Ponente de cartel</span>
+                    </label>
+
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="modalidad_participacion[]" value="Participante de prototipo"
+                            class="rounded border-gray-300 text-blue-900 focus:ring-blue-900">
+                        <span class="text-sm text-gray-700">Participante de prototipo</span>
+                    </label>
+
+                </div>
+
                 @error('modalidad_participacion')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -145,8 +160,8 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Clave del cuerpo academico: *
                 </label>
-                <input type="text" name="clave_ca" id="clave_ca" required placeholder="Clave del cuerpo academico"
-                    value="{{ old('clave_ca') }}"
+                <input type="text" name="clave_ca" id="clave_ca" required
+                    placeholder="Clave del cuerpo academico" value="{{ old('clave_ca') }}"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('clave_ca')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
@@ -154,7 +169,7 @@
             </div>
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
-                    Requiere oficio: *
+                    Requiere oficio de invitación: *
                 </label>
                 <select name="requiere_oficio" id="requiere_oficio" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
@@ -171,8 +186,8 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Nombre a quien va dirigido el oficio: *
                 </label>
-<input type="text" name="nombre_oficio" id="nombre_oficio"
-                    value="{{ old('nombre_oficio') }}" placeholder="Ingrese el nombre de su institución"
+                <input type="text" name="nombre_oficio" id="nombre_oficio" value="{{ old('nombre_oficio') }}"
+                    placeholder="Ingrese el nombre de su institución"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('nombre_oficio')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>

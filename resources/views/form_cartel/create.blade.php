@@ -47,22 +47,27 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
-            <!-- Institución -->
-           <div>
+             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Institución de procedencia: *
                 </label>
-                 <select name="institucion" id="institucion" required
+                <select name="institucion" id="institucion" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                     <option value="" disabled selected>Selecciona tu institución</option>
                     @foreach ($instituciones as $institucion)
                         <option value="{{ $institucion->nombre }}">{{ $institucion->nombre }}</option>
                     @endforeach
+                    <option value="Otra">Otra</option>
                 </select>
                 @error('institucion')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
+            </div>
+            <div id="otraInstitucionContainer" class="mt-2 hidden">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Especifica tu institución: *</label>
+                <input type="text" name="otra_institucion" id="otra_institucion"
+                    value="{{ old('otra_institucion') }}" placeholder="Ingrese el nombre de su institución"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
             </div>
             <!-- Archivo word resumen -->
             <div>
@@ -132,6 +137,32 @@
 
 </html>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const selectInstitucion = document.getElementById("institucion");
+        const otraContainer = document.getElementById("otraInstitucionContainer");
+        const otraInput = document.getElementById("otra_institucion");
+        const selecOficio = document.getElementById("requiere_oficio");
+        const nombreOficioContainer = document.getElementById("nombreOficioContainer");
+        const nombreOficioInput = document.getElementById("nombreOficio");
+
+        selectInstitucion.addEventListener("change", function() {
+            if (this.value === "Otra") {
+                otraContainer.classList.remove("hidden");
+                otraInput.setAttribute("required", "required");
+            } else {
+                otraContainer.classList.add("hidden");
+                otraInput.removeAttribute("required");
+                otraInput.value = "";
+            }
+        });
+        selecOficio.addEventListener("change", function() {
+            if (this.value === "Si") {
+                nombreOficioContainer.classList.remove("hidden");
+            } else {
+                nombreOficioContainer.classList.add("hidden");
+            }
+        });
+    });
 const form = document.getElementById('myForm');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
