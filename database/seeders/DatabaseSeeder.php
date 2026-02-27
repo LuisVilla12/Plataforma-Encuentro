@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'nombre' => 'Instituto Tecnológico de Huejutla '
         ]);
         Instituto::create([
-            'nombre' => 'Instituto Tecnológico de Misantla'
+            'nombre' => 'Instituto Tecnológico Superior de Misantla'
         ]);
         Instituto::create([
             'nombre' => 'Instituto Tecnológico de Tuxtepec'
@@ -45,7 +45,7 @@ Instituto::create([
             'nombre' => 'Instituto Tecnológico de Veracruz'
         ]);
          Instituto::create([
-            'nombre' => 'Instituto Tecnológico de Perote'
+            'nombre' => 'Instituto Tecnológico Superior de Perote'
         ]);
             Instituto::create([
                 'nombre' => 'Instituto Tecnológico Superior de Xalapa'
