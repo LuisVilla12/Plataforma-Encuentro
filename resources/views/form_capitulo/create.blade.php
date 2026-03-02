@@ -37,13 +37,24 @@
             @csrf
             <!-- Autores -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">
-                    Indica los nombres de los autores: *
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    Autores: *
                 </label>
-                <input type="text" name="autores" id="autores" required
-                    placeholder="Villa-Juárez, Jazmin; Alemán-Gutiérrez, María Rebeca..."
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
-                @error('autores')
+
+                <div id="contenedor-autores">
+                    <div class="flex mb-2">
+                        <input type="text" name="autores[]" required
+                            placeholder="Apellido Paterno,Apellido Materno, Nombres"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    </div>
+                </div>
+
+                <button type="button" onclick="agregarAutor()"
+                    class="bg-[#611232] text-white px-3 py-1 rounded text-sm">
+                    + Agregar autor
+                </button>
+
+                @error('autores.*')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
@@ -83,7 +94,7 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-                        <!-- Archivo word capitulo -->
+            <!-- Archivo word capitulo -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
                     Sube tu resumen en extenso en formato word:*
@@ -110,8 +121,7 @@
                 @enderror
             </div>
             <!-- Botón -->
-            <button type="submit"
-                class=" bg-[#611232] text-white py-2 rounded-md text-sm transition duration-200">
+            <button type="submit" class=" bg-[#611232] text-white py-2 rounded-md text-sm transition duration-200">
                 Enviar
             </button>
 
@@ -128,13 +138,10 @@
 </html>
 
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         const selectInstitucion = document.getElementById("institucion");
         const otraContainer = document.getElementById("otraInstitucionContainer");
         const otraInput = document.getElementById("otra_institucion");
-        const selecOficio = document.getElementById("requiere_oficio");
-        const nombreOficioContainer = document.getElementById("nombreOficioContainer");
-        const nombreOficioInput = document.getElementById("nombreOficio");
 
         selectInstitucion.addEventListener("change", function() {
             if (this.value === "Otra") {
@@ -146,45 +153,69 @@
                 otraInput.value = "";
             }
         });
-        selecOficio.addEventListener("change", function() {
-            if (this.value === "Si") {
-                nombreOficioContainer.classList.remove("hidden");
-            } else {
-                nombreOficioContainer.classList.add("hidden");
-            }
-        });
+
     });
 
-const form = document.getElementById('myForm');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // obtener valores
-    const autores = document.getElementById('autores').value;
-    const institucion = document.getElementById('institucion').value;
-    const resumenFile = document.getElementById('url_resumen').files[0];
-    const capituloFile = document.getElementById('url_capitulo').files[0];
-    const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
+    function agregarAutor() {
+        const contenedor = document.getElementById('contenedor-autores');
 
-    // validar checkbox
-    if (!confirmacion) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Debes confirmar los datos',
-            confirmButtonColor: '#611232'
-        });
-        return;
+        const div = document.createElement('div');
+        div.classList.add('flex', 'mb-2');
+
+        div.innerHTML = `
+        <input type="text" name="autores[]" required
+            placeholder="Apellido Paterno,Apellido Materno, Nombres"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+
+        <button type="button" onclick="this.parentElement.remove()"
+            class="ml-2 bg-[#611232] text-white px-2 rounded">
+            X
+        </button>
+    `;
+
+        contenedor.appendChild(div);
     }
 
-    // nombres de archivos
-    const resumenNombre = resumenFile ? resumenFile.name : "No seleccionado";
-    const capituloNombre = capituloFile ? capituloFile.name : "No seleccionado";
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // obtener valores
+        const autoresInputs = document.querySelectorAll('input[name="autores[]"]');
+        let autores = [];
+        autoresInputs.forEach(input => {
+            if (input.value.trim() !== "") {
+                autores.push(input.value.trim());
+            }
+        });
+        const autoresLista = autores.map(a => `<li>${a}</li>`).join("");
+        const institucion = document.getElementById('institucion').value;
+        const resumenFile = document.getElementById('url_resumen').files[0];
+        const capituloFile = document.getElementById('url_capitulo').files[0];
+        const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
 
-    // construir html del modal
-    const htmlPreview = `
+        // validar checkbox
+        if (!confirmacion) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Debes confirmar los datos',
+                confirmButtonColor: '#611232'
+            });
+            return;
+        }
+
+        // nombres de archivos
+        const resumenNombre = resumenFile ? resumenFile.name : "No seleccionado";
+        const capituloNombre = capituloFile ? capituloFile.name : "No seleccionado";
+
+        // construir html del modal
+        const htmlPreview = `
         <div style="text-align:left; font-size:14px">
-
-            <p class="text-sm text-gray-700 font-bold">Autores: <span class='font-normal'>${autores}</span></p>
-
+             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+                Autores:
+            </p>
+            <ul style="margin-left:20px; margin-top:5px; margin-bottom:10px;">
+                ${autoresLista}
+            </ul>
             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
             Institución: <span class='font-normal'>${institucion}</span>
             </p>
@@ -204,31 +235,31 @@ form.addEventListener('submit', function(e) {
         </div>
     `;
 
-    // mostrar modal
-    Swal.fire({
-        title: 'Confirmar registro',
-        html: htmlPreview,
-        width: 600,
-        showCancelButton: true,
-        confirmButtonText: 'Enviar',
-        cancelButtonText: 'Editar',
-        confirmButtonColor: '#611232',
-        cancelButtonColor: '#6b7280'
-    }).then((result) => {
+        // mostrar modal
+        Swal.fire({
+            title: 'Confirmar registro',
+            html: htmlPreview,
+            width: 600,
+            showCancelButton: true,
+            confirmButtonText: 'Enviar',
+            cancelButtonText: 'Editar',
+            confirmButtonColor: '#611232',
+            cancelButtonColor: '#6b7280'
+        }).then((result) => {
 
-        if (result.isConfirmed) {
+            if (result.isConfirmed) {
 
-            Swal.fire({
-                title: 'Enviando...',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                didOpen: () => Swal.showLoading()
-            });
+                Swal.fire({
+                    title: 'Enviando...',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    didOpen: () => Swal.showLoading()
+                });
 
-            form.submit();
-        }
+                form.submit();
+            }
+
+        });
 
     });
-
-});
 </script>

@@ -37,7 +37,8 @@ class FormularioCartelController extends Controller
     {
         //
         $request->validate([
-            'autores' => 'required',
+            'autores' => 'required|array|min:1',
+            'autores.*' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
             'url_cartel' => 'required|file',
             'url_resumen' => 'required|file',

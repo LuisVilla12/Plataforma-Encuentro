@@ -40,30 +40,24 @@
 
         <form action="{{ route('formulario_cursos.store') }}" id="myForm" method="POST" class="flex flex-col gap-4">
             @csrf
-            <!-- apellido P -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido paterno: *</label>
-                <input type="text" name="apellidoP" id="apellidoP" value="{{ old('apellidoP') }}" required placeholder="Ingrese su apellido paterno"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
-                @error('apellidoP')
-                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-            <!-- apellido M -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido materno: *</label>
-                <input type="text" name="apellidoM" id="apellidoM" value="{{ old('apellidoM') }}" required placeholder="Ingrese su apellido materno"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
-                @error('apellidoM')
-                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <!-- nombre -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Nombres: *</label>
-                <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required placeholder="Ingrese su nombre"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                <select name="autor" class="w-full border rounded px-3 py-2">
+                    <option value="">Seleccione un autor</option>
+                    {{-- @foreach ($prototipos as $prototipo)
+                        @foreach ($prototipo->autores as $autor)
+                            <option value="{{ $autor }}">
+                                {{ $autor }}
+                            </option>
+                        @endforeach
+                    @endforeach --}}
+                        @foreach ($autoresUnicos as $autor)
+                            <option value="{{ $autor }}">
+                                {{ $autor }}
+                            </option>
+                        @endforeach
+
+                </select>
                 @error('nombre')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -96,8 +90,8 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Correo electrónico: *
                 </label>
-                <input type="email" name="correo" id="correo" required
-                    placeholder="Correo electrónico" value="{{ old('correo') }}"
+                <input type="email" name="correo" id="correo" required placeholder="Correo electrónico"
+                    value="{{ old('correo') }}"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('correo')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
@@ -149,13 +143,10 @@
 
 </html>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         const selectInstitucion = document.getElementById("institucion");
         const otraContainer = document.getElementById("otraInstitucionContainer");
         const otraInput = document.getElementById("otra_institucion");
-        const selecOficio = document.getElementById("requiere_oficio");
-        const nombreOficioContainer = document.getElementById("nombreOficioContainer");
-        const nombreOficioInput = document.getElementById("nombreOficio");
 
         selectInstitucion.addEventListener("change", function() {
             if (this.value === "Otra") {
@@ -167,43 +158,33 @@ document.addEventListener("DOMContentLoaded", function() {
                 otraInput.value = "";
             }
         });
-        selecOficio.addEventListener("change", function() {
-            if (this.value === "Si") {
-                nombreOficioContainer.classList.remove("hidden");
-            } else {
-                nombreOficioContainer.classList.add("hidden");
-            }
-        });
+
     });
-const form = document.getElementById('myForm');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // obtener valores
-    const name = document.getElementById('nombre').value;
-    const apellidoP = document.getElementById('apellidoP').value;
-    const apellidoM = document.getElementById('apellidoM').value;
-    const institucion = document.getElementById('institucion').value;
-    const correo = document.getElementById('correo').value;
-    const curso = document.getElementById('curso').value;
-    const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // obtener valores
+        const name = document.getElementById('nombre').value;
+        const institucion = document.getElementById('institucion').value;
+        const correo = document.getElementById('correo').value;
+        const curso = document.getElementById('curso').value;
+        const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
 
-    // validar checkbox
-    if (!confirmacion) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Debes confirmar los datos',
-            confirmButtonColor: '#611232'
-        });
-        return;
-    }
+        // validar checkbox
+        if (!confirmacion) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Debes confirmar los datos',
+                confirmButtonColor: '#611232'
+            });
+            return;
+        }
 
-    // construir html del modal
-    const htmlPreview = `
+        // construir html del modal
+        const htmlPreview = `
         <div style="text-align:left; font-size:14px">
 
             <p class="text-sm text-gray-700 font-bold">Nombre: <span class='font-normal'>${name}</span></p>
-            <p class="text-sm text-gray-700 font-bold">Apellido Paterno: <span class='font-normal'>${apellidoP}</span></p>
-            <p class="text-sm text-gray-700 font-bold">Apellido Materno: <span class='font-normal'>${apellidoM}</span></p>
             <p class="text-sm text-gray-700 font-bold">Correo: <span class='font-normal'>${correo}</span></p>
             <p class="text-sm text-gray-700 font-bold">Curso: <span class='font-normal'>${curso}</span></p>
             <p class="text-sm text-gray-700 font-bold">Institución: <span class='font-normal'>${institucion}</span></p>
@@ -216,31 +197,31 @@ form.addEventListener('submit', function(e) {
         </div>
     `;
 
-    // mostrar modal
-    Swal.fire({
-        title: 'Confirmar registro',
-        html: htmlPreview,
-        width: 600,
-        showCancelButton: true,
-        confirmButtonText: 'Enviar',
-        cancelButtonText: 'Editar',
-        confirmButtonColor: '#611232',
-        cancelButtonColor: '#6b7280'
-    }).then((result) => {
+        // mostrar modal
+        Swal.fire({
+            title: 'Confirmar registro',
+            html: htmlPreview,
+            width: 600,
+            showCancelButton: true,
+            confirmButtonText: 'Enviar',
+            cancelButtonText: 'Editar',
+            confirmButtonColor: '#611232',
+            cancelButtonColor: '#6b7280'
+        }).then((result) => {
 
-        if (result.isConfirmed) {
+            if (result.isConfirmed) {
 
-            Swal.fire({
-                title: 'Enviando...',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                didOpen: () => Swal.showLoading()
-            });
+                Swal.fire({
+                    title: 'Enviando...',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    didOpen: () => Swal.showLoading()
+                });
 
-            form.submit();
-        }
+                form.submit();
+            }
+
+        });
 
     });
-
-});
 </script>

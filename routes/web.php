@@ -78,6 +78,7 @@ Route::post('/registrar-prototipo', [FormularioPrototipoController::class, 'stor
 Route::get('/registrar-cartel', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
 Route::post('/registrar-cartel', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
 
+
 //Formulario para registro de cursos
 Route::get('/registrar-cursos', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
 Route::post('/registrar-cursos', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');

@@ -8,8 +8,6 @@ class FormularioCursos extends Model
 {
     protected $fillable = [
         'nombre',
-        'apellidoP',
-        'apellidoM',
         'institucion',
         'correo',
         'curso',

@@ -38,7 +38,8 @@ class FormularioCapituloController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'autores' => 'required|string|min:5',
+            'autores' => 'required|array|min:1',
+            'autores.*' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
             'url_capitulo' => 'required|file|mimes:docx',
             'url_resumen' => 'required|file|mimes:docx',

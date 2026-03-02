@@ -14,4 +14,9 @@ class FormularioCartel extends Model
         'url_resumen',
         'url_zip'
     ];
+        protected $casts = [
+    'autores' => 'array',
+];
 }
+
+

@@ -16,7 +16,7 @@ class FormularioPrototipoController extends Controller
         //
         $datos = FormularioPrototipo::all();
         return view('form_prototipo.index', [
-            'datos' =>$datos
+            'datos' => $datos
         ]);
     }
 
@@ -26,7 +26,7 @@ class FormularioPrototipoController extends Controller
     public function create()
     {
         //
-        $instituciones=Instituto::all();
+        $instituciones = Instituto::all();
         return view('form_prototipo.create', compact('instituciones'));
     }
 
@@ -37,7 +37,8 @@ class FormularioPrototipoController extends Controller
     {
         //
         $request->validate([
-            'autores' => 'required|string|min:5',
+            'autores' => 'required|array|min:1',
+            'autores.*' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
             'url_prototipo' => 'required|file|mimes:docx',
             'url_resumen' => 'required|file|mimes:docx',
@@ -46,11 +47,11 @@ class FormularioPrototipoController extends Controller
         ]);
         $ruta_prototipo = $request->file('url_prototipo')->store('prototipos', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('prototipos', 'public');
-        if($request->institucion=='Otra')
-        Instituto::create(attributes: [
-            'nombre' => $request->otra_institucion,
-        ]);
-        if($request->institucion === "Otra"){
+        if ($request->institucion == 'Otra')
+            Instituto::create(attributes: [
+                'nombre' => $request->otra_institucion,
+            ]);
+        if ($request->institucion === "Otra") {
             $request->merge(['institucion' => $request->otra_institucion]);
         }
         FormularioPrototipo::create([
@@ -60,7 +61,7 @@ class FormularioPrototipoController extends Controller
             'observaciones' => $request->observaciones,
             'url_resumen' => $ruta_resumen,
         ]);
-            return redirect()->back()->with('success', 'Registro guardado correctamente');
+        return redirect()->back()->with('success', 'Registro guardado correctamente');
     }
 
     /**
@@ -93,11 +94,12 @@ class FormularioPrototipoController extends Controller
     public function destroy(FormularioPrototipo $dato)
     {
         $dato->delete();
-        $datos=FormularioPrototipo::all();
+        $datos = FormularioPrototipo::all();
         return redirect()
             ->route('formulario_prototipo.index', compact('datos'))
             ->with(
-                'success', 'El registro se ha eliminado correctamente.'
-        );
-        }
+                'success',
+                'El registro se ha eliminado correctamente.'
+            );
+    }
 }

@@ -14,4 +14,7 @@ class FormularioPrototipo extends Model
         'observaciones',
         'url_resumen',
     ];
+      protected $casts = [
+    'autores' => 'array',
+];
 }
