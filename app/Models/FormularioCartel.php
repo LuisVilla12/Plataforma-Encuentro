@@ -12,7 +12,9 @@ class FormularioCartel extends Model
         'institucion',
         'url_cartel',
         'url_resumen',
-        'url_zip'
+        'url_zip',
+        'url_cesion_derechos',
+        'url_ine'
     ];
         protected $casts = [
     'autores' => 'array',

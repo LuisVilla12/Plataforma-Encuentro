@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('institucion');
             $table->string('url_capitulo');
             $table->string('url_resumen');
+            $table->string('url_cesion_derechos');
+            $table->string('url_ine');
         });
     }
 

@@ -11,6 +11,8 @@ class FormularioCapitulo extends Model
         'institucion',
         'url_capitulo',
         'url_resumen',
+        'url_cesion_derechos',
+        'url_ine',
     ];
     protected $casts = [
         'autores' => 'array',

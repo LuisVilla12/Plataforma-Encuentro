@@ -43,10 +43,15 @@ class FormularioCapituloController extends Controller
             'institucion' => 'required|string|max:255',
             'url_capitulo' => 'required|file|mimes:docx',
             'url_resumen' => 'required|file|mimes:docx',
+            'url_cesion_derechos' => 'required|file|mimes:pdf',
+            'url_ine' => 'required|file|mimes:pdf',
             'confirmacion' => 'accepted',
         ]);
         $ruta_capitulo = $request->file('url_capitulo')->store('documentos', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('documentos', 'public');
+        $ruta_cesion_derechos = $request->file('url_cesion_derechos')->store('documentos', 'public');
+        $ruta_ine = $request->file('url_ine')->store('documentos', 'public');
+
         if($request->institucion=='Otra')
         Instituto::create(attributes: [
             'nombre' => $request->otra_institucion,
@@ -59,6 +64,8 @@ class FormularioCapituloController extends Controller
             'institucion' => $request->institucion,
             'url_capitulo' => $ruta_capitulo,
             'url_resumen' => $ruta_resumen,
+            'url_cesion_derechos' => $ruta_cesion_derechos,
+            'url_ine' => $ruta_ine,
         ]);
             return redirect()->back()->with('success', 'Registro guardado correctamente');
 

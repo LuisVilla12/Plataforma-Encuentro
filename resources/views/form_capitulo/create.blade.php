@@ -106,7 +106,31 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
+            {{-- Sube la cesión de derechos --}}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">
+                    Sube la cesión de derechos en formato pdf:*
+                </label>
+                <input type="file" name="url_cesion_derechos" id="url_cesion_derechos" required
+                    accept=".pdf,application/pdf"
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                @error('url_cesion_derechos')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            {{-- Sube el ine --}}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">
+                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf:*
+                </label>
+                <input type="file" name="url_ine" id="url_ine" required
+                    accept=".pdf,application/pdf"
+                    class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
+                @error('url_ine')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            {{-- Confirmar --}}
             <div class="mb-4">
                 <label class="flex items-center">
                     <input type="checkbox" name="confirmacion" value="1" required
@@ -191,6 +215,8 @@
         const institucion = document.getElementById('institucion').value;
         const resumenFile = document.getElementById('url_resumen').files[0];
         const capituloFile = document.getElementById('url_capitulo').files[0];
+        const cesionFile = document.getElementById('url_cesion_derechos').files[0];
+        const ineFile = document.getElementById('url_ine').files[0];
         const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
 
         // validar checkbox
@@ -226,6 +252,14 @@
 
             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
             Archivo capítulo: <span class='font-normal'>${capituloNombre}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Archivo cesión de derechos: <span class='font-normal'>${cesionFile ? cesionFile.name : "No seleccionado"}</span>
+            </p>
+
+            <p class="text-sm text-gray-700 font-bold" style="margin-top:10px">
+            Archivo INE: <span class='font-normal'>${ineFile ? ineFile.name : "No seleccionado"}</span>
             </p>
 
             <p class="text-sm text-gray-700 font-bold" style="margin-top:10px; color:green">
