@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('url_cartel');
             $table->string(column: 'url_resumen');
             $table->string(column: 'url_zip');
+            $table->string('url_cesion_derechos');
+            $table->string('url_ine');
         });
+
     }
 
     /**

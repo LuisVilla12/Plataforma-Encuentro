@@ -43,12 +43,17 @@ class FormularioCartelController extends Controller
             'url_cartel' => 'required|file',
             'url_resumen' => 'required|file',
             'url_zip' => 'required',
+            'url_cesion_derechos' => 'required|file|mimes:pdf',
+            'url_ine' => 'required|file|mimes:pdf',
             'confirmacion' => 'accepted',
         ]);
 
         $ruta_cartel = $request->file('url_cartel')->store('carteles', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('carteles', 'public');
         $ruta_zip = $request->file('url_zip')->store('carteles', 'public');
+        $ruta_cesion_derechos = $request->file('url_cesion_derechos')->store('carteles', 'public');
+        $ruta_ine = $request->file('url_ine')->store('carteles', 'public');
+
         if($request->institucion=='Otra')
         Instituto::create(attributes: [
             'nombre' => $request->otra_institucion,
@@ -62,6 +67,8 @@ class FormularioCartelController extends Controller
             'url_cartel' => $ruta_cartel,
             'url_resumen' => $ruta_resumen,
             'url_zip'=>$ruta_zip,
+            'url_cesion_derechos' => $ruta_cesion_derechos,
+            'url_ine' => $ruta_ine,
         ]);
         return redirect()->back()->with('success', 'Registro guardado correctamente');
     }
