@@ -239,9 +239,9 @@
           </p>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a href="assets/3ECA_Convocatoria2026.pdf" target="_blank" rel="noopener noreferrer"
+            <a href="#programa"
               class="rounded-xl bg-white px-5 py-3 text-center text-sm font-extrabold text-primary hover:bg-gray-100 transition">
-              Ver convocatoria
+              Ver programa
             </a>
             <a href="#masinfo"
               class="rounded-xl bg-accent px-5 py-3 text-center text-sm font-extrabold text-white hover:bg-sand hover:text-ink transition">
@@ -365,8 +365,7 @@
             <div class="absolute bottom-0 p-6 md:p-8">
               <p class="text-xs font-extrabold text-white/80">Categoría</p>
               <h3 class="mt-1 text-3xl font-extrabold text-white">Publicaciones</h3>
-              <p class="mt-1 text-sm text-white/80">“Ciencia e innovación sustentable: Alianzas tecnológicas para
-                transformar el desarrollo social”</p>
+              <p class="mt-1 text-sm text-white/80">"Acercando la tecnología a la sustentabilidad (2025)"</p>
             </div>
           </a>
         </div>
@@ -409,9 +408,8 @@
                 <li>Conferencias</li>
                 <li>Exposición de carteles y prototipos</li>
                 <li>Mesas de diálogo</li>
-                <li>Presentación del Libro 2025 “Ciencia e innovación sustentable: Alianzas tecnológicas para
-                  transformar el desarrollo social”</li>
-                <li>Convocatoria del Libro "Acercando la tecnología y la sustentabilidad 2026"</li>
+                <li>Presentación del Libro 2025</li>
+                <li>Convocatoria del Libro 2026</li>
               </ul>
             </div>
 
@@ -430,9 +428,9 @@
           <div class="mt-6 rounded-3xl bg-gray-50 p-6">
             <p class="text-sm font-extrabold text-gray-900">Conferencia magistral</p>
             <p class="mt-2 text-sm text-gray-700">
-              <b>“El proceso de la investigación en los ITS Retos y Estrategias”</b> — Dr. Jorge Estevéz Lavín
+              <b>“El proceso de la investigación en los ITS Retos y Estrategias”</b> — Dr. Jorge Estevez Levín
               ITS/Tierra Blanca<br />
-              <b>Viernes 27 de marzo de 2026</b>, 11:00 h • TecNM/ITS Perote
+              <b>Viernes 27 de marzo de 2026</b>, 11:00 h • TexNM/ITS Perote
             </p>
           </div>
         </div>
@@ -481,10 +479,6 @@
 
       <!-- Tabs -->
       <div class="mt-4 flex gap-2 md:mt-0">
-        <a href="assets/3ECA_programa.pdf" target="_blank" rel="noopener noreferrer"
-          class="rounded-xl bg-accent px-5 py-3 text-center text-sm font-extrabold text-white hover:bg-sand hover:text-ink transition">
-          Ver PDF
-        </a>
         <button type="button"
           class="program-tab rounded-xl bg-primary px-4 py-2 text-sm font-extrabold text-white hover:bg-primary2 transition"
           data-target="dia1" aria-pressed="true">
@@ -513,92 +507,89 @@
             <table class="min-w-full text-sm">
               <thead>
                 <tr class="bg-gray-100 text-gray-700">
-                  <th class="px-3 py-3 text-left font-extrabold text-center">Hora <br class="md:hidden">inicio</th>
-                  <th class="px-3 py-3 text-left font-extrabold text-center">Hora <br class="md:hidden">término</th>
-                  <th class="px-3 py-3 text-left font-extrabold text-center md:text-left">Actividad</th>
+                  <th class="px-4 py-3 text-left font-extrabold whitespace-nowrap">Hora inicio</th>
+                  <th class="px-4 py-3 text-left font-extrabold whitespace-nowrap">Hora término</th>
+                  <th class="px-4 py-3 text-left font-extrabold">Actividad</th>
                 </tr>
               </thead>
               <tbody class="divide-y">
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">8:30</td>
-                  <td class="px-3 py-3 font-semibold text-center">9:00</td>
-                  <td class="px-3 py-3">
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">8:30</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">9:00</td>
+                  <td class="px-4 py-3">
                     Registro de participantes
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">9:00</td>
-                  <td class="px-3 py-3 font-semibold text-center">9:45</td>
-                  <td class="px-3 py-3 justify-center">
-                    <div class="flex items-center justify-center gap-2 md:justify-start">
-                      <span
-                        class="inline-flex rounded-full bg-sand px-3 py-1 text-sm font-extrabold text-ink">Inauguración</span>
-                    </div>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">9:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">9:55</td>
+                  <td class="px-4 py-3">
+                    <span
+                      class="inline-flex items-center rounded-full bg-sand px-3 py-1 text-xs font-extrabold text-ink">Inauguración</span>
                     <div class="mt-2 grid gap-1 text-sm text-gray-700">
-                      <div><b>9:00–9:10</b> Mensaje de bienvenida (Director ITS Perote)</div>
-                      <div><b>9:10–9:15</b> Presentación presídium e invitados</div>
-                      <div><b>9:15–9:25</b> Mensaje director ITSX (Trascendencia de los CA´s en los Institutos)</div>
-                      <div><b>9:25–9:35</b> Mensaje directora COVEICYDET</div>
-                      <div><b>9:35–9:45</b> Declaratoria inaugural</div>
+                      <div><b>9:00–9:05</b> Mensaje de bienvenida (Director ITS Perote)</div>
+                      <div><b>9:05–9:10</b> Presentación presídium e invitados (lista adjunta)</div>
+                      <div><b>9:10–9:15</b> Mensaje director ITSX (trascendencia de los CA’s)</div>
+                      <div><b>9:15–9:35</b> Cuadro folclórico</div>
+                      <div><b>9:35–9:45</b> Mensaje directora COVEICYDET</div>
+                      <div><b>9:45–9:55</b> Declaratoria inaugural</div>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">9:45</td>
-                  <td class="px-3 py-3 font-semibold text-center">10:00</td>
-                  <td class="px-3 py-3">Coffee Break</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">9:55</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">10:15</td>
+                  <td class="px-4 py-3">Coffee Break</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">10:00</td>
-                  <td class="px-3 py-3 font-semibold text-center">11:30</td>
-                  <td class="px-3 py-3">Presentación de carteles y prototipos de los CA’s</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">10:15</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">11:45</td>
+                  <td class="px-4 py-3">Presentación de carteles y prototipos de los CA’s</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">11:30</td>
-                  <td class="px-3 py-3 font-semibold">14:00</td>
-                  <td class="px-3 py-3">
-                    <div class="flex items-center justify-center gap-2 md:justify-start">
-                      <span
-                        class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-extrabold text-primary">Mesas
-                        temáticas</span>
-                    </div>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">11:45</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">14:00</td>
+                  <td class="px-4 py-3">
+                    <span
+                      class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-extrabold text-primary">Mesas
+                      temáticas</span>
                     <p class="mt-2 text-sm text-gray-700">
                       Lugar: <b>Aulas ITS Perote</b>
                     </p>
                     <div class="mt-3 grid gap-2">
                       <div class="rounded-2xl bg-gray-50 p-4">
-                        <p class="font-extrabold">Mesa 1 - Edificio C - Aula C1</p>
+                        <p class="font-extrabold">Mesa 1</p>
                         <p class="text-sm text-gray-700">Procesos Productivos, energías renovables, electromovilidad y
                           semiconductores.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Hugo Amores Pérez, Luis de Jesús Montero
-                          García, Daniel Bello Parra</p>
+                          García, Daniel Bello</p>
                       </div>
                       <div class="rounded-2xl bg-gray-50 p-4">
-                        <p class="font-extrabold">Mesa 2 - Edificio E - Aula E1</p>
+                        <p class="font-extrabold">Mesa 2</p>
                         <p class="text-sm text-gray-700">Medio Ambiente, Biotecnología y Sustentabilidad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Juan Carlos Moreno Seceña, Fabiola Lango
                           Reynoso, María del Refugio Castañeda, Daniel Alejandro García López</p>
                       </div>
                       <div class="rounded-2xl bg-gray-50 p-4">
-                        <p class="font-extrabold">Mesa 3 - Edificio C - Aula C2</p>
+                        <p class="font-extrabold">Mesa 3</p>
                         <p class="text-sm text-gray-700">Sistema de Gestión Económico Admvo. y Sociedad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Dulce María Ángeles Martínez, Sagrario
                           Alejandre Apolinar, Francisco Hernández Quinto</p>
                       </div>
                       <div class="rounded-2xl bg-gray-50 p-4">
-                        <p class="font-extrabold">Mesa 4 - Edificio I - Aula I1</p>
+                        <p class="font-extrabold">Mesa 4</p>
                         <p class="text-sm text-gray-700">Tecnología de la información y comunicación.</p>
-                        <p class="mt-1 text-xs text-gray-600">Responsables: María Salomé Alejandre Apolinar, Virginia Lagunes
+                        <p class="mt-1 text-xs text-gray-600">Responsables: María Salomé Alejandre, Virginia Lagunes
                           Barradas, Irma A. García González</p>
                       </div>
                       <div class="rounded-2xl bg-gray-50 p-4">
-                        <p class="font-extrabold">Mesa 5 - Edificio C - Aula C3</p>
+                        <p class="font-extrabold">Mesa 5</p>
                         <p class="text-sm text-gray-700">Innovación en Alimentos, Nutrición y bienestar.</p>
-                        <p class="mt-1 text-xs text-gray-600">Responsables: José Armando Lozada García, Cristina López Méndez,
+                        <p class="mt-1 text-xs text-gray-600">Responsables: José Armando Lozada, Cristina López Méndez,
                           Lilia Ortiz Rodríguez</p>
                       </div>
                     </div>
@@ -606,54 +597,56 @@
                     <div class="mt-4 rounded-2xl border border-primary/15 bg-primary/5 p-4">
                       <p class="text-sm font-extrabold text-primary">Detalles:</p>
                       <ul class="mt-2 list-disc pl-5 text-sm text-gray-700">
-                        <li><b>11:30–11:45</b> Distribución en aulas para presentación de diálogos</li>
-                        <li><b>11:45–13:15</b> Diálogos de CA’s (por áreas temáticas)</li>
-                        <li><b>13:15–14:00</b> Acuerdos / minuta de trabajo</li>
+                        <li><b>11:45–12:00</b> Distribución en aulas para presentación de diálogos</li>
+                        <li><b>12:00–13:30</b> Diálogos de CA’s (por áreas temáticas)</li>
+                        <li><b>13:30–14:00</b> Acuerdos / minuta de trabajo</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">14:00</td>
-                  <td class="px-3 py-3 font-semibold">15:00</td>
-                  <td class="px-3 py-3">
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">14:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">15:00</td>
+                  <td class="px-4 py-3">
                     Box Lunch / Verbena
                     <p class="mt-1 text-xs text-gray-600">Lugar: Domo Explanada ITS Perote</p>
                   </td>
                 </tr>
-                <!-- Talleres Jueves-->
+
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">15:00</td>
-                  <td class="px-3 py-3 font-semibold">17:00</td>
-                  <td class="px-3 py-3">
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">15:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">17:00</td>
+                  <td class="px-4 py-3">
                     Talleres / Visita a la Fortaleza de San Carlos
                     <div class="mt-4 grid gap-3">
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">El camino a la consolidación de cuerpos
                           académicos</p>
-                        <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevéz Lavín - ITS Tierra Blanca</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
+                        <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevez Lavin - ITS Tierra Blanca</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">Aplicando la IA en la educación superior</p>
-                        <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
+                        <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hernández Hernández - CINTÉRGICA IA
+                        </p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Propiedad intelectual y agenda en ciencia y
-                          tecnología para el posicionamiento académico</p>
-                        <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI/COVEICYDET</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
+                        <p class="text-sm font-extrabold text-primary">Agenda Prioritaria en Ciencia y Tecnología y
+                          Posicionamiento Académico para la Consolidación en el SNII</p>
+                        <p class="mt-1 text-sm text-gray-700">COVEICYDET</p>
+                      </div>
+
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
+                        <p class="text-sm font-extrabold text-primary">Propiedad Intelectual</p>
+                        <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">De la investigación a la Innovación: Estrategias
                           de colaboración científica Transferencia tecnológica</p>
-                        <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez - CRODE Orizaba</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
+                        <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez/CRODE Orizaba</p>
                       </div>
                     </div>
                   </td>
@@ -673,7 +666,7 @@
                 <li>Dr. David Agustín Jiménez Rojas — Subsecretario de Educación Media Superior</li>
                 <li>Dr. Sidney René Toledo Martínez — Director del ITS Xalapa</li>
                 <li>Dr. Rodrigo Rodríguez Franco — Director del ITS Perote</li>
-                <li>Dra. María Graciela Hernández y Orduña — Directora del Consejo Veracruzano de Investigación Científica y Desarrollo Tecnológico (COVEICYDET)</li>
+                <li>Dra. María Graciela Hernández y Orduña — Directora del COVEICYDET</li>
               </ul>
             </details>
 
@@ -719,80 +712,80 @@
             <table class="min-w-full text-sm">
               <thead>
                 <tr class="bg-gray-100 text-gray-700">
-                  <th class="px-4 py-3 text-left font-extrabold">Hora <br class="md:hidden"> inicio
-                  </th>
-                  <th class="px-4 py-3 text-left font-extrabold">Hora <br class="md:hidden"> término
-                  </th>
+                  <th class="px-4 py-3 text-left font-extrabold whitespace-nowrap">Hora inicio</th>
+                  <th class="px-4 py-3 text-left font-extrabold whitespace-nowrap">Hora término</th>
                   <th class="px-4 py-3 text-left font-extrabold">Actividad</th>
                 </tr>
               </thead>
               <tbody class="divide-y">
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">9:00</td>
-                  <td class="px-4 py-3 font-semibold">11:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">9:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">11:00</td>
                   <td class="px-4 py-3">Talleres / Visita a la Fortaleza de San Carlos
                     <!-- Talleres presenciales -->
                     <div class="mt-4 grid gap-3">
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">El camino a la consolidación de cuerpos
                           académicos</p>
-                        <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevéz Lavín - ITS Tierra Blanca</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
+                        <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevez Lavin - ITS Tierra Blanca</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">Aplicando la IA en la educación superior</p>
-                        <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
+                        <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hernández Hernández - CINTÉRGICA IA
+                        </p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Propiedad intelectual y agenda en ciencia y
-                          tecnología para el posicionamiento académico</p>
-                        <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI/COVEICYDET</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
+                        <p class="text-sm font-extrabold text-primary">Agenda Prioritaria en Ciencia y Tecnología y
+                          Posicionamiento Académico para la Consolidación en el SNII</p>
+                        <p class="mt-1 text-sm text-gray-700">COVEICYDET</p>
+                      </div>
+
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
+                        <p class="text-sm font-extrabold text-primary">Propiedad Intelectual</p>
+                        <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary">De la investigación a la Innovación: Estrategias
                           de colaboración científica Transferencia tecnológica</p>
-                        <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez - CRODE Orizaba</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
+                        <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez/CRODE Orizaba</p>
                       </div>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">11:00</td>
-                  <td class="px-4 py-3 font-semibold">12:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">11:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:00</td>
                   <td class="px-4 py-3">
-                    Conferencia Magistral: <b>“El proceso de la investigación en los ITS Retos y Estrategias”</b>
-                    <span class="text-sm text-gray-600">Conferencista: Dr. Jorge Estevéz Lavín ITS/Tierra Blanca</span>
+                    Conferencia: <b>“El proceso de la investigación en los ITS Retos y Estrategias”</b>
+                    <span class="text-sm text-gray-600">Conferencista: Dr. Jorge Estevez Levín ITS/Tierra Blanca</span>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:00</td>
-                  <td class="px-4 py-3 font-semibold">12:15</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:15</td>
                   <td class="px-4 py-3">Coffee Break</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:15</td>
-                  <td class="px-4 py-3 font-semibold">12:45</td>
-                  <td class="px-4 py-3">Presentación del libro 2o. Encuentro CA’s: <b>"Ciencia e Innovación Sustentable: Alianzas tecnológicas para transformar el desarrollo Social"</b></td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:15</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:45</td>
+                  <td class="px-4 py-3">Presentación del libro: <b>2o. Encuentro CA’s</b></td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:45</td>
-                  <td class="px-4 py-3 font-semibold">13:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">12:45</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">13:00</td>
                   <td class="px-4 py-3">Mensaje por comité organizador</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">13:00</td>
-                  <td class="px-4 py-3 font-semibold">13:30</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">13:00</td>
+                  <td class="px-4 py-3 font-semibold whitespace-nowrap">13:30</td>
                   <td class="px-4 py-3">
                     Mensaje a participantes y <b>clausura</b> por el Director ITS Perote
                   </td>
@@ -815,7 +808,7 @@
           Gratuitos.
         </p>
       </div>
-      <a href="https://encuentro-ca.itsx.edu.mx/registrar-cursos" target="_blank" rel="noopener noreferrer"
+      <a href="https://encuentro-ca.itsx.edu.mx/formulario-cursos/create" target="_blank" rel="noopener noreferrer"
         class="mt-3 md:mt-0 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white hover:bg-primary2 transition">
         Registrar curso
       </a>
@@ -827,11 +820,10 @@
         <p class="mt-2 text-sm text-gray-700">
           <b>Fechas:</b> 12, 13, 16, 17 y 18 de marzo 2026<br />
           <b>Horario:</b> 17:00 a 20:00 h<br />
-          <b>Modalidad:</b> Virtual<br />
-          <b>Cupo:</b> 25 personas
+          <b>Modalidad:</b> Virtual
         </p>
         <p class="mt-3 text-xs text-gray-600">
-          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterreys Campus Querétaro)
+          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tec. de Mty Campus Querétaro)
         </p>
       </div>
 
@@ -840,19 +832,13 @@
         <p class="mt-2 text-sm text-gray-700">
           <b>Fechas:</b> 19, 20, 23, 24 y 25 de marzo 2026<br />
           <b>Horario:</b> 17:00 a 20:00 h<br />
-          <b>Modalidad:</b> Virtual<br />
-          <b>Cupo:</b> 40 personas
+          <b>Modalidad:</b> Virtual
         </p>
         <p class="mt-3 text-xs text-gray-600">
           Instructor(es): Dr. Jonathan Villanueva Tavira (CENIDET) / Dra. Margarita Tecpoyotl Torres (CIICAP-UAEM) / Dr.
           Manuel Juárez Pacheco (CENIDET)
         </p>
       </div>
-
-      <p class="mt-3 text-sm text-gray-600">
-        Nota: Para inscribirse en estos cursos es necesario registrar antes su participación en Cartel, Prototipo o
-        capítulo de libro.
-      </p>
     </div>
   </section>
 
@@ -865,7 +851,7 @@
           Presenta investigaciones y proyectos. Se publicará <b>resumen y cartel</b> en la memoria del evento con ISBN.
         </p>
       </div>
-      <a href="https://encuentro-ca.itsx.edu.mx/registrar-cartel" target="_blank" rel="noopener noreferrer"
+      <a href="https://encuentro-ca.itsx.edu.mx/formulario-cartel/create" target="_blank" rel="noopener noreferrer"
         class="mt-3 md:mt-0 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-extrabold text-white hover:bg-sand hover:text-ink transition">
         Registrar cartel
       </a>
@@ -876,7 +862,7 @@
         <p class="text-sm font-extrabold text-primary">Lineamientos principales</p>
         <ul class="mt-3 list-disc pl-5 text-sm text-gray-700">
           <li>Enviar el cartel en formato editable <b>.pptx</b>.</li>
-          <li>Imágenes a la plataforma en <b>.png</b> o <b>.jpg</b>.</li>
+          <li>Imágenes a la plataforma en <b>.png</b>.</li>
           <li>Máximo <b>5 autores</b> por resumen.</li>
           <li>Solo trabajos <b>no publicados</b> y no sometidos a dictamen en otros medios.</li>
           <li>El día del evento: llevar el cartel impreso en <b>papel bond</b>.</li>
@@ -895,11 +881,11 @@
       <div class="rounded-3xl border bg-white p-6 shadow-sm">
         <p class="text-sm font-extrabold text-primary">Ejes temáticos</p>
         <ul class="mt-3 list-disc pl-5 text-sm text-gray-700">
-          <li>Procesos productivos, energías renovables, electromovilidad y semiconductores.</li>
-          <li>Medio Ambiente, Biotecnología y Sustentabilidad.</li>
-          <li>Sistema de Gestión Económico Administrativo y Sociedad.</li>
-          <li>Tecnología de la información y comunicación.</li>
-          <li>Innovación en Alimentos, Nutrición y Bienestar.</li>
+          <li>Procesos productivos, energías renovables, electromovilidad y semiconductores</li>
+          <li>Medio Ambiente, Biotecnología y Sustentabilidad</li>
+          <li>Sistema de Gestión Económico Administrativo y Sociedad</li>
+          <li>Tecnología de la información y comunicación</li>
+          <li>Innovación en Alimentos, Nutrición y Bienestar</li>
         </ul>
 
         <div class="mt-5">
@@ -910,10 +896,6 @@
           <a href="assets/FormatoResumenCartel2026.docx" target="_blank" rel="noopener noreferrer"
             class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">
             Formato de resumen (.docx)
-          </a>
-          <a href="assets/FormatoCartaCesiónDerechos2026.docx" target="_blank" rel="noopener noreferrer"
-            class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">
-            Carta Cesión de Derechos (.docx)
           </a>
         </div>
       </div>
@@ -930,7 +912,7 @@
           prototipo funcional.
         </p>
       </div>
-      <a href="https://encuentro-ca.itsx.edu.mx/registrar-prototipo" target="_blank" rel="noopener noreferrer"
+      <a href="https://encuentro-ca.itsx.edu.mx/formulario-prototipo/create" target="_blank" rel="noopener noreferrer"
         class="mt-3 md:mt-0 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-extrabold text-white hover:bg-sand hover:text-ink transition">
         Registrar prototipo
       </a>
@@ -946,11 +928,7 @@
       </div>
 
       <div class="rounded-3xl border bg-white p-6 shadow-sm">
-        <a href="assets/FormatoFichaTécnica2026.docx" target="_blank" rel="noopener noreferrer"
-          class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">Formato
-          ficha técnica (.docx)
-        </a>
-        <p class="text-sm font-extrabold text-primary"><br>Nota (requerimientos especiales)</p>
+        <p class="text-sm font-extrabold text-primary">Nota (requerimientos especiales)</p>
         <p class="mt-3 text-sm text-gray-700">
           Si el prototipo requiere condiciones especiales, informar con al menos <b>5 días</b> antes del evento a:
           <a class="font-extrabold text-primary hover:underline"
@@ -984,7 +962,11 @@
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Formato de nombre de archivo</p>
           <p class="mt-2 text-sm text-gray-700">
-            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej. <b>3ECA_ITSX_Alejandre_Apolinar.docx</b>)
+            Subir el extenso como: <b>1erApellidoAutorPrincipal_titulo</b> (ej. <b>rodriguez_2ECA.doc</b>)
+          </p>
+          <p class="mt-2 text-sm text-gray-700">
+            Nota: Si es aceptado, se requerirá traducción del resumen al inglés por personal certificado
+            (aprox. <b>$500 MXN</b> a cargo de los autores).
           </p>
         </div>
       </div>
@@ -999,7 +981,7 @@
           <li><b>Primer borrador:</b> 1 – 30 octubre 2026</li>
           <li><b>Maquetado:</b> 03 – 26 noviembre 2026</li>
           <li><b>ISBN:</b> enero 2027</li>
-          <li><b>Publicación:</b> agosto 2027 (límite)</li>
+          <li><b>Publicación:</b> marzo 2027 (límite)</li>
         </ul>
       </div>
     </div>
@@ -1018,8 +1000,7 @@
       <div class="mt-8 grid gap-4 md:grid-cols-2">
         <div class="rounded-3xl border bg-white p-6 shadow-sm">
           <p class="text-xs font-extrabold text-gray-500">Libro (PDF)</p>
-          <p class="mt-2 text-lg font-extrabold text-primary">“Ciencia e innovación sustentable: Alianzas tecnológicas
-            para transformar el desarrollo social”</p>
+          <p class="mt-2 text-lg font-extrabold text-primary">Acercando la tecnología a la sustentabilidad 2025</p>
           <p class="mt-2 text-sm text-gray-700">
             Presentación del libro 2025 dentro del evento y descarga oficial.
           </p>
@@ -1060,11 +1041,16 @@
 
       <div class="mt-8 grid gap-4 md:grid-cols-2">
         <!-- Carrusel 1 -->
-        <div class="rounded-3xl border bg-white p-6 shadow-sm">
-          <p class="mt-2 text-lg font-extrabold text-primary text-center">1er Encuentro de Cuerpos Académicos "Acercando
-            la tecnología a la sustentabilidad"</p>
-          <p class="mt-2 text-sm text-gray-700 text-center">11-12 de enero de 2024</p>
-          <p class="mt-2 text-sm text-gray-700 text-center">Sede: UV e ITSX</p>
+        <div class="rounded-3xl border bg-white py-5 md:p-6">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h3 class="text-lg font-extrabold">
+                1er. Encuentro de Cuerpos Académicos "Acercando la tecnología a la sustentabilidad"
+              </h3>
+              <p class="mt-1 text-sm text-gray-600">11-12 de enero de 2024</p>
+              <p class="mt-1 text-sm text-gray-600">Sede: UV e ITSX</p>
+            </div>
+          </div>
 
           <div class="mt-5 relative" id="gal1Carousel">
             <!-- Flecha izquierda -->
@@ -1092,17 +1078,19 @@
             </button>
           </div>
 
-          <div class="mt-4 flex items-center justify-center gap-1 md:gap-2" id="gal1Dots"></div>
+          <div class="mt-4 flex items-center justify-center gap-2" id="gal1Dots"></div>
         </div>
 
         <!-- Carrusel 2 -->
         <div class="rounded-3xl border bg-white py-5 md:p-6">
           <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <p class="mt-2 text-lg font-extrabold text-primary text-center">2.° Encuentro de Cuerpos Académicos
-                "Acercando la tecnología y la sustentabilidad para la atención a temas prioritarios"</p>
-              <p class="mt-1 text-sm text-gray-700 text-center">27-28 de marzo de 2025</p>
-              <p class="mt-1 text-sm text-gray-700 text-center">Sede: TecNM/IT Boca del Río</p>
+              <h3 class="text-lg font-extrabold">
+                2.° Encuentro de Cuerpos Académicos "Acercando la tecnología y la sustentabilidad para la atención a
+                temas prioritarios"
+              </h3>
+              <p class="mt-1 text-sm text-gray-600">27-28 de marzo de 2025</p>
+              <p class="mt-1 text-sm text-gray-600">Sede: TecNM/IT Boca del Río</p>
             </div>
           </div>
 
@@ -1132,7 +1120,7 @@
             </button>
           </div>
 
-          <div class="mt-4 flex items-center justify-center gap-1 md:gap-2" id="gal2Dots"></div>
+          <div class="mt-4 flex items-center justify-center gap-2" id="gal2Dots"></div>
         </div>
       </div>
     </div>
@@ -1142,7 +1130,7 @@
   <section id="sede" class="border-y bg-white">
     <div class="mx-auto max-w-7xl px-4 py-14">
       <div class="grid gap-8 md:grid-cols-2 md:items-start">
-        <div class="rounded-3xl border bg-white p-6 shadow-sm">
+        <div>
           <h2 class="text-2xl font-extrabold">Sede: Instituto Tecnológico Superior de Perote</h2>
           <p class="mt-2 text-sm text-gray-600">Perote, Veracruz.</p>
 
@@ -1151,6 +1139,305 @@
             <p class="mt-2 text-sm text-gray-600">
               Km. 2.5 Carretera Federal Perote - México Col. Centro Perote, Ver. C.P. 91270
             </p>
+          </div>
+
+          <!-- HOSPEDAJE (hoteles) -->
+          <div class="mt-6 rounded-3xl bg-gray-50 p-6">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p class="text-sm font-extrabold text-gray-900">Hospedaje en Perote</p>
+                <p class="mt-1 text-sm text-gray-600">
+                  Opciones cercanas a la sede. <span class="font-semibold">Tarifas sujetas a cambio</span>.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-5 grid gap-4 md:grid-cols-2">
+              <!-- Hotel 1 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">HOTEL RESTAURANT LA BRUMA </h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                      Juan Escutia Sur 2 B, Centro, 91273 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/Dqj9DCjPeQ8iWr68A" target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522828253069" class="font-extrabold text-primary hover:underline">2828253069</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama queen $900 (máximo 2 personas)
+                      Doble - 2 matrimoniales $1,250 (máximo 4 personas)</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">15:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hotel 2 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">HOTEL CAFÉ ROMA RESTAURANT</h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                      José María Morelos 1, Centro, 91270 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/dgf3PUV6SVXZ9CMc6" target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522828253186" class="font-extrabold text-primary hover:underline">2828253186</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama queen $1,300
+                      Doble - 1 cama queen + 1 cama individual $1,500</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">12:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hotel 3 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">RESTAURANT Y HOTEL HOSTERIA COVADONGA</h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                      Alejandro Von Humboldt Sur 109, Miguel Hidalgo y Costilla, 91270 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/oys3jHHymaKTr9Pt7" target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522828252642" class="font-extrabold text-primary hover:underline">2828252642</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">1 cama matrimonia $650
+                      1 cama matrimonial + 1 individual $750
+                      2 camas matrimoniales $850
+                      1 cama matrimonial + 2 camas individuales $950</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">15:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hotel 4 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">HOTEL MARIA ESTHER</h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                      Xalapa - Puebla, Heroico Colegio Militar, 91273 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/aZ89swGGLNQUTqSJ9" target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522828250469" class="font-extrabold text-primary hover:underline">2828250469</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama matrimonial $600
+                      Doble - 2 matrimoniales $800
+                      Bungalo - 1 matrimonial + 2 matrimonial + 2 matrimoniales + 1 individual $2,200 ( depende las
+                      personas)</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">12:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hotel 5 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">HOTEL MANSION HUMBOLDT</h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                      Alejandro Von Humboldt Sur 23, Centro, 91270 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/QRbzqGuJcWa45mop8"
+                    target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522821598850" class="font-extrabold text-primary hover:underline">2821598850</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">1 cama matrimonial $495
+                      2 camas matrimoniales + 1 cama individual $860
+                      2 camas individuales $540
+                      1 cama matrimonial + 1 cama individual $630
+                      2 camas matrimoniales $730</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">12:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hotel 6 -->
+              <article class="rounded-3xl border bg-white p-5 shadow-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 class="text-base font-extrabold text-gray-900">HOTEL DEL CENTRO, PEROTE</h4>
+                    <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
+                     C. José María Pino Suárez 17, Centro, 91270 Perote, Ver.
+                    </p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/8fi1dmAfn67x39mq5"
+                    target="_blank" rel="noopener noreferrer"
+                    class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
+                    Ver mapa
+                  </a>
+                </div>
+
+                <div class="mt-4 grid gap-2 text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-extrabold text-gray-500">Tel:</span>
+                    <a href="tel:+522828251462" class="font-extrabold text-primary hover:underline">2828251462</a>
+                    <a href="tel:+522828251452" class="font-extrabold text-primary hover:underline">2828251452</a>
+                  </div>
+
+                  <div class="rounded-2xl bg-gray-50 p-3">
+                    <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
+                    <p class="mt-1 whitespace-pre-line">Depende las personas y ubicación de habitación</p>
+                  </div>
+
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Convenio</p>
+                      <p class="mt-1 font-semibold">No</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
+                      <p class="mt-1 whitespace-pre-line">No incluye</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-50 p-3">
+                      <p class="text-xs font-extrabold text-gray-500">Check-in</p>
+                      <p class="mt-1 font-semibold">13:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="rounded-3xl border bg-white p-4 shadow-sm">
+          <p class="px-2 pt-2 text-sm font-extrabold">Mapa</p>
+          <div class="mt-3 overflow-hidden rounded-2xl">
+            <iframe title="Mapa Tec de Perote" class="h-[360px] w-full" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Tecnol%C3%B3gico%20de%20Perote&output=embed">
+            </iframe>
           </div>
           <div class="mt-6 rounded-3xl bg-gray-50 p-6">
             <p class="text-sm font-extrabold">Croquis ITS Perote</p>
@@ -1179,307 +1466,7 @@
               <img id="modalImg" src="" alt="" class="max-h-[92vh] w-auto rounded-2xl bg-white shadow-2xl">
             </div>
           </div>
-
         </div>
-        <div class="rounded-3xl border bg-white p-4 shadow-sm">
-          <p class="px-2 pt-2 text-sm font-extrabold">Mapa</p>
-          <div class="mt-3 overflow-hidden rounded-2xl">
-            <iframe title="Mapa Tec de Perote" class="h-[360px] w-full" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Tecnol%C3%B3gico%20de%20Perote&output=embed">
-            </iframe>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <section id="hospedaje" class="border-y bg-white">
-    <!-- HOSPEDAJE (hoteles) -->
-    <div class="mx-auto max-w-7xl px-4 py-14">
-      <div class="grid gap-8 md:grid-cols-2 md:items-start">
-        <div>
-          <h2 class="text-2xl font-extrabold">Hospedaje en Perote</h2>
-          <p class="mt-1 text-sm text-gray-600">
-            Opciones cercanas a la sede. <span class="font-semibold">Tarifas sujetas a cambio</span>.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-5 grid gap-4 md:grid-cols-2">
-        <!-- Hotel 1 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">HOTEL RESTAURANT LA BRUMA </h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                Juan Escutia Sur 2 B, Centro, 91273 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/Dqj9DCjPeQ8iWr68A" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522828253069" class="font-extrabold text-primary hover:underline">2828253069</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama queen $900 (máximo 2 personas)
-                Doble - 2 matrimoniales $1,250 (máximo 4 personas)</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">15:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Hotel 2 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">HOTEL CAFÉ ROMA RESTAURANT</h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                José María Morelos 1, Centro, 91270 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/dgf3PUV6SVXZ9CMc6" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522828253186" class="font-extrabold text-primary hover:underline">2828253186</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama queen $1,300
-                Doble - 1 cama queen + 1 cama individual $1,500</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">12:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Hotel 3 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">RESTAURANT Y HOTEL HOSTERIA COVADONGA</h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                Alejandro Von Humboldt Sur 109, Miguel Hidalgo y Costilla, 91270 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/oys3jHHymaKTr9Pt7" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522828252642" class="font-extrabold text-primary hover:underline">2828252642</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">1 cama matrimonia $650
-                1 cama matrimonial + 1 individual $750
-                2 camas matrimoniales $850
-                1 cama matrimonial + 2 camas individuales $950</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">15:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Hotel 4 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">HOTEL MARIA ESTHER</h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                Xalapa - Puebla, Heroico Colegio Militar, 91273 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/aZ89swGGLNQUTqSJ9" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522828250469" class="font-extrabold text-primary hover:underline">2828250469</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">Sencilla - 1 cama matrimonial $600
-                Doble - 2 matrimoniales $800
-                Bungalo - 1 matrimonial + 2 matrimonial + 2 matrimoniales + 1 individual $2,200 ( depende las
-                personas)</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">12:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Hotel 5 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">HOTEL MANSION HUMBOLDT</h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                Alejandro Von Humboldt Sur 23, Centro, 91270 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/QRbzqGuJcWa45mop8" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522821598850" class="font-extrabold text-primary hover:underline">2821598850</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">1 cama matrimonial $495
-                2 camas matrimoniales + 1 cama individual $860
-                2 camas individuales $540
-                1 cama matrimonial + 1 cama individual $630
-                2 camas matrimoniales $730</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">12:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Hotel 6 -->
-        <article class="rounded-3xl border bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <h4 class="text-base font-extrabold text-gray-900">HOTEL DEL CENTRO, PEROTE</h4>
-              <p class="mt-1 text-sm text-gray-600 whitespace-pre-line">
-                C. José María Pino Suárez 17, Centro, 91270 Perote, Ver.
-              </p>
-            </div>
-            <a href="https://maps.app.goo.gl/8fi1dmAfn67x39mq5" target="_blank" rel="noopener noreferrer"
-              class="shrink-0 rounded-xl border bg-gray-50 px-3 py-2 text-xs font-extrabold hover:bg-gray-100">
-              Ver mapa
-            </a>
-          </div>
-
-          <div class="mt-4 grid gap-2 text-sm">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-xs font-extrabold text-gray-500">Tel:</span>
-              <a href="tel:+522828251462" class="font-extrabold text-primary hover:underline">2828251462</a>
-              <a href="tel:+522828251452" class="font-extrabold text-primary hover:underline">2828251452</a>
-            </div>
-
-            <div class="rounded-2xl bg-gray-50 p-3">
-              <p class="text-xs font-extrabold text-gray-500">Tarifa / habitaciones</p>
-              <p class="mt-1 whitespace-pre-line">Depende las personas y ubicación de habitación</p>
-            </div>
-
-            <div class="grid gap-2 sm:grid-cols-3">
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Convenio</p>
-                <p class="mt-1 font-semibold">No</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Desayuno</p>
-                <p class="mt-1 whitespace-pre-line">No incluye</p>
-              </div>
-              <div class="rounded-2xl bg-gray-50 p-3">
-                <p class="text-xs font-extrabold text-gray-500">Check-in</p>
-                <p class="mt-1 font-semibold">13:00</p>
-              </div>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   </section>

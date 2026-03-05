@@ -222,7 +222,7 @@ async function initGalleryCarousel(cfg) {
     files = await res.json();
   } catch (e) {
     track.innerHTML = `
-      <div class="min-w-full p-6">
+      <div class="relative min-w-full">
         <p class="text-sm font-extrabold text-primary">Galería no disponible</p>
         <p class="mt-2 text-sm text-gray-600">
           Falta el archivo <b>${jsonUrl}</b> o no se puede leer.
@@ -235,7 +235,7 @@ async function initGalleryCarousel(cfg) {
 
   if (!files.length) {
     track.innerHTML = `
-      <div class="min-w-full p-6">
+      <div class="relative min-w-full">
         <p class="text-sm font-extrabold text-primary">Sin fotos</p>
         <p class="mt-2 text-sm text-gray-600">El JSON está vacío o no contiene imágenes.</p>
       </div>`;
@@ -249,7 +249,7 @@ async function initGalleryCarousel(cfg) {
       return `
         <div class="min-w-full">
           <div class="relative w-full overflow-hidden rounded-2xl border bg-white shadow-sm">
-            <div class="flex h-[320px] md:h-[520px] items-center justify-center bg-sand/30">
+            <div class="flex h-[320px] md:h-[420px] items-center justify-center bg-sand/30">
               <img
                 src="${src}"
                 alt="Foto del evento"
