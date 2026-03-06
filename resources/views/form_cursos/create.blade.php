@@ -137,6 +137,36 @@
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // mostrar modal
+       Swal.fire({
+    title: 'Registro previo requerido',
+    html: `
+        <p class="text-sm text-gray-700 mb-4">
+        Para poder inscribirse en cualquiera de los <b>cursos</b>, primero debe completar su
+        <b>registro de asistencia al evento</b> y registrar el <b>cartel o prototipo</b> con el que participará.
+        </p>
+
+        <p class="text-sm text-gray-700 mb-4">
+        Si aún no ha realizado este registro, por favor complételo primero en el formulario principal.
+        </p>
+
+        <p class="text-sm text-gray-700">
+        <b>Importante:</b> Los cursos tienen cupo limitado y  para poder seleccionar su nombre debe cumplir los requisitos mencionados.
+        </p>
+    `,
+    icon: 'info',
+    width: 650,
+    showCancelButton: true,
+    confirmButtonText: 'Registrarme en el evento',
+    cancelButtonText: 'Continuar',
+    confirmButtonColor: '#611232',
+    cancelButtonColor: '#6c757d'
+}).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = "/registrar-asistencia"; // formulario principal
+    }
+});
+
         const selectInstitucion = document.getElementById("institucion");
         const otraContainer = document.getElementById("otraInstitucionContainer");
         const otraInput = document.getElementById("otra_institucion");
@@ -162,6 +192,7 @@
         const correo = document.getElementById('correo').value;
         const curso = document.getElementById('curso').value;
         const confirmacion = document.querySelector('input[name="confirmacion"]').checked;
+        let textoCurso = curso == '1' ? 'Redacción de Artículos científicos' : 'Metodología para la potencialización de proyectos innovadores';
 
         // validar checkbox
         if (!confirmacion) {
@@ -179,7 +210,7 @@
 
             <p class="text-sm text-gray-700 font-bold">Nombre: <span class='font-normal'>${name}</span></p>
             <p class="text-sm text-gray-700 font-bold">Correo: <span class='font-normal'>${correo}</span></p>
-            <p class="text-sm text-gray-700 font-bold">Curso: <span class='font-normal'>${curso}</span></p>
+            <p class="text-sm text-gray-700 font-bold">Curso: <span class='font-normal'>${textoCurso}</span></p>
             <p class="text-sm text-gray-700 font-bold">Institución: <span class='font-normal'>${institucion}</span></p>
 
 
@@ -212,6 +243,7 @@
                 });
 
                 form.submit();
+
             }
 
         });

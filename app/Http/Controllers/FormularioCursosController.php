@@ -51,10 +51,10 @@ class FormularioCursosController extends Controller
         $lugaresRestantesCurso1 = FormularioCursos::where('curso', '1')->count();
         $lugaresRestantesCurso2 = FormularioCursos::where('curso', '2')->count();
 
-        if ($request->curso == 1 && $lugaresRestantesCurso1 >= 30) {
+        if ($request->curso == 1 && $lugaresRestantesCurso1 >= 25) {
             return redirect()->back()->with('error', 'No hay lugares disponibles para este curso.');
         }
-        if ($request->curso == 2 && $lugaresRestantesCurso2 >= 30) {
+        if ($request->curso == 2 && $lugaresRestantesCurso2 >= 45) {
             return redirect()->back()->with('error', 'No hay lugares disponibles para este curso.');
         }
 
