@@ -54,7 +54,7 @@
           <!-- Publicaciones (dropdown) -->
           <div class="relative group" id="publicacionesMenu">
             <button type="button"
-              class="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 transition">
+              class="inline-flex items-center gap-2 rounded-xl px-1 py-2 text-sm font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 transition">
               Publicaciones
               <svg class="h-4 w-4 text-gray-500 transition group-hover:rotate-180" viewBox="0 0 20 20"
                 fill="currentColor">
@@ -95,11 +95,12 @@
           </div>
 
           <a href="#sede"
-            class="text-sm font-semibold text-gray-700 hover:text-primary transition rounded-xl px-3 py-2 hover:bg-gray-50">
+            class="text-sm font-semibold text-gray-700 hover:text-primary transition rounded-xl px-2 py-2 hover:bg-gray-50">
             Sede
           </a>
 
-          <a href="#galeria" class="text-sm font-semibold text-gray-700 hover:text-primary transition">
+          <a href="#galeria"
+            class="text-sm font-semibold text-gray-700 hover:text-primary transition rounded-xl px-2 py-2 hover:bg-gray-50">
             Galería
           </a>
 
@@ -108,25 +109,25 @@
           <p class="text-sm font-extrabold">Regístrate:</p>
 
           <a href="https://encuentro-ca.itsx.edu.mx/registrar-asistencia"
-            class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
+            class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Asistencia
           </a>
           <a href="https://encuentro-ca.itsx.edu.mx/registrar-cursos"
-            class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
+            class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Cursos
           </a>
           <a href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
-            class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
+            class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Carteles
           </a>
           <a href="https://encuentro-ca.itsx.edu.mx/registrar-prototipo"
-            class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
+            class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Prototipo
           </a>
           <div class="hidden h-10 w-px bg-black/20 md:block"></div>
 
           <a href="https://encuentro-ca.itsx.edu.mx/login"
-            class="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary2 transition">
+            class="rounded-xl bg-primary px-2 py-2 text-sm font-semibold text-white hover:bg-primary2 transition">
             Login
           </a>
         </nav>
@@ -176,6 +177,10 @@
 
           <a href="#sede" class="rounded-xl border px-3 py-2 text-sm font-semibold hover:bg-gray-100">
             Sede
+          </a>
+
+          <a href="#galeria" class="rounded-xl border px-3 py-2 text-sm font-semibold hover:bg-gray-100">
+            Galería
           </a>
 
           <div class="h-px bg-black/10 my-2"></div>
@@ -359,14 +364,24 @@
             </div>
           </a>
           <!-- Slide 5 -->
-          <a href="#publicaciones" class="relative min-w-full"> <img src="assets/book1.jpg"
-              class="h-[320px] w-full md:h-[520px]" alt="Libro" />
+          <a href="#publicaciones" class="bg-primary relative min-w-full"> <img src="assets/book1.jpg"
+              class="h-[320px] w-full object-contain md:h-[520px]" alt="Libro" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
             <div class="absolute bottom-0 p-6 md:p-8">
               <p class="text-xs font-extrabold text-white/80">Categoría</p>
               <h3 class="mt-1 text-3xl font-extrabold text-white">Publicaciones</h3>
               <p class="mt-1 text-sm text-white/80">“Ciencia e innovación sustentable: Alianzas tecnológicas para
                 transformar el desarrollo social”</p>
+            </div>
+          </a>
+          <!-- Slide 6 -->
+          <a class="bg-primary relative min-w-full"> <img src="assets/Market_poster.png"
+              class="h-[320px] w-full md:h-[520px] object-contain" alt="Mercado" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
+            <div class="absolute bottom-0 p-6 md:p-8">
+              <p class="text-xs font-extrabold text-white/80">Categoría</p>
+              <h3 class="mt-1 text-3xl font-extrabold text-white">Publicaciones</h3>
+              <p class="mt-1 text-sm text-white/80">Mercadito de productos artesanales</p>
             </div>
           </a>
         </div>
@@ -442,12 +457,12 @@
           <div class="mt-4 grid gap-3 text-sm">
             <div class="rounded-2xl bg-gray-50 p-4">
               <p class="text-xs font-extrabold text-gray-500">Evento</p>
-              <p class="mt-1 font-extrabold text-primary">26–27 marzo 2026</p>
+              <p class="mt-1 font-extrabold text-primary">26-27 marzo 2026</p>
               <p class="mt-1 text-xs text-gray-600">Sede: TecNM/ITS Perote</p>
             </div>
 
             <div class="rounded-2xl bg-gray-50 p-4">
-              <p class="text-xs font-extrabold text-gray-500">Carteles (resumen)</p>
+              <p class="text-xs font-extrabold text-gray-500">Resumen y cartel</p>
               <p class="mt-1 font-extrabold">Recepción: <span class="text-primary">hasta 20 marzo 2026</span></p>
               <p class="mt-1 font-extrabold">Aceptación: <span class="text-primary">23 marzo 2026</span></p>
             </div>
@@ -508,58 +523,62 @@
         </div>
 
         <div class="p-6">
-          <!-- Tabla responsiva -->
           <div class="overflow-x-auto">
             <table class="min-w-full text-sm">
               <thead>
                 <tr class="bg-gray-100 text-gray-700">
-                  <th class="px-3 py-3 text-left font-extrabold text-center">Hora <br class="md:hidden">inicio</th>
-                  <th class="px-3 py-3 text-left font-extrabold text-center">Hora <br class="md:hidden">término</th>
-                  <th class="px-3 py-3 text-left font-extrabold text-center md:text-left">Actividad</th>
+                  <th class="px-1 py-3 md:px-3 text-[10px] md:text-sm font-extrabold text-center">Hora <br
+                      class="md:hidden">inicio
+                  </th>
+                  <th class="px-1 py-3 md:px-3 text-[10px] md:text-sm font-extrabold text-center">Hora <br
+                      class="md:hidden">término</th>
+                  <th class="px-3 py-3 text-xs md:text-sm text-left font-extrabold text-center md:text-left">Actividad
+                  </th>
                 </tr>
               </thead>
               <tbody class="divide-y">
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">8:30</td>
-                  <td class="px-3 py-3 font-semibold text-center">9:00</td>
-                  <td class="px-3 py-3">
-                    Registro de participantes
-                  </td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">8:30</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">9:00</td>
+                  <td class="px-3 py-3">Registro de participantes</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">9:00</td>
-                  <td class="px-3 py-3 font-semibold text-center">9:45</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">9:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">9:45</td>
                   <td class="px-3 py-3 justify-center">
                     <div class="flex items-center justify-center gap-2 md:justify-start">
                       <span
                         class="inline-flex rounded-full bg-sand px-3 py-1 text-sm font-extrabold text-ink">Inauguración</span>
                     </div>
                     <div class="mt-2 grid gap-1 text-sm text-gray-700">
-                      <div><b>9:00–9:10</b> Mensaje de bienvenida (Director ITS Perote)</div>
-                      <div><b>9:10–9:15</b> Presentación presídium e invitados</div>
-                      <div><b>9:15–9:25</b> Mensaje director ITSX (Trascendencia de los CA´s en los Institutos)</div>
-                      <div><b>9:25–9:35</b> Mensaje directora COVEICYDET</div>
-                      <div><b>9:35–9:45</b> Declaratoria inaugural</div>
+                      <p class="text-justify"><b>9:00-9:10</b> <br class="md:hidden"> Mensaje de bienvenida (Director
+                        ITS Perote)</p>
+                      <p class="text-justify"><b>9:10-9:15</b> <br class="md:hidden"> Presentación presídium e invitados
+                      </p>
+                      <p class="text-justify"><b>9:15-9:25</b> <br class="md:hidden"> Mensaje director ITSX
+                        (Trascendencia de los CA´s en los Institutos)</p>
+                      <p class="text-justify"><b>9:25-9:35</b> <br class="md:hidden"> Mensaje directora COVEICYDET</p>
+                      <p class="text-justify"><b>9:35-s9:45</b> <br class="md:hidden"> Declaratoria inaugural</p>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">9:45</td>
-                  <td class="px-3 py-3 font-semibold text-center">10:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">9:45</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">10:00</td>
                   <td class="px-3 py-3">Coffee Break</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold text-center">10:00</td>
-                  <td class="px-3 py-3 font-semibold text-center">11:30</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">10:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">11:30</td>
                   <td class="px-3 py-3">Presentación de carteles y prototipos de los CA’s</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">11:30</td>
-                  <td class="px-3 py-3 font-semibold">14:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">11:30</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">14:00</td>
                   <td class="px-3 py-3">
                     <div class="flex items-center justify-center gap-2 md:justify-start">
                       <span
@@ -570,35 +589,37 @@
                       Lugar: <b>Aulas ITS Perote</b>
                     </p>
                     <div class="mt-3 grid gap-2">
-                      <div class="rounded-2xl bg-gray-50 p-4">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 1 - Edificio C - Aula C1</p>
                         <p class="text-sm text-gray-700">Procesos Productivos, energías renovables, electromovilidad y
                           semiconductores.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Hugo Amores Pérez, Luis de Jesús Montero
                           García, Daniel Bello Parra</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-4">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 2 - Edificio E - Aula E1</p>
                         <p class="text-sm text-gray-700">Medio Ambiente, Biotecnología y Sustentabilidad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Juan Carlos Moreno Seceña, Fabiola Lango
                           Reynoso, María del Refugio Castañeda, Daniel Alejandro García López</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-4">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 3 - Edificio C - Aula C2</p>
                         <p class="text-sm text-gray-700">Sistema de Gestión Económico Admvo. y Sociedad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Dulce María Ángeles Martínez, Sagrario
                           Alejandre Apolinar, Francisco Hernández Quinto</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-4">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 4 - Edificio I - Aula I1</p>
                         <p class="text-sm text-gray-700">Tecnología de la información y comunicación.</p>
-                        <p class="mt-1 text-xs text-gray-600">Responsables: María Salomé Alejandre Apolinar, Virginia Lagunes
+                        <p class="mt-1 text-xs text-gray-600">Responsables: María Salomé Alejandre Apolinar, Virginia
+                          Lagunes
                           Barradas, Irma A. García González</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-4">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 5 - Edificio C - Aula C3</p>
                         <p class="text-sm text-gray-700">Innovación en Alimentos, Nutrición y bienestar.</p>
-                        <p class="mt-1 text-xs text-gray-600">Responsables: José Armando Lozada García, Cristina López Méndez,
+                        <p class="mt-1 text-xs text-gray-600">Responsables: José Armando Lozada García, Cristina López
+                          Méndez,
                           Lilia Ortiz Rodríguez</p>
                       </div>
                     </div>
@@ -606,17 +627,18 @@
                     <div class="mt-4 rounded-2xl border border-primary/15 bg-primary/5 p-4">
                       <p class="text-sm font-extrabold text-primary">Detalles:</p>
                       <ul class="mt-2 list-disc pl-5 text-sm text-gray-700">
-                        <li><b>11:30–11:45</b> Distribución en aulas para presentación de diálogos</li>
-                        <li><b>11:45–13:15</b> Diálogos de CA’s (por áreas temáticas)</li>
-                        <li><b>13:15–14:00</b> Acuerdos / minuta de trabajo</li>
+                        <li><b>11:30-11:45</b> <br class="md:hidden"> Distribución en aulas para presentación de
+                          diálogos</li>
+                        <li><b>11:45-13:15</b> <br class="md:hidden"> Diálogos de CA’s (por áreas temáticas)</li>
+                        <li><b>13:15-14:00</b> <br class="md:hidden"> Acuerdos / minuta de trabajo</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">14:00</td>
-                  <td class="px-3 py-3 font-semibold">15:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">14:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">15:00</td>
                   <td class="px-3 py-3">
                     Box Lunch / Verbena
                     <p class="mt-1 text-xs text-gray-600">Lugar: Domo Explanada ITS Perote</p>
@@ -624,36 +646,48 @@
                 </tr>
                 <!-- Talleres Jueves-->
                 <tr class="hover:bg-gray-50">
-                  <td class="px-3 py-3 font-semibold">15:00</td>
-                  <td class="px-3 py-3 font-semibold">17:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">15:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">17:00</td>
                   <td class="px-3 py-3">
                     Talleres / Visita a la Fortaleza de San Carlos
                     <div class="mt-4 grid gap-3">
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">El camino a la consolidación de cuerpos
+                        <p class="text-sm font-extrabold text-primary text-justify">El camino a la consolidación de
+                          cuerpos
                           académicos</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevéz Lavín - ITS Tierra Blanca</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Aplicando la IA en la educación superior</p>
+                        <p class="text-sm font-extrabold text-primary text-justify">Aplicando la IA en la educación
+                          superior</p>
                         <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Propiedad intelectual y agenda en ciencia y
+                        <p class="text-sm font-extrabold text-primary text-justify">Propiedad intelectual y agenda en
+                          ciencia y
                           tecnología para el posicionamiento académico</p>
                         <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI/COVEICYDET</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">De la investigación a la Innovación: Estrategias
+                        <p class="text-sm font-extrabold text-primary text-justify">De la investigación a la Innovación:
+                          Estrategias
                           de colaboración científica Transferencia tecnológica</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez - CRODE Orizaba</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
+                      </div>
+
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
+                        <p class="text-sm font-extrabold text-primary text-justify">Asesoramiento y conformacion de los
+                          nodos de
+                          impulso a la economía social y solidaria (Nodess)</p>
+                        <p class="mt-1 text-sm text-gray-700">Dra. Jacel Adame García - IT Ursulo Galván</p>
+                        <p class="mt-1 text-sm text-gray-700">Edificio - Aula </p>
                       </div>
                     </div>
                   </td>
@@ -673,7 +707,8 @@
                 <li>Dr. David Agustín Jiménez Rojas — Subsecretario de Educación Media Superior</li>
                 <li>Dr. Sidney René Toledo Martínez — Director del ITS Xalapa</li>
                 <li>Dr. Rodrigo Rodríguez Franco — Director del ITS Perote</li>
-                <li>Dra. María Graciela Hernández y Orduña — Directora del Consejo Veracruzano de Investigación Científica y Desarrollo Tecnológico (COVEICYDET)</li>
+                <li>Dra. María Graciela Hernández y Orduña — Directora del Consejo Veracruzano de Investigación
+                  Científica y Desarrollo Tecnológico (COVEICYDET)</li>
               </ul>
             </details>
 
@@ -719,81 +754,95 @@
             <table class="min-w-full text-sm">
               <thead>
                 <tr class="bg-gray-100 text-gray-700">
-                  <th class="px-4 py-3 text-left font-extrabold">Hora <br class="md:hidden"> inicio
+                  <th class="px-1 py-3 md:px-3 text-[10px] md:text-sm font-extrabold text-center">Hora <br
+                      class="md:hidden">inicio
                   </th>
-                  <th class="px-4 py-3 text-left font-extrabold">Hora <br class="md:hidden"> término
+                  <th class="px-1 py-3 md:px-3 text-[10px] md:text-sm font-extrabold text-center">Hora <br
+                      class="md:hidden">término</th>
+                  <th class="px-3 py-3 text-xs md:text-sm text-left font-extrabold text-center md:text-left">Actividad
                   </th>
-                  <th class="px-4 py-3 text-left font-extrabold">Actividad</th>
                 </tr>
               </thead>
               <tbody class="divide-y">
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">9:00</td>
-                  <td class="px-4 py-3 font-semibold">11:00</td>
-                  <td class="px-4 py-3">Talleres / Visita a la Fortaleza de San Carlos
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">9:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">11:00</td>
+                  <td class="px-3 py-3">Talleres / Visita a la Fortaleza de San Carlos
                     <!-- Talleres presenciales -->
                     <div class="mt-4 grid gap-3">
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">El camino a la consolidación de cuerpos
+                        <p class="text-sm font-extrabold text-primary text-justify">El camino a la consolidación de
+                          cuerpos
                           académicos</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevéz Lavín - ITS Tierra Blanca</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Aplicando la IA en la educación superior</p>
+                        <p class="text-sm font-extrabold text-primary text-justify">Aplicando la IA en la educación
+                          superior</p>
                         <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">Propiedad intelectual y agenda en ciencia y
+                        <p class="text-sm font-extrabold text-primary text-justify">Propiedad intelectual y agenda en
+                          ciencia y
                           tecnología para el posicionamiento académico</p>
                         <p class="mt-1 text-sm text-gray-700">Lic. Sandra Cisneros Benítez - IMPI/COVEICYDET</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
                       </div>
 
                       <div class="rounded-2xl bg-sand p-4 shadow-sm">
-                        <p class="text-sm font-extrabold text-primary">De la investigación a la Innovación: Estrategias
+                        <p class="text-sm font-extrabold text-primary text-justify">De la investigación a la Innovación:
+                          Estrategias
                           de colaboración científica Transferencia tecnológica</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez - CRODE Orizaba</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
+                      </div>
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
+                        <p class="text-sm font-extrabold text-primary text-justify">Asesoramiento y conformacion de los
+                          nodos de
+                          impulso a la economía social y solidaria (Nodess)</p>
+                        <p class="mt-1 text-sm text-gray-700">Dra. Jacel Adame García - IT Ursulo Galván</p>
+                        <p class="mt-1 text-sm text-gray-700">Edificio - Aula </p>
                       </div>
                     </div>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">11:00</td>
-                  <td class="px-4 py-3 font-semibold">12:00</td>
-                  <td class="px-4 py-3">
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">11:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:00</td>
+                  <td class="px-3 py-3">
                     Conferencia Magistral: <b>“El proceso de la investigación en los ITS Retos y Estrategias”</b>
                     <span class="text-sm text-gray-600">Conferencista: Dr. Jorge Estevéz Lavín ITS/Tierra Blanca</span>
                   </td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:00</td>
-                  <td class="px-4 py-3 font-semibold">12:15</td>
-                  <td class="px-4 py-3">Coffee Break</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:15</td>
+                  <td class="px-3 py-3">Coffee Break</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:15</td>
-                  <td class="px-4 py-3 font-semibold">12:45</td>
-                  <td class="px-4 py-3">Presentación del libro 2o. Encuentro CA’s: <b>"Ciencia e Innovación Sustentable: Alianzas tecnológicas para transformar el desarrollo Social"</b></td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:15</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:45</td>
+                  <td class="px-3 py-3">Presentación del libro 2o. Encuentro CA’s: <b>"Ciencia e Innovación Sustentable:
+                      Alianzas tecnológicas para transformar el desarrollo Social"</b></td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">12:45</td>
-                  <td class="px-4 py-3 font-semibold">13:00</td>
-                  <td class="px-4 py-3">Mensaje por comité organizador</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">12:45</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">13:00</td>
+                  <td class="px-3 py-3">Mensaje por comité organizador</td>
                 </tr>
 
                 <tr class="hover:bg-gray-50">
-                  <td class="px-4 py-3 font-semibold">13:00</td>
-                  <td class="px-4 py-3 font-semibold">13:30</td>
-                  <td class="px-4 py-3">
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">13:00</td>
+                  <td class="px-1 py-3 md:px-3 font-semibold text-center text-xs md:text-sm">13:30</td>
+                  <td class="px-3 py-3">
                     Mensaje a participantes y <b>clausura</b> por el Director ITS Perote
                   </td>
                 </tr>
@@ -831,7 +880,8 @@
           <b>Cupo:</b> 25 personas
         </p>
         <p class="mt-3 text-xs text-gray-600">
-          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterreys Campus Querétaro)
+          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterreys Campus
+          Querétaro)
         </p>
       </div>
 
@@ -849,11 +899,11 @@
         </p>
       </div>
 
-      <p class="mt-3 text-sm text-gray-600">
-        Nota: Para inscribirse en estos cursos es necesario registrar antes su participación en Cartel, Prototipo o
-        capítulo de libro.
-      </p>
     </div>
+    <p class="mt-3 text-sm text-gray-600">
+      Nota: Para inscribirse en estos cursos es necesario registrar antes su participación en cartel, prototipo o
+      capítulo de libro.
+    </p>
   </section>
 
   <!-- CARTELES (ampliada) -->
@@ -911,7 +961,7 @@
             class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">
             Formato de resumen (.docx)
           </a>
-          <a href="assets/FormatoCartaCesiónDerechos2026.docx" target="_blank" rel="noopener noreferrer"
+          <a href="assets/FormatoCartaCesionDerechos2026.docx" target="_blank" rel="noopener noreferrer"
             class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">
             Carta Cesión de Derechos (.docx)
           </a>
@@ -946,7 +996,7 @@
       </div>
 
       <div class="rounded-3xl border bg-white p-6 shadow-sm">
-        <a href="assets/FormatoFichaTécnica2026.docx" target="_blank" rel="noopener noreferrer"
+        <a href="assets/FormatoFichaTecnica2026.docx" target="_blank" rel="noopener noreferrer"
           class="block bg-sand rounded-xl border px-4 py-2 text-center text-sm font-extrabold hover:bg-gray-200 hover:text-ink hover:text-primary transition">Formato
           ficha técnica (.docx)
         </a>
@@ -984,7 +1034,8 @@
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Formato de nombre de archivo</p>
           <p class="mt-2 text-sm text-gray-700">
-            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej. <b>3ECA_ITSX_Alejandre_Apolinar.docx</b>)
+            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej.
+            <b>3ECA_ITSX_Alejandre_Apolinar.docx</b>)
           </p>
         </div>
       </div>
@@ -993,11 +1044,11 @@
         <p class="text-sm font-extrabold text-primary">Cronograma editorial</p>
         <ul class="mt-3 list-disc pl-5 text-sm text-gray-700">
           <li><b>Recepción:</b> 30 abril 2026</li>
-          <li><b>Revisión:</b> 4 mayo – 31 julio 2026</li>
-          <li><b>Aceptación/Rechazo:</b> 3 – 28 agosto 2026</li>
-          <li><b>Correcciones:</b> 1 – 10 septiembre 2026</li>
-          <li><b>Primer borrador:</b> 1 – 30 octubre 2026</li>
-          <li><b>Maquetado:</b> 03 – 26 noviembre 2026</li>
+          <li><b>Revisión:</b> 4 mayo - 31 julio 2026</li>
+          <li><b>Aceptación/Rechazo:</b> 3 - 28 agosto 2026</li>
+          <li><b>Correcciones:</b> 1 - 10 septiembre 2026</li>
+          <li><b>Primer borrador:</b> 1 - 30 octubre 2026</li>
+          <li><b>Maquetado:</b> 03 - 26 noviembre 2026</li>
           <li><b>ISBN:</b> enero 2027</li>
           <li><b>Publicación:</b> agosto 2027 (límite)</li>
         </ul>
@@ -1010,7 +1061,7 @@
     <div class="mx-auto max-w-7xl px-4 py-14">
       <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 class="text-2xl font-extrabold">Publicaciones</h2>
+          <h2 class="text-xl font-extrabold">Publicaciones</h2>
           <p class="mt-1 text-sm text-gray-600">Libros y memorias relacionadas con el Encuentro.</p>
         </div>
       </div>
@@ -1092,7 +1143,7 @@
             </button>
           </div>
 
-          <div class="mt-4 flex items-center justify-center gap-1 md:gap-2" id="gal1Dots"></div>
+          <div class="hidden mt-4 flex items-center justify-center md:flex md:gap-1" id="gal1Dots"></div>
         </div>
 
         <!-- Carrusel 2 -->
@@ -1132,7 +1183,7 @@
             </button>
           </div>
 
-          <div class="mt-4 flex items-center justify-center gap-1 md:gap-2" id="gal2Dots"></div>
+          <div class="hidden mt-4 items-center justify-center md:flex  md:gap-1" id="gal2Dots"></div>
         </div>
       </div>
     </div>
