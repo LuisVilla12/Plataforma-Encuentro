@@ -42,18 +42,11 @@
             @csrf
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Nombres: *</label>
-                <select name="autor" class="w-full border rounded px-3 py-2">
-                    <option value="">Seleccione un autor</option>
-                    {{-- @foreach ($prototipos as $prototipo)
-                        @foreach ($prototipo->autores as $autor)
-                            <option value="{{ $autor }}">
-                                {{ $autor }}
-                            </option>
-                        @endforeach
-                    @endforeach --}}
-                        @foreach ($autoresUnicos as $autor)
-                            <option value="{{ $autor }}">
-                                {{ $autor }}
+                <select name="nombre" id="nombre" class="w-full border rounded px-3 py-2">
+                    <option value="">Seleccione un nombre</option>
+                        @foreach ($autoresUnicos as $nombre)
+                            <option value="{{ $nombre }}">
+                                {{ $nombre }}
                             </option>
                         @endforeach
 

@@ -65,6 +65,7 @@ class FormularioCursosController extends Controller
             'curso' => 'required',
             'confirmacion' => 'accepted',
         ]);
+
         if ($request->institucion == 'Otra')
             Instituto::create(attributes: [
                 'nombre' => $request->otra_institucion,
