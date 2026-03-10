@@ -21,21 +21,28 @@
                     <tbody>
                         @foreach ($datos as $dato)
                             <tr class="border-t">
-                                 <td class="p-2 text-center">
+                                <td class="p-2 text-center">
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="p-2 text-center">
-                                    {{ $dato->autores }}
+                                    @foreach ($dato->autores as $autor)
+                                        <span
+                                            class="block bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
+                                            {{ $autor }}
+                                        </span>
+                                    @endforeach
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_cartel) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
+                                    <a href="{{ asset('storage/' . $dato->url_cartel) }}"
+                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>
-                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" />
-</a>
+                                <td class="p-2">
+                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank">
+                                        <x-heroicon-o-document-text class="w-4 h-4" />
+                                    </a>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
@@ -55,7 +62,8 @@
                                         <span class="hidden sm:inline text-gray-300">•</span>
 
                                         {{-- Eliminar --}}
-                                        <form action="{{ route('formulario_cartel.destroy',$dato) }}" method="POST" class="inline">
+                                        <form action="{{ route('formulario_cartel.destroy', $dato) }}" method="POST"
+                                            class="inline">
                                             @csrf
                                             @method('DELETE')
 
@@ -81,7 +89,12 @@
                             <div class="mb-2 text-sm text-gray-500">
                                 <span>Autores:</span>
                                 <span class="font-medium text-gray-800">
-                                    {{ $dato->autores }}
+                                    @foreach ($dato->autores as $autor)
+                                        <span
+                                            class="block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full">
+                                            {{ $autor }}
+                                        </span>
+                                    @endforeach
                                 </span>
                             </div>
                             <div class="">

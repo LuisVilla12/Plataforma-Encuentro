@@ -14,6 +14,7 @@
                             <th class="p-2 text-white">Nombre completo </th>
                             <th class="p-2 text-white">Instituto</th>
                             <th class="p-2 text-white">Correo electronico</th>
+                            <th class="p-2 text-white">Participacion</th>
                             <th class="p-2 text-white">Acciones</th>
                         </tr>
                     </thead>
@@ -24,7 +25,7 @@
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="p-2 text-center">
-                                    {{ $dato->nombre }}
+                                    {{ $dato->nombre . ' ' . $dato->apellidoP . ' ' . $dato->apellidoM }}
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
@@ -32,6 +33,14 @@
                                 <td class="p-2">
                                     {{ $dato->correo }}
                                 </td>
+                                <td class="p-2">
+                                    @foreach ($dato->autores as $autor)
+                                        <span
+                                            class="block bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
+                                            {{ $autor }}
+                                        </span>
+                                    @endforeach
+                                    </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
                                         {{-- Ver --}}
