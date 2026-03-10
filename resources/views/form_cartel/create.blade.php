@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3o. Encuentro de CA's</title>
+    <title>III Encuentro de CA's</title>
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,10 +19,18 @@
 
         {{-- <img src="Encabezado.jpeg" alt="encabezado" class="w-full h-20 object-cover my-4"> --}}
         @if (session('success'))
-            <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 4000)"
-                class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-4">
-                {{ session('success') }}
-            </p>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    Swal.fire({
+                        title: "Éxito",
+                        text: "{{ session('success') }}",
+                        icon: "success",
+                        draggable: true,
+                        timer: 4000,
+                        showConfirmButton: false
+                    });
+                });
+            </script>
         @endif
         <h1 class="text-xl text-center font-semibold text-gray-800 mb-2 mt-6">
             Registro cartel de investigación
@@ -44,7 +52,7 @@
                 <div id="contenedor-autores">
                     <div class="flex mb-2">
                         <input type="text" name="autores[]" required
-                            placeholder="Apellido Paterno,Apellido Materno, Nombres"
+                            placeholder="Apellido Paterno Apellido Materno Nombres"
                             class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                     </div>
                 </div>
@@ -202,7 +210,7 @@
 
         div.innerHTML = `
         <input type="text" name="autores[]" required
-            placeholder="Apellido Paterno,Apellido Materno, Nombres"
+            placeholder="Apellido Paterno Apellido Materno Nombres"
             class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
 
         <button type="button" onclick="this.parentElement.remove()"

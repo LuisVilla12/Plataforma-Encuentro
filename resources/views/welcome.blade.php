@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>III. Encuentro de CA's</title>
+  <title>III Encuentro de CA's</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -420,7 +420,7 @@
               <ul class="mt-3 list-disc pl-5 text-sm text-gray-700">
                 <li>Cursos pre-congreso (virtuales)</li>
                 <li>Talleres presenciales</li>
-                <li>Visitas</li>
+                <li>Visita a la Fortaleza de San Carlos</li>
                 <li>Conferencias</li>
                 <li>Exposición de carteles y prototipos</li>
                 <li>Mesas de diálogo</li>
@@ -687,7 +687,7 @@
                           nodos de
                           impulso a la economía social y solidaria (Nodess)</p>
                         <p class="mt-1 text-sm text-gray-700">Dra. Jacel Adame García - IT Ursulo Galván</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio - Aula </p>
+                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C2 </p>
                       </div>
                     </div>
                   </td>
@@ -805,7 +805,7 @@
                           nodos de
                           impulso a la economía social y solidaria (Nodess)</p>
                         <p class="mt-1 text-sm text-gray-700">Dra. Jacel Adame García - IT Ursulo Galván</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio - Aula </p>
+                        <p class="mt-1 text-sm text-gray-700">Edificio C- Aula C2 </p>
                       </div>
                     </div>
                   </td>
@@ -934,7 +934,7 @@
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Fechas importantes</p>
           <ul class="mt-2 list-disc pl-5 text-sm text-gray-700">
-            <li><b>Recepción de Resumen:</b> hasta el <span class="font-extrabold text-primary">20 de marzo 2026</span>
+            <li><b>Recepción de Resumen y Cartel:</b> hasta el <span class="font-extrabold text-primary">20 de marzo 2026</span>
             </li>
             <li><b>Cartas de aceptación:</b> <span class="font-extrabold text-primary">23 de marzo 2026</span></li>
           </ul>

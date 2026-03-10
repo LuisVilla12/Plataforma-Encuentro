@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3er. Encuentro de CA's</title>
+    <title>III Encuentro de CA's</title>
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,10 +17,18 @@
     <div class="max-w-xl mx-auto mt-12 bg-white shadow-md rounded-lg px-8 py-6">
         {{-- <img src="Encabezado.jpeg" alt="encabezado" class="w-full h-20 object-cover my-4"> --}}
         @if (session('success'))
-            <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 4000)"
-                class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-4">
-                {{ session('success') }}
-            </p>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    Swal.fire({
+                        title: "Éxito",
+                        text: "{{ session('success') }}",
+                        icon: "success",
+                        draggable: true,
+                        timer: 4000,
+                        showConfirmButton: false
+                    });
+                });
+            </script>
         @endif
         @if (session('error'))
             <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 4000)"
@@ -224,14 +232,14 @@
                 @enderror
             </div>
             <!-- Botón -->
- <div class="flex justify-between items-center mt-6">
-            <a href="{{ route('index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm" >
-                Inicio
-            </a>
-            <button type="submit"
-                class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">
-                Registrar
-            </button>
+            <div class="flex justify-between items-center mt-6">
+                <a href="{{ route('index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm">
+                    Inicio
+                </a>
+                <button type="submit"
+                    class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">
+                    Registrar
+                </button>
             </div>
 
 
