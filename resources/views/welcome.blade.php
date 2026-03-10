@@ -42,7 +42,7 @@
             <img src="assets/logo_CA.jpeg" alt="Logo" class="h-full w-full object-cover" />
           </div>
           <div class="leading-tight">
-            <p class="text-sm font-extrabold">III. Encuentro de Cuerpos Académicos</p>
+            <p class="text-sm font-extrabold">III Encuentro de Cuerpos Académicos</p>
             <p class="text-xs text-gray-600">Sede: TecNM/ITS Perote</p>
           </div>
         </a>
@@ -230,7 +230,7 @@
           </span>
 
           <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-white md:text-5xl">
-            III. Encuentro de Cuerpos Académicos
+            III Encuentro de Cuerpos Académicos
           </h1>
 
           <h2 class="mt-4 text-2xl font-semibold tracking-tight text-white/90 md:text-3xl">
@@ -1538,7 +1538,7 @@
     <div class="mx-auto max-w-7xl px-4 py-10">
       <div class="grid gap-6 md:grid-cols-3">
         <div>
-          <p class="text-sm font-extrabold">III. Encuentro de Cuerpos Académicos</p>
+          <p class="text-sm font-extrabold">III Encuentro de Cuerpos Académicos</p>
           <p class="mt-2 text-sm text-white/75">Sede: Instituto Tecnológico Superior de Perote • TecNM</p>
         </div>
 

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\FormularioCursos;
 use App\Models\Instituto;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -96,5 +97,12 @@ Instituto::create([
             'tipo' => 2,
             'password' => Hash::make('qazqazqaz9')
         ]);
+        // Registro de cursos
+        // FormularioCursos::create([
+        //     'nombre' => 'Alberto Villa',
+        //     'institucion' => 'Instituto Tecnológico de Veracruz',
+        //     'correo' => 'luis@gmail.com',
+        //     'curso' => 1,
+        // ]);
     }
 }
