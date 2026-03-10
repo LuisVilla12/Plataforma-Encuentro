@@ -34,10 +34,10 @@
                                     {{ $dato->correo }}
                                 </td>
                                 <td class="p-2">
-                                    @foreach ($dato->autores as $autor)
+                                    @foreach ($dato->modalidad_participacion as $modalidad)
                                         <span
-                                            class="block bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
-                                            {{ $autor }}
+                                            class="block text-center bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
+                                            {{ $modalidad }}
                                         </span>
                                     @endforeach
                                     </td>
