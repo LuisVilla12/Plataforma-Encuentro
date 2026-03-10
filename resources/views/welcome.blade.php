@@ -831,7 +831,7 @@
           <b>Cupo:</b> 25 personas
         </p>
         <p class="mt-3 text-xs text-gray-600">
-          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterreys Campus Querétaro)
+          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterrey Campus Querétaro)
         </p>
       </div>
 
@@ -984,7 +984,7 @@
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Formato de nombre de archivo</p>
           <p class="mt-2 text-sm text-gray-700">
-            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej. <b>3ECA_ITSX_Alejandre_Apolinar.docx</b>)
+            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej. <b>3ECA_ITSX_Villa_García.docx</b>)
           </p>
         </div>
       </div>
