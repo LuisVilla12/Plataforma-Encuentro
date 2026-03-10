@@ -132,10 +132,15 @@
                 @enderror
             </div>
             <!-- Botón -->
+            <div class="flex justify-between items-center mt-6">
+            <a href="{{ route('index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm" >
+                Inicio
+            </a>
             <button type="submit"
-                class=" bg-[#611232] hover:bg-gray-800 text-white py-2 rounded-md text-sm transition duration-200">
-                Enviar
+                class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">
+                Registrar
             </button>
+            </div>
 
         </form>
 

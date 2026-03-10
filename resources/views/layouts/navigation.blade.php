@@ -18,33 +18,33 @@
                 </div> --}}
                 @if (auth()->user()->tipo == 1)
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('formulario_asistencia.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('formulario_asistencia.index')">
+                        <x-nav-link :href="route('formulario_asistencia.index')" class="text-white " :active="request()->routeIs('formulario_asistencia.index')">
                             {{ __('Asistentes') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('formulario_cursos.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('formulario_cursos.index')">
+                        <x-nav-link :href="route('formulario_cursos.index')" class="text-white " :active="request()->routeIs('formulario_cursos.index')">
                             {{ __('Cursos') }}
                         </x-nav-link>
                     </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('formulario_capitulo.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('formulario_capitulo.index')">
+                        <x-nav-link :href="route('formulario_capitulo.index')" class="text-white " :active="request()->routeIs('formulario_capitulo.index')">
                             {{ __('Capítulos') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('formulario_prototipo.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('formulario_prototipo.index')">
+                        <x-nav-link :href="route('formulario_prototipo.index')" class="text-white " :active="request()->routeIs('formulario_prototipo.index')">
                             {{ __('Prototipos') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('formulario_cartel.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('formulario_cartel.index')">
+                        <x-nav-link :href="route('formulario_cartel.index')" class="text-white " :active="request()->routeIs('formulario_cartel.index')">
                             {{ __('Carteles') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('revisores.index')" class="text-white hover:text-gray-200" :active="request()->routeIs('revisores.index')">
+                        <x-nav-link :href="route('revisores.index')" class="text-white " :active="request()->routeIs('revisores.index')">
                             {{ __('Revisores') }}
                         </x-nav-link>
                     </div>

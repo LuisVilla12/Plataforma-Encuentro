@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-white dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-[#611232] dark:text-white leading-tight">
             {{ __('Inicio') }}
         </h2>
     </x-slot>
@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-[#611232] border-b text-white  border-gray-200">
+                <div class="p-6 bg-[#611232]  border-b text-white  border-gray-200">
                     {{ __("¡Bienvenido al panel de administración del 3er Encuentro de Cuerpos Academicos!") }}
                 </div>
             @if(auth()->user()->tipo == 1)

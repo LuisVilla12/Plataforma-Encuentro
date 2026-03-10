@@ -227,6 +227,9 @@
             <button type="submit" class=" bg-[#611232]  text-white py-2 rounded-md text-sm transition duration-200">
                 Registrar
             </button>
+            <button type="submit" class=" bg-[#611232]  text-white py-2 rounded-md text-sm transition duration-200">
+                Registrar
+            </button>
 
 
         </form>

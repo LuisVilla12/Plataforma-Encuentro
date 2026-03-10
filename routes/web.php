@@ -13,8 +13,8 @@ use App\Http\Controllers\RevisoresController;
 use App\Models\AsignacionRevision;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view(view: 'welcome');
+})->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

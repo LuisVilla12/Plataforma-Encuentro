@@ -10,6 +10,7 @@
                 <table class="w-full border bg-white shadow rounded">
                     <thead class="bg-[#611232]">
                         <tr>
+                            <th class="p-2 text-white">N° </th>
                             <th class="p-2 text-white">Nombre completo </th>
                             <th class="p-2 text-white">Instituto</th>
                             <th class="p-2 text-white">Correo electronico</th>
@@ -19,6 +20,9 @@
                     <tbody>
                         @foreach ($datos as $dato)
                             <tr class="border-t">
+                                <td class="p-2 text-center">
+                                    {{ $loop->iteration }}
+                                </td>
                                 <td class="p-2 text-center">
                                     {{ $dato->nombre }}
                                 </td>
