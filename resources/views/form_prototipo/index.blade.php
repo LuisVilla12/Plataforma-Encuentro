@@ -84,9 +84,13 @@
                         <div class="mt-2">
                             <div class="mb-2 text-sm text-gray-500">
                                 <span>Autores:</span>
-                                <span class="font-medium text-gray-800">
-                                    {{ $dato->autores }}
-                                </span>
+                                <td class="p-2 text-center">
+                                    @foreach ($dato->autores as $autor)
+                                        <span class="block bg-gray-200 mb-2 text-gray-800 text-xs px-2 py-1 rounded-full">
+                                            {{ $autor }}
+                                        </span>
+                                    @endforeach
+                                </td>
                             </div>
                             <div class="">
                                 <p class="mb-2 text-sm">Institución:
