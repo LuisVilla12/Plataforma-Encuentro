@@ -25,7 +25,11 @@
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="p-2 text-center">
-                                    {{ $dato->autores }}
+                                    @foreach ($dato->autores as $autor)
+                                        <span class="block bg-gray-200 mb-2 text-gray-800 text-xs px-2 py-1 rounded-full">
+                                            {{ $autor }}
+                                        </span>
+                                    @endforeach
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}

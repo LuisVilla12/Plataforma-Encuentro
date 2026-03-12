@@ -332,3 +332,27 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplayMs: 3000
   });
 });
+
+// botón
+const btnSubir = document.getElementById("btnSubir");
+
+// mostrar botón al bajar
+window.addEventListener("scroll", function () {
+
+    if (document.documentElement.scrollTop > 200) {
+        btnSubir.classList.remove("hidden");
+    } else {
+        btnSubir.classList.add("hidden");
+    }
+
+});
+
+// función para subir
+function irArriba() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}

@@ -184,7 +184,7 @@
           </a>
 
           <div class="h-px bg-black/10 my-2"></div>
-          <p class="text-sm font-semibold text-primary">Regístrate:</p>
+
           <a href="https://encuentro-ca.itsx.edu.mx/registrar-asistencia"
             class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Asistencia
@@ -589,33 +589,33 @@
                       Lugar: <b>Aulas ITS Perote</b>
                     </p>
                     <div class="mt-3 grid gap-2">
-                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4 hover:bg-sand/80">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 1 - Edificio C - Aula C1</p>
                         <p class="text-sm text-gray-700">Procesos Productivos, energías renovables, electromovilidad y
                           semiconductores.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Hugo Amores Pérez, Luis de Jesús Montero
                           García, Daniel Bello Parra</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4 hover:bg-sand/80">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 2 - Edificio E - Aula E1</p>
                         <p class="text-sm text-gray-700">Medio Ambiente, Biotecnología y Sustentabilidad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Juan Carlos Moreno Seceña, Fabiola Lango
                           Reynoso, María del Refugio Castañeda, Daniel Alejandro García López</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4 hover:bg-sand/80">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 3 - Edificio C - Aula C2</p>
                         <p class="text-sm text-gray-700">Sistema de Gestión Económico Admvo. y Sociedad.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: Dulce María Ángeles Martínez, Sagrario
                           Alejandre Apolinar, Francisco Hernández Quinto</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4 hover:bg-sand/80">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 4 - Edificio I - Aula I1</p>
                         <p class="text-sm text-gray-700">Tecnología de la información y comunicación.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: María Salomé Alejandre Apolinar, Virginia
                           Lagunes
                           Barradas, Irma A. García González</p>
                       </div>
-                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4 hover:bg-sand/80">
+                      <div class="rounded-2xl bg-gray-50 p-1 md:p-4">
                         <p class="font-extrabold">Mesa 5 - Edificio C - Aula C3</p>
                         <p class="text-sm text-gray-700">Innovación en Alimentos, Nutrición y bienestar.</p>
                         <p class="mt-1 text-xs text-gray-600">Responsables: José Armando Lozada García, Cristina López
@@ -651,21 +651,22 @@
                   <td class="px-3 py-3">
                     Talleres / Visita a la Fortaleza de San Carlos
                     <div class="mt-4 grid gap-3">
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">El camino a la consolidación de
-                          cuerpos académicos</p>
+                          cuerpos
+                          académicos</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Jorge Estevéz Lavín - ITS Tierra Blanca</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Aplicando la IA en la educación
                           superior</p>
                         <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Propiedad intelectual y agenda en
                           ciencia y
                           tecnología para el posicionamiento académico</p>
@@ -673,7 +674,7 @@
                         <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">De la investigación a la Innovación:
                           Estrategias
                           de colaboración científica Transferencia tecnológica</p>
@@ -681,7 +682,7 @@
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Asesoramiento y conformacion de los
                           nodos de
                           impulso a la economía social y solidaria (Nodess)</p>
@@ -769,7 +770,7 @@
                   <td class="px-3 py-3">Talleres / Visita a la Fortaleza de San Carlos
                     <!-- Talleres presenciales -->
                     <div class="mt-4 grid gap-3">
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">El camino a la consolidación de
                           cuerpos
                           académicos</p>
@@ -777,14 +778,14 @@
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C1</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Aplicando la IA en la educación
                           superior</p>
                         <p class="mt-1 text-sm text-gray-700">Mtro. José Clemente Hdz. - Sintérgica AI</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio B - Lab. Cómputo - Aula B1</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Propiedad intelectual y agenda en
                           ciencia y
                           tecnología para el posicionamiento académico</p>
@@ -792,19 +793,19 @@
                         <p class="mt-1 text-sm text-gray-700">Edificio I - Aula I7</p>
                       </div>
 
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">De la investigación a la Innovación:
                           Estrategias
                           de colaboración científica Transferencia tecnológica</p>
                         <p class="mt-1 text-sm text-gray-700">Dr. Rubén Posadas Gómez - CRODE Orizaba</p>
                         <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C3</p>
                       </div>
-                      <div class="rounded-2xl bg-sand p-4 shadow-sm hover:bg-sand/30">
+                      <div class="rounded-2xl bg-sand p-4 shadow-sm">
                         <p class="text-sm font-extrabold text-primary text-justify">Asesoramiento y conformacion de los
                           nodos de
                           impulso a la economía social y solidaria (Nodess)</p>
                         <p class="mt-1 text-sm text-gray-700">Dra. Jacel Adame García - IT Ursulo Galván</p>
-                        <p class="mt-1 text-sm text-gray-700">Edificio C - Aula C2 </p>
+                        <p class="mt-1 text-sm text-gray-700">Edificio C- Aula C2 </p>
                       </div>
                     </div>
                   </td>
@@ -876,18 +877,10 @@
           <b>Fechas:</b> 12, 13, 16, 17 y 18 de marzo 2026<br />
           <b>Horario:</b> 17:00 a 20:00 h<br />
           <b>Modalidad:</b> Virtual<br />
-          <b>Cupo:</b> 25 personas<br /><br />
-          <b>Requisitos:</b>
-        <ul class="list-disc text-sm pl-5 mt-1 text-gray-700">
-          <li>Tener buena conexión a internet.</li>
-          <li>Contar con datos experimentales publicables.</li>
-          <li>Descargar la versión gratuita de ENDNOTE.</li>
-          <li>Disponibilidad de tiempo para las actividades asíncronas y entregables.</li>
-        </ul>
+          <b>Cupo:</b> 25 personas
         </p>
         <p class="mt-3 text-xs text-gray-600">
-          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterrey Campus
-          Querétaro)
+          Instructoras: Dra. Fabiola Sandoval Salas / Dra. AnaBerta Cardador Martínez (Tecnológico de Monterrey Campus Querétaro)
         </p>
       </div>
 
@@ -935,14 +928,13 @@
           <li>Imágenes a la plataforma en <b>.png</b> o <b>.jpg</b>.</li>
           <li>Máximo <b>5 autores</b> por resumen.</li>
           <li>Solo trabajos <b>no publicados</b> y no sometidos a dictamen en otros medios.</li>
-          <li>El día del evento: llevar el cartel impreso en <b>papel bond (tamaño: 0.90 x 1.20 m)</b>.</li>
+          <li>El día del evento: llevar el cartel impreso en <b>papel bond</b>.</li>
         </ul>
 
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Fechas importantes</p>
           <ul class="mt-2 list-disc pl-5 text-sm text-gray-700">
-            <li><b>Recepción de cartel y resumen:</b> hasta el <span class="font-extrabold text-primary">20 de marzo
-                2026</span>
+            <li><b>Recepción de Resumen y Cartel:</b> hasta el <span class="font-extrabold text-primary">20 de marzo 2026</span>
             </li>
             <li><b>Cartas de aceptación:</b> <span class="font-extrabold text-primary">23 de marzo 2026</span></li>
           </ul>
@@ -1041,8 +1033,7 @@
         <div class="mt-5 rounded-2xl bg-gray-50 p-4">
           <p class="text-sm font-extrabold text-gray-900">Formato de nombre de archivo</p>
           <p class="mt-2 text-sm text-gray-700">
-            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej.
-            <b>3ECA_ITSX_Alejandre_Apolinar.docx</b>)
+            Subir el extenso como: <b>3ECA_Institucion_1er apellido_2o. Apellido.docx</b> (ej. <b>3ECA_ITSX_Villa_García.docx</b>)
           </p>
         </div>
       </div>
@@ -1078,7 +1069,9 @@
           <p class="text-xs font-extrabold text-gray-500">Libro (PDF)</p>
           <p class="mt-2 text-lg font-extrabold text-primary">“Ciencia e innovación sustentable: Alianzas tecnológicas
             para transformar el desarrollo social”</p>
-          <p class="mt-2 text-sm text-gray-700">Presentación del libro 2025 dentro del evento y descarga oficial.</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Presentación del libro 2025 dentro del evento y descarga oficial.
+          </p>
           <div>
             <img src="assets/book1.jpg" alt="Portada del libro 2025"
               class="mt-4 h-auto w-full rounded-lg object-cover shadow-sm">
@@ -1086,19 +1079,19 @@
           <a href="https://ciencia.covecyt.gob.mx/wp-content/uploads/2025/10/LIBRO_Acercando-la-tecnologia-a-la-sustentabilidad_2025_.pdf"
             target="_blank" rel="noopener noreferrer"
             class="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white hover:bg-primary2 transition">
-            Abrir PDF</a>
+            Abrir PDF
+          </a>
           <a href="/assets/NR_610770.pdf" target="_blank" rel="noopener noreferrer"
             class="mt-4 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-extrabold text-white hover:bg-primary2 transition">
-            INDAUTOR</a>
+            INDAUTOR
+          </a>
         </div>
 
         <div class="rounded-3xl bg-gray-50 p-6">
           <p class="text-sm font-extrabold text-gray-900">Convocatoria libro 2026</p>
-          <p class="mt-2 text-lg font-extrabold text-primary">Próximamente se publicarán más detalles.</p>
-          <div>
-            <img src="assets/proximamente.png" alt="Portada del libro 2025"
-              class="mt-4 h-auto w-full rounded-lg object-cover shadow-sm">
-          </div>
+          <p class="mt-2 text-sm text-gray-700">
+            Próximamente se publicarán más detalles.
+          </p>
         </div>
       </div>
     </div>
@@ -1585,10 +1578,6 @@
       <p class="mt-8 text-xs text-white/50">© <span id="year"></span> Todos los derechos reservados.</p>
     </div>
   </footer>
-  <button id="btnSubir" onclick="irArriba()"
-    class="hidden text-xl fixed bottom-6 right-1 md:right-6 bg-primary2 text-white p-3 rounded-full shadow-lg hover:scale-110 transition">
-    ↑
-  </button>
 </body>
 
 </html>
