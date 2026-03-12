@@ -80,7 +80,7 @@
             </div>
             <!-- Institución -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                <label class="block text-sm font-semibold text-gray-700 mt-2 mb-1">
                     Institución de procedencia: *
                 </label>
                 <select name="institucion" id="institucion" required
