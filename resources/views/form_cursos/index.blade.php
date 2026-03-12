@@ -13,6 +13,7 @@
                             <th class="p-2 text-white">N°</th>
                             <th class="p-2 text-white">Nombre completo</th>
                             <th class="p-2 text-white">Instituto</th>
+                            <th class="p-2 text-white">Correo</th>
                             <th class="p-2 text-white">Curso</th>
                             <th class="p-2 text-white">Acciones</th>
                         </tr>
@@ -24,6 +25,9 @@
                             <td class="p-2 text-center">{{ $dato->nombre }}</td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
+                                </td>
+                                <td class="p-2">
+                                    {{ $dato->correo }}
                                 </td>
                                 <td class="p-2">
                                     @if ($dato->curso == 1)
