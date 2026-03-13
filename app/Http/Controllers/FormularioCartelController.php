@@ -35,19 +35,17 @@ class FormularioCartelController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $request->validate([
             'autores' => 'required|array|min:1',
             'autores.*' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
-            'url_cartel' => 'required|file|mimes:pptx|max:5120',
-            'url_resumen' => 'required|file|mimes:docx|max:2024',
-            'url_zip' => 'required|file|mimes:zip|max:5120',
-            'url_cesion_derechos' => 'required|file|mimes:pdf|max:2024',
-            'url_ine' => 'required|file|mimes:pdf|max:2024',
+            'url_resumen' => 'required|file|mimes:docx',
+            'url_cartel' => 'required|file|mimes:pptx',
+            'url_zip' => 'required|file|mimes:zip',
+            'url_cesion_derechos' => 'required|file|mimes:pdf',
+            'url_ine' => 'required|file|mimes:pdf',
             'confirmacion' => 'accepted',
         ]);
-
         $ruta_cartel = $request->file('url_cartel')->store('carteles', 'public');
         $ruta_resumen = $request->file('url_resumen')->store('carteles', 'public');
         $ruta_zip = $request->file('url_zip')->store('carteles', 'public');
