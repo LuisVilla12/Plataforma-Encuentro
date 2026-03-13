@@ -40,11 +40,11 @@ class FormularioCartelController extends Controller
             'autores' => 'required|array|min:1',
             'autores.*' => 'required|string|max:255',
             'institucion' => 'required|string|max:255',
-            'url_cartel' => 'required|file',
-            'url_resumen' => 'required|file',
-            'url_zip' => 'required',
-            'url_cesion_derechos' => 'required|file|mimes:pdf',
-            'url_ine' => 'required|file|mimes:pdf',
+            'url_cartel' => 'required|file|mimes:pptx|max:5120',
+            'url_resumen' => 'required|file|mimes:docx|max:2024',
+            'url_zip' => 'required|file|mimes:zip|max:5120',
+            'url_cesion_derechos' => 'required|file|mimes:pdf|max:2024',
+            'url_ine' => 'required|file|mimes:pdf|max:2024',
             'confirmacion' => 'accepted',
         ]);
 

@@ -92,7 +92,7 @@
             <!-- Archivo word resumen -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu resumen de tu cartel en formato word:*
+                    Sube tu resumen de tu cartel en formato word (max 1MB):*
                 </label>
                 <input type="file" name="url_resumen" id="url_resumen" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -104,7 +104,7 @@
             <!-- Archivo word capitulo -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu cartel en formato de power point:*
+                    Sube tu cartel en formato de power point (máx 5MB):*
                 </label>
                 <input type="file" name="url_cartel" id="url_cartel" required
                     accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation"
@@ -113,10 +113,11 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+
             <!-- Archivo zip -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tus imagenes originales del cartel en un archivo comprimido (zip):*
+                    Sube tus imagenes originales del cartel en un archivo comprimido zip  (máx 5MB):*
                 </label>
                 <input type="file" name="url_zip" id="url_zip" required accept=".zip,application/zip"
                     class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
@@ -127,7 +128,7 @@
                         {{-- Sube la cesión de derechos --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube la cesión de derechos en formato pdf:*
+                    Sube la cesión de derechos en formato pdf  (máx 5MB):*
                 </label>
                 <input type="file" name="url_cesion_derechos" id="url_cesion_derechos" required
                     accept=".pdf,application/pdf"
@@ -139,7 +140,7 @@
             {{-- Sube el ine --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf:*
+                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf  (máx 5MB):*
                 </label>
                 <input type="file" name="url_ine" id="url_ine" required
                     accept=".pdf,application/pdf"
