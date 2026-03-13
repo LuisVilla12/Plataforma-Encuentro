@@ -109,7 +109,7 @@ class FormularioCartelController extends Controller
 
         if ($request->eliminar_resumen) {
             Storage::disk('public')->delete($dato->url_resumen);
-            $dato->url_resumen = null;
+            $ruta_resumen = $request->file('url_resumen')->store('carteles', 'public');
         }
         if ($request->hasFile('url_resumen')) {
             if ($dato->url_resumen) {
