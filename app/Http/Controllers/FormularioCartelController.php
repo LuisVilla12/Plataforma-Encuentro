@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FormularioCartel;
 use App\Models\Instituto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FormularioCartelController extends Controller
 {
@@ -16,7 +17,7 @@ class FormularioCartelController extends Controller
         //
         $datos = FormularioCartel::all();
         return view('form_cartel.index', [
-            'datos' =>$datos
+            'datos' => $datos
         ]);
     }
 
@@ -26,7 +27,7 @@ class FormularioCartelController extends Controller
     public function create()
     {
         //
-        $instituciones=Instituto::all();
+        $instituciones = Instituto::all();
         return view('form_cartel.create', compact('instituciones'));
     }
 
@@ -52,11 +53,11 @@ class FormularioCartelController extends Controller
         $ruta_cesion_derechos = $request->file('url_cesion_derechos')->store('carteles', 'public');
         $ruta_ine = $request->file('url_ine')->store('carteles', 'public');
 
-        if($request->institucion=='Otra')
-        Instituto::create(attributes: [
-            'nombre' => $request->otra_institucion,
-        ]);
-        if($request->institucion === "Otra"){
+        if ($request->institucion == 'Otra')
+            Instituto::create(attributes: [
+                'nombre' => $request->otra_institucion,
+            ]);
+        if ($request->institucion === "Otra") {
             $request->merge(['institucion' => $request->otra_institucion]);
         }
         FormularioCartel::create([
@@ -64,7 +65,7 @@ class FormularioCartelController extends Controller
             'institucion' => $request->institucion,
             'url_cartel' => $ruta_cartel,
             'url_resumen' => $ruta_resumen,
-            'url_zip'=>$ruta_zip,
+            'url_zip' => $ruta_zip,
             'url_cesion_derechos' => $ruta_cesion_derechos,
             'url_ine' => $ruta_ine,
         ]);
@@ -83,17 +84,98 @@ class FormularioCartelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FormularioCartel $formularioCartel)
+    public function edit(FormularioCartel $dato)
     {
         //
+        return view('form_cartel.edit', compact('dato'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FormularioCartel $formularioCartel)
+    public function update(Request $request, FormularioCartel $dato)
     {
-        //
+        // dd($request->all());
+        $request->validate([
+            'autores' => 'required|array|min:1',
+            'autores.*' => 'required|string|max:255',
+            'institucion' => 'required|string|max:255',
+            'url_resumen' => 'nullable|file|mimes:docx',
+            'url_cartel' => 'nullable|file|mimes:pptx',
+            'url_zip' => 'nullable|file|mimes:zip',
+            'url_cesion_derechos' => 'nullable|file|mimes:pdf',
+            'url_ine' => 'nullable|file|mimes:pdf',
+        ]);
+
+        if ($request->eliminar_resumen) {
+            Storage::disk('public')->delete($dato->url_resumen);
+            $dato->url_resumen = null;
+        }
+        if ($request->hasFile('url_resumen')) {
+            if ($dato->url_resumen) {
+                Storage::disk('public')->delete($dato->url_resumen);
+            }
+            $dato->url_resumen = $request->file('url_resumen')->store('carteles', 'public');
+        }
+        if ($request->eliminar_cartel) {
+            Storage::disk('public')->delete($dato->url_cartel);
+            $dato->url_cartel = null;
+        }
+        if ($request->hasFile('url_cartel')) {
+            if ($dato->url_cartel) {
+                Storage::disk('public')->delete($dato->url_cartel);
+            }
+
+            $dato->url_cartel = $request->file('url_cartel')->store('carteles', 'public');
+        }
+        if ($request->eliminar_zip) {
+            Storage::disk('public')->delete($dato->url_zip);
+            $dato->url_zip = null;
+        }
+
+        if ($request->hasFile('url_zip')) {
+
+            if ($dato->url_zip) {
+                Storage::disk('public')->delete($dato->url_zip);
+            }
+
+            $dato->url_zip = $request->file('url_zip')->store('carteles', 'public');
+        }
+
+        if ($request->eliminar_cesion) {
+            Storage::disk('public')->delete($dato->url_cesion_derechos);
+            $dato->url_cesion_derechos = null;
+        }
+
+        if ($request->hasFile('url_cesion_derechos')) {
+
+            if ($dato->url_cesion_derechos) {
+                Storage::disk('public')->delete($dato->url_cesion_derechos);
+            }
+
+            $dato->url_cesion_derechos = $request->file('url_cesion_derechos')->store('carteles', 'public');
+        }
+
+        if ($request->eliminar_ine) {
+            Storage::disk('public')->delete($dato->url_ine);
+            $dato->url_ine = null;
+        }
+
+        if ($request->hasFile('url_ine')) {
+
+            if ($dato->url_ine) {
+                Storage::disk('public')->delete($dato->url_ine);
+            }
+
+            $dato->url_ine = $request->file('url_ine')->store('carteles', 'public');
+        }
+
+        $dato->autores = $request->autores;
+        $dato->institucion = $request->institucion;
+
+        $dato->save();
+
+        return redirect()->back()->with('success', 'Registro actualizado correctamente');
     }
 
     /**
@@ -102,11 +184,12 @@ class FormularioCartelController extends Controller
     public function destroy(FormularioCartel $dato)
     {
         $dato->delete();
-        $datos=FormularioCartel::all();
+        $datos = FormularioCartel::all();
         return redirect()
             ->route('formulario_cartel.index', compact('datos'))
             ->with(
-                'success', 'El registro se ha eliminado correctamente.'
-        );
-        }
+                'success',
+                'El registro se ha eliminado correctamente.'
+            );
+    }
 }

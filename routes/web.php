@@ -47,6 +47,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     //Carteles
     Route::get('/carteles-registrados', [FormularioCartelController::class, 'index'])->name('formulario_cartel.index');
+    Route::get('/cartel/{dato}/edit', [FormularioCartelController::class, 'edit'])->name('formulario_cartel.edit');
+    Route::put('/cartel/{dato}', [FormularioCartelController::class, 'update'])->name('formulario_cartel.update');
     Route::get('/cartel/{dato}', [FormularioCartelController::class, 'show'])->name('formulario_cartel.show');
     Route::delete('/carteles/{dato}', [FormularioCartelController::class, 'destroy'])->name('formulario_cartel.destroy');
 
