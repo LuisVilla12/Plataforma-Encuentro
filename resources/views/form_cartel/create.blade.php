@@ -104,7 +104,7 @@
             <!-- Archivo word capitulo -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu cartel en formato de power point (máx 3MB):*
+                    Sube tu cartel en formato de power point (máx 5MB):*
                 </label>
                 <input type="file" name="url_cartel" id="url_cartel" required
                     accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation"
@@ -212,9 +212,9 @@
         // Validar tamaño de archivo
         document.getElementById('url_cartel').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 3 * 1024 * 1024; // 3MB
+            const maxSize = 5 * 1024 * 1024; // 5MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 3MB");
+                alert("El archivo no puede ser mayor a 5MB");
                 this.value = "";
             }
         });
