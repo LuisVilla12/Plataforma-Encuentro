@@ -39,11 +39,15 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'admin'])->group(function () {
      //Rutas para formulario de capitulos
     Route::get('/capitulos-registrados', [FormularioCapituloController::class, 'index'])->name('formulario_capitulo.index');
+
     Route::get('/capitulo/{dato}/edit', [FormularioCapituloController::class, 'edit'])->name('formulario_capitulo.edit');
     Route::put('/capitulo', [FormularioCapituloController::class, 'update'])->name('formulario_capitulo.update');
+
     //Prototipos de investigación
     Route::get('/prototipos-registrados', [FormularioPrototipoController::class, 'index'])->name('formulario_prototipo.index');
     Route::get('/prototipo/{dato}', [FormularioPrototipoController::class, 'show'])->name('formulario_prototipo.show');
+    Route::get('/prototipo/{dato}/edit', [FormularioPrototipoController::class, 'edit'])->name('formulario_prototipo.edit');
+    Route::put('/prototipo/{dato}', [FormularioPrototipoController::class, 'update'])->name('formulario_prototipo.update');
     Route::delete('/prototipos-registrados/{dato}', [FormularioPrototipoController::class, 'destroy'])->name('formulario_prototipo.destroy');
 
     //Carteles

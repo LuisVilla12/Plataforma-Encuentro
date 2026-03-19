@@ -117,7 +117,7 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
                     Telefono: *
                 </label>
-                <input type="tel" name="celular" id="celular" required placeholder="Número de teléfono"
+                <input type="tel" name="celular" id="celular" minlength="10" maxlength="10" required placeholder="Número de teléfono"
                     value="{{ old('celular') }}"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('celular')
@@ -280,6 +280,32 @@
                 nombreOficioContainer.classList.add("hidden");
             }
         });
+    });
+    document.getElementById("correo").addEventListener("blur", function() {
+        const correo = this.value.toLowerCase();
+
+        // dominios personales bloqueados
+        const dominiosBloqueados = [
+            "gmail.com",
+            "hotmail.com",
+            "outlook.com",
+            "live.com.mx",
+            "yahoo.com",
+            "yahoo.com.mx"
+        ];
+
+        const dominio = correo.split("@")[1];
+
+        if (dominiosBloqueados.includes(dominio)) {
+            Swal.fire({
+                icon: "warning",
+                title: "Correo no permitido",
+                text: "Por favor coloca un correo institucional."
+            });
+
+            this.value = "";
+            this.focus();
+        }
     });
     const form = document.getElementById('myForm');
     form.addEventListener('submit', function(e) {

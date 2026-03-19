@@ -79,7 +79,7 @@
                                         </a>
                                         <span class="hidden sm:inline text-gray-300">•</span>
                                         {{-- Editar --}}
-                                        <a href=""
+                                        <a href="{{ route('formulario_prototipo.edit', ['dato' => $dato]) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                             <x-heroicon-o-pencil-square class="w-4 h-4" />
                                             <span class="hidden sm:inline">Editar</span>

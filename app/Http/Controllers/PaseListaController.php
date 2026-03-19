@@ -19,9 +19,9 @@ class PaseListaController extends Controller
                 ->orWhere('institucion', 'like', "%{$search}%");
             });
         })
-        ->orderBy('id', 'desc')
+        ->orderBy('apellidoP', 'asc')
         ->paginate(10)
-        ->withQueryString(); // ← mantiene el search en la paginación
+        ->withQueryString();
 
         // $datos = FormularioAsistencia::all();
         return view('lista.index', compact('datos'));

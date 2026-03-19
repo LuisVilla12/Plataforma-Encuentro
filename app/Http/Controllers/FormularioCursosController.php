@@ -12,9 +12,6 @@ use Illuminate\Http\Request;
 
 class FormularioCursosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(Request $request)
     {
     $search = $request->get('search');
