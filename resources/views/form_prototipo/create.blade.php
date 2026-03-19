@@ -104,7 +104,7 @@
             <!-- Archivo word resumen -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu resumen del prototipo en formato word:*
+                    Sube tu resumen del prototipo en formato word (máx 1MB):*
                 </label>
                 <input type="file" name="url_resumen" id="url_resumen" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -116,7 +116,7 @@
             <!-- Archivo word capitulo -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu ficha técnica en formato word:*
+                    Sube tu ficha técnica en formato word (máx 2MB): *
                 </label>
                 <input type="file" name="url_prototipo" id="url_prototipo" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -177,7 +177,22 @@
                 otraInput.value = "";
             }
         });
-
+        document.getElementById('url_prototipo').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 2 * 1024 * 1024; // 2MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 2MB");
+                this.value = "";
+            }
+        });
+        document.getElementById('url_resumen').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 1 * 1024 * 1024; // 1MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 1MB");
+                this.value = "";
+            }
+        });
     });
     function agregarAutor() {
         const contenedor = document.getElementById('contenedor-autores');
