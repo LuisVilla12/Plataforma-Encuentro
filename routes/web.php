@@ -53,22 +53,27 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/cartel/{dato}', [FormularioCartelController::class, 'show'])->name('formulario_cartel.show');
     Route::delete('/carteles/{dato}', [FormularioCartelController::class, 'destroy'])->name('formulario_cartel.destroy');
 
+
     //Rutas para cursos
     Route::get('/cursos', action: [FormularioCursosController::class, 'index'])->name('formulario_cursos.index');
     Route::get('/cursos/{dato}/edit', [FormularioCursosController::class, 'edit'])->name('formulario_cursos.edit');
     Route::put('/cursos/{dato}', [FormularioCursosController::class, 'update'])->name('formulario_cursos.update');
     Route::delete('/cursos/{dato}', [FormularioCursosController::class, 'destroy'])->name('formulario_cursos.destroy');
+
     //Rutas para revisores
     Route::get('/revisores', action: [RevisoresController::class, 'index'])->name('revisores.index');
     Route::get('/revisores/{dato}', action: [RevisoresController::class, 'show'])->name('revisores.show');
+
     //Asignar capitulo a revisor
     Route::post('/asignar-revisor', [AsignacionRevisionController::class, 'store'])->name('asignar.create');
     //Litado de asistentes
     Route::get('/asistentes', [FormularioAsistenciaController::class, 'index'])->name('formulario_asistencia.index');
     Route::get('/asistentes/{dato}', [FormularioAsistenciaController::class, 'show'])->name('formulario_asistencia.show');
     Route::delete('/asistentes/{dato}', [FormularioAsistenciaController::class, 'destroy'])->name('formulario_asistencia.destroy');
+
     Route::get('/asistentes/{dato}/edit', [FormularioAsistenciaController::class, 'edit'])->name('formulario_asistencia.edit');
     Route::put('/asistentes/{dato}', [FormularioAsistenciaController::class, 'update'])->name('formulario_asistencia.update');
+
     //Confirmar asistencia
     Route::get('/lista-confirmacion', [PaseListaController::class, 'index'])->name('lista.index');
     Route::put('/lista-confirmacion/{dato}/confirmar', [PaseListaController::class, 'update'])->name('lista.update');

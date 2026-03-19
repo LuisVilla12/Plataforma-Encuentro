@@ -31,6 +31,7 @@
             Registrar prototipo
         </a>
     </div>
+
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
         @if ($datos->count() > 0)
             <div class="hidden md:block">
@@ -86,7 +87,7 @@
                                         <span class="hidden sm:inline text-gray-300">•</span>
 
                                         {{-- Eliminar --}}
-                                        <form action="" method="POST" class="inline">
+                                        <form action="{{ route('formulario_prototipo.destroy', $dato) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
 

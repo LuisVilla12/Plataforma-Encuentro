@@ -110,5 +110,6 @@ class FormularioPrototipoController extends Controller
                 'success',
                 'El registro se ha eliminado correctamente.'
             );
+
     }
 }
