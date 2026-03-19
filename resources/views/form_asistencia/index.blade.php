@@ -43,6 +43,7 @@
                             <th class="p-2 text-white">Instituto</th>
                             <th class="p-2 text-white">Correo electronico</th>
                             <th class="p-2 text-white">Telefono</th>
+                            <th class="p-2 text-white">Oficio</th>
                             <th class="p-2 text-white">Participacion</th>
                             <th class="p-2 text-white">Acciones</th>
                         </tr>
@@ -64,6 +65,9 @@
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->celular }}
+                                </td>
+                                <td class="p-2">
+                                    {{ $dato->nombre_oficio }}
                                 </td>
                                 <td class="p-2">
                                     @foreach ($dato->modalidad_participacion as $modalidad)
