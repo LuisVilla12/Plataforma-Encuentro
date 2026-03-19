@@ -95,7 +95,7 @@
                 </label>
 
                 <div id="resumen_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank">
+                    <a href="{{ asset('storage/' . $dato->url_prototipo) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
@@ -119,12 +119,12 @@
                     Ficha técnica (máx 3MB):*
                 </label>
 
-                <div id="cartel_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cartel) }}" target="_blank">
+                <div id="prototipo_actual" class="flex items-center gap-2">
+                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
-                    <button type="button" onclick="quitarArchivo('cartel')"
+                    <button type="button" onclick="quitarArchivo('prototipo')"
                         class="bg-red-600 text-white px-2 py-1 rounded text-xs">
                         Quitar
                     </button>
