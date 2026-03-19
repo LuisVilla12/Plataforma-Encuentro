@@ -4,6 +4,33 @@
             Registrados a cursos Pre-Congreso Virtuales
         </h2>
     </x-slot>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-4">
+        {{-- Buscador --}}
+        <form method="GET" action="{{ route('formulario_cursos.index') }}" class="w-full md:w-1/3">
+            <div class="relative">
+                <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar asistente..."
+                    class="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
+
+                <svg class="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+                </svg>
+            </div>
+
+            @if (request('search'))
+                <a href="{{ route('formulario_cursos.index') }}"
+                    class="inline-block mt-1 text-sm text-gray-500 hover:text-indigo-600">
+                    Limpiar búsqueda
+                </a>
+            @endif
+        </form>
+        {{-- Botón --}}
+        <a href="{{ route('formulario_cursos.create') }}"
+            class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
+            Registrar asistente
+        </a>
+    </div>
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
         @if ($datos->count() > 0)
             <div class="hidden md:block">
@@ -118,25 +145,25 @@
             </div>
         @else
             <div class="bg-white py-4 mt-3">
-                <p class="text-sm text-gray-600 ml-6 text-center"> No hay registros de cursos registrados</p>
+                <p class="text-sm text-gray-600 ml-6 text-center"> No hay registros de cursos</p>
             </div>
         @endif
-        {{-- @if ($almacenes->count() > 0)
+        @if ($datos->count() > 0)
             <div class="bg-white py-4 my-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
                 <p class="text-sm text-gray-600 ml-6">
                     Mostrando
-                    <span class="font-medium">{{ $almacenes->firstItem() }}</span>
+                    <span class="font-medium">{{ $datos->firstItem() }}</span>
                     a
-                    <span class="font-medium">{{ $almacenes->lastItem() }}</span>
+                    <span class="font-medium">{{ $datos->lastItem() }}</span>
                     de
-                    <span class="font-medium">{{ $almacenes->total() }}</span>
+                    <span class="font-medium">{{ $datos->total() }}</span>
                     registros
                 </p>
 
-                {{ $almacenes->links() }}
+                {{ $datos->links() }}
             </div>
-        @endif --}}
+        @endif
 
     </div>
 

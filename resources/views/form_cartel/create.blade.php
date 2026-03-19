@@ -140,7 +140,7 @@
             {{-- Sube el ine --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf  (máx 5MB):*
+                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf  (máx 2MB):*
                 </label>
                 <input type="file" name="url_ine" id="url_ine" required
                     accept=".pdf,application/pdf"
