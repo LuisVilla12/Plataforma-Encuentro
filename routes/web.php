@@ -71,7 +71,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/asistentes/{dato}', [FormularioAsistenciaController::class, 'update'])->name('formulario_asistencia.update');
     //Confirmar asistencia
     Route::get('/lista-confirmacion', [PaseListaController::class, 'index'])->name('lista.index');
-    Route::put('/lista-confirmacion/{dato}', [PaseListaController::class, 'update'])->name('lista.update');
+    Route::put('/lista-confirmacion/{dato}/confirmar', [PaseListaController::class, 'update'])->name('lista.update');
+    Route::put('/lista-confirmacion/{dato}/desconfirmar', [PaseListaController::class, 'update1'])->name('lista.desconfirmar');
 
     });
 

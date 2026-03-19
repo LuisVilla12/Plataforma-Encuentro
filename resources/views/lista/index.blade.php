@@ -68,7 +68,18 @@
                                             </button>
                                         </form>
                                         <span class="hidden sm:inline text-gray-300">•</span>
-
+                                        @endif
+                                        @if($dato->confirmacion==2)
+                                        <form action="{{ route('lista.desconfirmar', ['dato' => $dato]) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            <button type="submit"
+                                                class="inline-flex items-center gap-1 text-red-600 hover:text-red-800 transition">
+                                                <x-heroicon-o-x-mark class="w-4 h-4" />
+                                                <span class="hidden sm:inline">Desconfirmar</span>
+                                            </button>
+                                        </form>
+                                        <span class="hidden sm:inline text-gray-300">•</span>
                                         @endif
 
                                         {{-- Editar --}}

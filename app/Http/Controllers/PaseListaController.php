@@ -31,5 +31,10 @@ class PaseListaController extends Controller
         $dato->save();
         return redirect()->route('lista.index')->with('success', 'Asistencia confirmada exitosamente.');
     }
+    public function update1(FormularioAsistencia $dato){
+        $dato->confirmacion = 1;
+        $dato->save();
+        return redirect()->route('lista.index')->with('success', 'Asistencia deshabilitada exitosamente.');
+    }
 }
 
