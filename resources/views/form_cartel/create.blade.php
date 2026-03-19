@@ -40,8 +40,8 @@
             Completa los siguientes campos para registrar tu participación.
         </p>
 
-        <form action="{{ route('formulario_cartel.store') }}" id="myForm" method="POST"
-            enctype="multipart/form-data" class="flex flex-col gap-4">
+        <form action="{{ route('formulario_cartel.store') }}" id="myForm" method="POST" enctype="multipart/form-data"
+            class="flex flex-col gap-4">
             @csrf
             <!-- Autores -->
             <div>
@@ -92,7 +92,7 @@
             <!-- Archivo word resumen -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tu resumen de tu cartel en formato word (max 1MB):*
+                    Sube tu resumen de tu cartel en formato word (máx 1MB):*
                 </label>
                 <input type="file" name="url_resumen" id="url_resumen" required
                     accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -117,7 +117,7 @@
             <!-- Archivo zip -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube tus imagenes originales del cartel en un archivo comprimido zip  (máx 5MB):*
+                    Sube tus imagenes originales del cartel en un archivo comprimido zip (máx 5MB):*
                 </label>
                 <input type="file" name="url_zip" id="url_zip" required accept=".zip,application/zip"
                     class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
@@ -125,10 +125,10 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-                        {{-- Sube la cesión de derechos --}}
+            {{-- Sube la cesión de derechos --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube la cesión de derechos en formato pdf  (máx 5MB):*
+                    Sube la cesión de derechos en formato pdf (máx 1MB):*
                 </label>
                 <input type="file" name="url_cesion_derechos" id="url_cesion_derechos" required
                     accept=".pdf,application/pdf"
@@ -140,10 +140,9 @@
             {{-- Sube el ine --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700">
-                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en  formato pdf  (máx 2MB):*
+                    Sube todas identificaciones oficinales (INE) de los miembros en archivo en formato pdf (máx 1MB):*
                 </label>
-                <input type="file" name="url_ine" id="url_ine" required
-                    accept=".pdf,application/pdf"
+                <input type="file" name="url_ine" id="url_ine" required accept=".pdf,application/pdf"
                     class="mt-2 w-full text-sm border border-gray-300 rounded-md p-2 file:bg-[#611232] file:text-white file:border-0 file:px-4 file:py-2 file:rounded-md file:cursor-pointer">
                 @error('url_ine')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
@@ -165,13 +164,13 @@
             </div>
             <!-- Botón -->
             <div class="flex justify-between items-center mt-6">
-            <a href="{{ route('index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm" >
-                Inicio
-            </a>
-            <button type="submit"
-                class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">
-                Registrar
-            </button>
+                <a href="{{ route('index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm">
+                    Inicio
+                </a>
+                <button type="submit"
+                    class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">
+                    Registrar
+                </button>
             </div>
 
         </form>
@@ -199,6 +198,51 @@
                 otraContainer.classList.add("hidden");
                 otraInput.removeAttribute("required");
                 otraInput.value = "";
+            }
+        });
+        // Validar tamaño de archivo
+        document.getElementById('url_resumen').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 1 * 1024 * 1024; // 1MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 1MB");
+                this.value = "";
+            }
+        });
+        // Validar tamaño de archivo
+        document.getElementById('url_cartel').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 5MB");
+                this.value = "";
+            }
+        });
+        // Validar tamaño de archivo
+        document.getElementById('url_zip').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 5MB");
+                this.value = "";
+            }
+        });
+        // sesion
+        document.getElementById('url_cesion_derechos').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 1 * 1024 * 1024; // 1MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 1MB");
+                this.value = "";
+            }
+        });
+        // Validar tamaño de archivo
+        document.getElementById('url_ine').addEventListener('change', function() {
+            const file = this.files[0];
+            const maxSize = 1 * 1024 * 1024; // 1MB
+            if (file && file.size > maxSize) {
+                alert("El archivo no puede ser mayor a 1MB");
+                this.value = "";
             }
         });
     });
