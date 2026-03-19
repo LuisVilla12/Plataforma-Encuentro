@@ -23,6 +23,11 @@
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('lista.index')" class="text-white " :active="request()->routeIs('lista.index')">
+                            {{ __('Confirmación') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('formulario_cursos.index')" class="text-white " :active="request()->routeIs('formulario_cursos.index')">
                             {{ __('Cursos') }}
                         </x-nav-link>

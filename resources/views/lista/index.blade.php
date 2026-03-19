@@ -1,7 +1,8 @@
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200">
-            Asistentes registrados al 3er. Encuentro de CA's
+            Confirmación de registro al 3er. Encuentro de CA's
         </h2>
     </x-slot>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-4">
@@ -25,11 +26,6 @@
                 </a>
             @endif
         </form>
-        {{-- Botón --}}
-        <a href="{{ route('formulario_asistencia.create') }}"
-            class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
-            Registrar asistente
-        </a>
     </div>
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
         @if ($datos->count() > 0)
@@ -40,9 +36,7 @@
                             <th class="p-2 text-white">N° </th>
                             <th class="p-2 text-white">Nombre completo </th>
                             <th class="p-2 text-white">Instituto</th>
-                            <th class="p-2 text-white">Correo electronico</th>
-                            <th class="p-2 text-white">Telefono</th>
-                            <th class="p-2 text-white">Participacion</th>
+                            <th class="p-2 text-white">Estatus</th>
                             <th class="p-2 text-white">Acciones</th>
                         </tr>
                     </thead>
@@ -58,29 +52,18 @@
                                 <td class="p-2">
                                     {{ $dato->institucion }}
                                 </td>
-                                <td class="p-2">
-                                    {{ $dato->correo }}
-                                </td>
-                                <td class="p-2">
-                                    {{ $dato->celular }}
-                                </td>
-                                <td class="p-2">
-                                    @foreach ($dato->modalidad_participacion as $modalidad)
-                                        <span
-                                            class="block text-center bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
-                                            {{ $modalidad }}
-                                        </span>
-                                    @endforeach
+                                <td class="p-2 text-center">
+                                    {{ $dato->confirmacion==2? 'Confirmado' : 'Pendiente' }}
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
                                         {{-- Ver --}}
-                                        <a href="{{ route('formulario_asistencia.show', ['dato' => $dato]) }}"
+                                        {{-- <a href="{{ route('formulario_asistencia.show', ['dato' => $dato]) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
                                             <x-heroicon-o-eye class="w-4 h-4" />
                                             <span class="hidden sm:inline">Ver</span>
                                         </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span>
+                                        <span class="hidden sm:inline text-gray-300">•</span> --}}
 
                                         {{-- Editar --}}
                                         <a href="{{ route('formulario_asistencia.edit', ['dato' => $dato]) }}"
@@ -88,21 +71,6 @@
                                             <x-heroicon-o-pencil-square class="w-4 h-4" />
                                             <span class="hidden sm:inline">Editar</span>
                                         </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span>
-
-                                        {{-- Eliminar --}}
-                                        <form action="{{ route('formulario_asistencia.destroy', ['dato' => $dato]) }}"
-                                            method="POST" class="inline">
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit"
-                                                class="inline-flex items-center gap-1 text-gray-500 hover:text-red-600 transition"
-                                                onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
-                                                <x-heroicon-o-trash class="w-4 h-4" />
-                                                <span class="hidden sm:inline">Eliminar</span>
-                                            </button>
-                                        </form>
                                     </div>
                                 </td>
                             </tr>
@@ -128,13 +96,6 @@
                                     </span>
                                 </p>
                             </div>
-                            <div class="">
-                                <p class="mb-2 text-sm">Correo electrónico:
-                                    <span class="font-semibold">
-                                        {{ $dato->correo }}
-                                    </span>
-                                </p>
-                            </div>
                         </div>
                         <div class="flex flex-wrap items-center justify-end mt-4 gap-4">
                             {{-- Ver --}}
@@ -149,19 +110,6 @@
                                 <x-heroicon-o-pencil-square class="w-4 h-4" />
                                 <span class="hidden sm:inline">Editar</span>
                             </a>
-                            <span class="hidden sm:inline text-gray-300">•</span>
-                            {{-- Eliminar --}}
-                            <form action="{{ route('formulario_asistencia.destroy', ['dato' => $dato]) }}"
-                                method="POST" class="inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit"
-                                    class="inline-flex items-center gap-1 text-gray-500 hover:text-red-600 transition"
-                                    onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
-                                    <x-heroicon-o-trash class="w-4 h-4" />
-                                    <span class="hidden sm:inline">Eliminar</span>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 @endforeach

@@ -8,6 +8,7 @@ use App\Http\Controllers\FormularioCartelController;
 use App\Http\Controllers\FormularioCursosController;
 use App\Http\Controllers\FormularioPrototipoController;
 use App\Http\Controllers\ObservacionesDocumentoController;
+use App\Http\Controllers\PaseListaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RevisoresController;
 use App\Models\AsignacionRevision;
@@ -68,6 +69,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/asistentes/{dato}', [FormularioAsistenciaController::class, 'destroy'])->name('formulario_asistencia.destroy');
     Route::get('/asistentes/{dato}/edit', [FormularioAsistenciaController::class, 'edit'])->name('formulario_asistencia.edit');
     Route::put('/asistentes/{dato}', [FormularioAsistenciaController::class, 'update'])->name('formulario_asistencia.update');
+    Route::get('/lista-confirmacion', [PaseListaController::class, 'index'])->name('lista.index');
+
     });
 
 // Rutas para formulario de capitulos
