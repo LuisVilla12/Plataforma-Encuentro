@@ -187,6 +187,17 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Nombre oficio:*
+                </label>
+                <input type="text" name="nombre_oficio" id="nombre_oficio" required placeholder="Nombre del oficio"
+                    value="{{ $dato->nombre_oficio }}"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('nombre_oficio')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             <!-- Curso -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">
