@@ -74,12 +74,12 @@
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
                                         {{-- Ver --}}
-                                        <a href="{{ route('formulario_cartel.show', $dato) }}"
+                                        {{-- <a href="{{ route('formulario_cartel.show', $dato) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
                                             <x-heroicon-o-eye class="w-4 h-4" />
                                             <span class="hidden sm:inline">Ver</span>
                                         </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span>
+                                        <span class="hidden sm:inline text-gray-300">•</span> --}}
                                         {{-- Editar --}}
                                         <a href="{{ route('formulario_cartel.edit', ['dato' => $dato]) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">

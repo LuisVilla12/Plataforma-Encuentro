@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>III Encuentro de CA's</title>
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -219,7 +220,7 @@
             <!-- Botón -->
             <div class="flex justify-between items-center mt-6">
                 <a href="{{ route('formulario_cartel.index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm">
-                    Inicio
+                    Regresar
                 </a>
                 <button type="submit"
                     class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">

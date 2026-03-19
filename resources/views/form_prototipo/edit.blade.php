@@ -78,9 +78,20 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Observaciones:
+                </label>
+                <textarea name="observaciones" id="observaciones" rows="4"
+                    placeholder=""
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">{{ $dato->observaciones }}</textarea>
+                @error('observaciones')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             <div class="flex items-center gap-4">
                 <label class="block text-sm font-semibold text-gray-700">
-                    Resumen de cartel (máx 1MB):*
+                    Resumen de prototipo (máx 1MB):*
                 </label>
 
                 <div id="resumen_actual" class="flex items-center gap-2">
@@ -105,7 +116,7 @@
             @enderror
             <div class="flex items-center gap-4">
                 <label class="block text-sm font-semibold text-gray-700">
-                    Cartel (máx 3MB):*
+                    Ficha técnica (máx 3MB):*
                 </label>
 
                 <div id="cartel_actual" class="flex items-center gap-2">
@@ -119,90 +130,15 @@
                     </button>
                 </div>
 
-                <input type="file" name="url_cartel" id="input_cartel" class="hidden"
+                <input type="file" name="url_prototipo" id="input_prototipo" class="hidden"
                     accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation">
 
-                <input type="hidden" name="eliminar_cartel" id="eliminar_cartel" value="0">
+                <input type="hidden" name="eliminar_prototipo" id="eliminar_prototipo" value="0">
             </div>
 
-            @error('url_cartel')
+            @error('url_prototipo')
                 <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
             @enderror
-            <div class="flex items-center gap-4">
-                <label class="block text-sm font-semibold text-gray-700">
-                    Imágenes del cartel (máx 5MB):*
-                </label>
-
-                <div id="zip_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_zip) }}" target="_blank">
-                        <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
-                    </a>
-
-                    <button type="button" onclick="quitarArchivo('zip')"
-                        class="bg-red-600 text-white px-2 py-1 rounded text-xs">
-                        Quitar
-                    </button>
-                </div>
-
-                <input type="file" name="url_zip" id="input_zip" class="hidden" accept=".zip,application/zip">
-
-                <input type="hidden" name="eliminar_zip" id="eliminar_zip" value="0">
-            </div>
-
-            @error('url_zip')
-                <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-            @enderror
-            <div class="flex items-center gap-4">
-                <label class="block text-sm font-semibold text-gray-700">
-                    Cesión de derechos (máx 1MB):*
-                </label>
-
-                <div id="cesion_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cesion_derechos) }}" target="_blank">
-                        <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
-                    </a>
-
-                    <button type="button" onclick="quitarArchivo('cesion')"
-                        class="bg-red-600 text-white px-2 py-1 rounded text-xs">
-                        Quitar
-                    </button>
-                </div>
-
-                <input type="file" name="url_cesion_derechos" id="input_cesion" class="hidden"
-                    accept=".pdf,application/pdf">
-
-                <input type="hidden" name="eliminar_cesion" id="eliminar_cesion" value="0">
-            </div>
-
-            @error('url_cesion_derechos')
-                <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-            @enderror
-            <div class="flex items-center gap-4">
-                <label class="block text-sm font-semibold text-gray-700">
-                    Cesión de derechos (máx 1MB):*
-                </label>
-
-                <div id="cesion_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cesion_derechos) }}" target="_blank">
-                        <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
-                    </a>
-
-                    <button type="button" onclick="quitarArchivo('cesion')"
-                        class="bg-red-600 text-white px-2 py-1 rounded text-xs">
-                        Quitar
-                    </button>
-                </div>
-
-                <input type="file" name="url_cesion_derechos" id="input_cesion" class="hidden"
-                    accept=".pdf,application/pdf">
-
-                <input type="hidden" name="eliminar_cesion" id="eliminar_cesion" value="0">
-            </div>
-
-            @error('url_cesion_derechos')
-                <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
-            @enderror
-
             {{-- Confirmación --}}
             <div class="mb-4">
                 <label class="flex items-center">
@@ -219,8 +155,8 @@
             </div>
             <!-- Botón -->
             <div class="flex justify-between items-center mt-6">
-                <a href="{{ route('formulario_cartel.index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm">
-                    Inicio
+                <a href="{{ route('formulario_prototipo.index') }}" class="bg-[#A57F2C] text-white px-8 py-2 uppercase rounded text-sm">
+                    Regresar
                 </a>
                 <button type="submit"
                     class=" bg-[#611232] text-white px-8 py-2 rounded-md text-sm transition uppercase duration-200">

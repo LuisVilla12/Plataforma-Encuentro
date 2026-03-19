@@ -84,9 +84,11 @@ class FormularioPrototipoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FormularioPrototipo $formularioPrototipo)
+    public function edit(FormularioPrototipo $dato)
     {
         //
+        $instituciones = Instituto::all();
+        return view('form_prototipo.edit', compact('dato', 'instituciones'));
     }
 
     /**
