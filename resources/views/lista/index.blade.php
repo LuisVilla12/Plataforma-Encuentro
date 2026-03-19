@@ -42,7 +42,7 @@
                     </thead>
                     <tbody>
                         @foreach ($datos as $dato)
-                            <tr class="border-t">
+                            <tr class="border-t {{ $dato->confirmacion==1 ? 'bg-red-100' : 'bg-green-100' }} hover:bg-gray-300 transition">
                                 <td class="p-2 text-center">
                                     {{ $loop->iteration }}
                                 </td>
@@ -57,13 +57,19 @@
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
-                                        {{-- Ver --}}
-                                        {{-- <a href="{{ route('formulario_asistencia.show', ['dato' => $dato]) }}"
-                                            class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
-                                            <x-heroicon-o-eye class="w-4 h-4" />
-                                            <span class="hidden sm:inline">Ver</span>
-                                        </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span> --}}
+                                        @if($dato->confirmacion==1)
+                                        <form action="{{ route('lista.update', ['dato' => $dato]) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            <button type="submit"
+                                                class="inline-flex items-center gap-1 text-green-600 hover:text-green-800 transition">
+                                                <x-heroicon-o-check class="w-4 h-4" />
+                                                <span class="hidden sm:inline">Confirmar</span>
+                                            </button>
+                                        </form>
+                                        <span class="hidden sm:inline text-gray-300">•</span>
+
+                                        @endif
 
                                         {{-- Editar --}}
                                         <a href="{{ route('formulario_asistencia.edit', ['dato' => $dato]) }}"

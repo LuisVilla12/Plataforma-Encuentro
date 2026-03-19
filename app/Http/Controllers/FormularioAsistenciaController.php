@@ -35,7 +35,7 @@ class FormularioAsistenciaController extends Controller
      */
     public function create()
     {
-        $instituciones = Instituto::all()->orderBy('nombre');
+        $instituciones = Instituto::all();
         return view('form_asistencia.create', compact('instituciones'));
     }
 

@@ -69,7 +69,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/asistentes/{dato}', [FormularioAsistenciaController::class, 'destroy'])->name('formulario_asistencia.destroy');
     Route::get('/asistentes/{dato}/edit', [FormularioAsistenciaController::class, 'edit'])->name('formulario_asistencia.edit');
     Route::put('/asistentes/{dato}', [FormularioAsistenciaController::class, 'update'])->name('formulario_asistencia.update');
+    //Confirmar asistencia
     Route::get('/lista-confirmacion', [PaseListaController::class, 'index'])->name('lista.index');
+    Route::put('/lista-confirmacion/{dato}', [PaseListaController::class, 'update'])->name('lista.update');
 
     });
 

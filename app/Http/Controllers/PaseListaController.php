@@ -26,5 +26,10 @@ class PaseListaController extends Controller
         // $datos = FormularioAsistencia::all();
         return view('lista.index', compact('datos'));
     }
+    public function update(FormularioAsistencia $dato){
+        $dato->confirmacion = 2;
+        $dato->save();
+        return redirect()->route('lista.index')->with('success', 'Asistencia confirmada exitosamente.');
+    }
 }
 
