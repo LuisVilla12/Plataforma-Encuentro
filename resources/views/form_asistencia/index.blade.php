@@ -4,6 +4,7 @@
             Asistentes registrados al 3er. Encuentro de CA's
         </h2>
     </x-slot>
+
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-4">
         {{-- Buscador --}}
         <form method="GET" action="{{ route('formulario_asistencia.index') }}" class="w-full md:w-1/3">
@@ -171,7 +172,7 @@
                 <p class="text-sm text-gray-600 ml-6 text-center"> No hay registros</p>
             </div>
         @endif
-        @if ($datos->count() > 0)
+        {{-- @if ($datos->count() > 0)
             <div class="bg-white py-4 my-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <p class="text-sm text-gray-600 ml-6">
                     Mostrando
@@ -184,7 +185,7 @@
                 </p>
                 {{ $datos->links() }}
             </div>
-        @endif
+        @endif --}}
 
     </div>
 
