@@ -54,7 +54,7 @@
             </div>
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Apellido Materno: *</label>
-                <input type="text" name="apellidoM" id="apellidoM" value="{{ $dato->apellidoM }}" required
+                <input type="text" name="apellidoM" id="apellidoM" value="{{ $dato->apellidoM }}"
                     placeholder="Ingrese su apellido materno"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
                 @error('apellidoM')
