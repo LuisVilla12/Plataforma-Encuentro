@@ -22,7 +22,7 @@ class FormularioAsistenciaController extends Controller
                 ->orWhere('institucion', 'like', "%{$search}%");
             });
         })
-        ->orderBy('id', 'desc')->get();
+        ->orderBy('nombre', 'desc')->get();
         // ->paginate(10)
         // ->withQueryString(); // ← mantiene el search en la paginación
 
