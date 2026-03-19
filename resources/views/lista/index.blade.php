@@ -7,7 +7,7 @@
     </x-slot>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-4">
         {{-- Buscador --}}
-        <form method="GET" action="{{ route('formulario_asistencia.index') }}" class="w-full md:w-1/3">
+        <form method="GET" action="{{ route('lista.index') }}" class="w-full md:w-1/3">
             <div class="relative">
                 <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar asistente..."
                     class="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
@@ -20,7 +20,7 @@
             </div>
 
             @if (request('search'))
-                <a href="{{ route('formulario_asistencia.index') }}"
+                <a href="{{ route('lista.index') }}"
                     class="inline-block mt-1 text-sm text-gray-500 hover:text-indigo-600">
                     Limpiar búsqueda
                 </a>
