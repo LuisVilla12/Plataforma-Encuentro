@@ -164,22 +164,20 @@
                 <p class="text-sm text-gray-600 ml-6 text-center"> No hay prototipos registrados</p>
             </div>
         @endif
-        {{-- @if ($almacenes->count() > 0)
+        @if ($datos->count() > 0)
             <div class="bg-white py-4 my-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-
                 <p class="text-sm text-gray-600 ml-6">
                     Mostrando
-                    <span class="font-medium">{{ $almacenes->firstItem() }}</span>
+                    <span class="font-medium">{{ $datos->firstItem() }}</span>
                     a
-                    <span class="font-medium">{{ $almacenes->lastItem() }}</span>
+                    <span class="font-medium">{{ $datos->lastItem() }}</span>
                     de
-                    <span class="font-medium">{{ $almacenes->total() }}</span>
+                    <span class="font-medium">{{ $datos->total() }}</span>
                     registros
                 </p>
-
-                {{ $almacenes->links() }}
+                {{ $datos->links() }}
             </div>
-        @endif --}}
+        @endif
 
     </div>
 
