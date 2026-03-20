@@ -179,11 +179,11 @@
             @enderror
             <div class="flex items-center gap-4">
                 <label class="block text-sm font-semibold text-gray-700">
-                    Cesión de derechos (máx 1MB):*
+                    INE (máx 1MB):*
                 </label>
 
                 <div id="cesion_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cesion_derechos) }}" target="_blank">
+                    <a href="{{ asset('storage/' . $dato->url_ine) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
