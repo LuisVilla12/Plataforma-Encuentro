@@ -356,3 +356,26 @@ function irArriba() {
     });
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("btnCarteles");
+
+  // Fecha límite: 23 marzo 2026, 20:00 (GMT-6)
+  const fechaLimite = new Date("2026-03-23T20:00:00-06:00");
+
+  btn.addEventListener("click", function (e) {
+    const ahora = new Date();
+
+    if (ahora >= fechaLimite) {
+      e.preventDefault(); // 🚫 bloquea el link
+
+      Swal.fire({
+        icon: "error",
+        title: "Registro cerrado",
+        text: "El registro de carteles ha finalizado.",
+        confirmButtonColor: "#611232"
+      });
+    }
+    // Si no, deja que el link funcione normal
+  });
+});

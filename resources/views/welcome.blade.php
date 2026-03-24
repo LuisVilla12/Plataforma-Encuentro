@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/logo_cas.ico">              <!-- HTML4 (Legacy) -->
+  <link rel="icon" sizes="64x64" href="assets/logo_cas.ico">         <!-- HTML5 -->
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="assets/logo_cas.ico">                 <!-- iPhone/iPad -->
+
   <title>III Encuentro de CA's</title>
 
   <!-- Tailwind CDN -->
@@ -12,6 +17,8 @@
   <!-- JS externo -->
   <script src="assets/main.js" defer></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
   <!-- Config rápida de Tailwind -->
   <script>
     tailwind.config = {
@@ -116,7 +123,8 @@
             class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Cursos
           </a>
-          <a href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
+          <a id="btnCarteles"
+            href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
             class="rounded-xl bg-accent px-2 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Carteles
           </a>
