@@ -16,15 +16,15 @@ class FormularioPrototipoExport implements FromCollection, WithHeadings
     return FormularioPrototipo::all()->map(function ($asistente) {
 
     // Decodificar JSON
-    $autores = json_decode($asistente->autores, true);
+    // $autores = json_decode($asistente->autores, true);
 
     // Seguridad
-    if (!is_array($autores)) {
-        $autores = [$asistente->autores];
-    }
+    // if (!is_array($autores)) {
+    //     $autores = [$asistente->autores];
+    // }
 
     // Formatear autores
-    $autoresFormateados = collect($autores)
+    $autoresFormateados = collect($asistente->autores)
         ->map(function ($autor, $index) {
             return ($index + 1) . '. ' . $autor;
         })
