@@ -110,5 +110,5 @@ Route::post('/registrar-cursos', [FormularioCursosController::class, 'store'])->
 Route::get('/registrar-asistencia', [FormularioAsistenciaController::class, 'create'])->name('formulario_asistencia.create');
 Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
 
-
+Route::get('/cartel/{dato}/{tipo}', [FormularioCartelController::class, 'descargar'])->name('formulario_cartel.descargar');
 require __DIR__ . '/auth.php';

@@ -76,11 +76,11 @@
                                     {{ $dato->tematica }}
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_cartel) }}"
+                                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'cartel']) }}"
                                         target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank">
+                                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'resumen']) }}" target="_blank">
                                         <x-heroicon-o-document-text class="w-4 h-4" />
                                     </a>
                                 </td>
@@ -147,11 +147,11 @@
                         </div>
                         <div class="flex flex-wrap items-center justify-end mt-4 gap-4">
                             {{-- Ver --}}
-                            <a href="{{ route('formulario_cartel.show', $dato) }}"
+                            {{-- <a href="{{ route('formulario_cartel.show', $dato) }}"
                                 class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
                                 <x-heroicon-o-eye class="w-4 h-4" />
                                 <span class="hidden sm:inline">Ver</span>
-                            </a>
+                            </a> --}}
                             <span class="hidden sm:inline text-gray-300">•</span>
                             {{-- Editar --}}
                             <a href=""

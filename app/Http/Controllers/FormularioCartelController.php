@@ -213,4 +213,29 @@ class FormularioCartelController extends Controller
     {
     return Excel::download(new FormularioCartelExport(), 'carteles.xlsx');
     }
+
+    public function descargar($dato,$tipo)
+{
+    $dato = FormularioCartel::findOrFail($dato);
+    if($tipo == 'cartel'){
+        $ruta = storage_path('app/public/' . $dato->url_cartel);
+        $nombrePersonalizado = 'Cartel_' . $dato->id . '.pptx';
+    }elseif($tipo == 'resumen'){
+        $ruta = storage_path('app/public/' . $dato->url_resumen);
+        $nombrePersonalizado = 'Resumen_' . $dato->id . '.docx';
+    }elseif($tipo == 'zip'){
+        $ruta = storage_path('app/public/' . $dato->url_zip);
+        $nombrePersonalizado = 'Material_' . $dato->id . '.zip';
+    }elseif($tipo == 'cesion'){
+        $ruta = storage_path('app/public/' . $dato->url_cesion_derechos);
+        $nombrePersonalizado = 'Cesion_Derechos_' . $dato->id . '.pdf';
+    }elseif($tipo == 'ine'){
+        $ruta = storage_path('app/public/' . $dato->url_ine);
+        $nombrePersonalizado = 'INE_' . $dato->id . '.pdf';
+    }else{
+         return redirect()->back()->with('error', 'Tipo de archivo no válido');
+    }
+
+    return response()->download($ruta, $nombrePersonalizado);
+}
 }

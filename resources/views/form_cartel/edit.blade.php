@@ -116,7 +116,7 @@
                 </label>
 
                 <div id="resumen_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank">
+                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'resumen']) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
@@ -141,7 +141,7 @@
                 </label>
 
                 <div id="cartel_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cartel) }}" target="_blank">
+                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'cartel']) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
@@ -166,7 +166,7 @@
                 </label>
 
                 <div id="zip_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_zip) }}" target="_blank">
+                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'zip']) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
@@ -190,7 +190,7 @@
                 </label>
 
                 <div id="cesion_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_cesion_derechos) }}" target="_blank">
+                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'cesion']) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
@@ -215,7 +215,7 @@
                 </label>
 
                 <div id="cesion_actual" class="flex items-center gap-2">
-                    <a href="{{ asset('storage/' . $dato->url_ine) }}" target="_blank">
+                    <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'ine']) }}" target="_blank">
                         <x-heroicon-o-document-text class="w-5 h-5 text-blue-700" />
                     </a>
 
