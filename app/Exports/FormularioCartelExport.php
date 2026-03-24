@@ -15,12 +15,28 @@ class FormularioCartelExport implements FromCollection, WithHeadings
     public function collection()
     {
         return FormularioCartel::all()->map(function ($asistente) {
-            return [
-                $asistente->id,
-                $asistente->autores,
-                $asistente->institucion,
-                        ];
-        });
+
+    // Decodificar JSON a array
+    $autores = json_decode($asistente->autores, true);
+
+    // Seguridad por si viene null o mal formato
+    if (!is_array($autores)) {
+        $autores = [$asistente->autores];
+    }
+
+    // Formatear autores
+    $autoresFormateados = collect($autores)
+        ->map(function ($autor, $index) {
+            return ($index + 1) . '. ' . $autor;
+        })
+        ->implode("\n");
+
+    return [
+        $asistente->id,
+        $autoresFormateados,
+        $asistente->institucion,
+    ];
+});
     }
      public function headings(): array
     {

@@ -13,13 +13,29 @@ class FormularioPrototipoExport implements FromCollection, WithHeadings
     */
     public function collection()
     {
-        return FormularioPrototipo::all()->map(function ($asistente) {
-            return [
-                $asistente->id,
-                $asistente->autores,
-                $asistente->institucion,
-                        ];
-        });
+    return FormularioPrototipo::all()->map(function ($asistente) {
+
+    // Decodificar JSON
+    $autores = json_decode($asistente->autores, true);
+
+    // Seguridad
+    if (!is_array($autores)) {
+        $autores = [$asistente->autores];
+    }
+
+    // Formatear autores
+    $autoresFormateados = collect($autores)
+        ->map(function ($autor, $index) {
+            return ($index + 1) . '. ' . $autor;
+        })
+        ->implode("\n");
+
+    return [
+        $asistente->id,
+        $autoresFormateados,
+        $asistente->institucion,
+    ];
+});
     }
     public function headings(): array
     {
