@@ -90,6 +90,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/lista-confirmacion/{dato}/confirmar', [PaseListaController::class, 'update'])->name('lista.update');
     Route::put('/lista-confirmacion/{dato}/desconfirmar', [PaseListaController::class, 'update1'])->name('lista.desconfirmar');
 
+    //Formulario para registro de carteles
+    Route::get('/registrar-cartel', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
+    Route::post('/registrar-cartel', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
+
     });
 
 // Rutas para formulario de capitulos
@@ -98,9 +102,6 @@ Route::post('/registrar-capitulo', [FormularioCapituloController::class, 'store'
 //Formulario para registro de prototipo de investigación
 Route::get('/registrar-prototipo', [FormularioPrototipoController::class, 'create'])->name('formulario_prototipo.create');
 Route::post('/registrar-prototipo', [FormularioPrototipoController::class, 'store'])->name('formulario_prototipo.store');
-//Formulario para registro de carteles
-Route::get('/registrar-cartel', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
-Route::post('/registrar-cartel', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
 
 
 //Formulario para registro de cursos
