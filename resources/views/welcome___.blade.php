@@ -201,8 +201,7 @@
             class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Cursos
           </a>
-          <a id="btnCarteles2"
-            href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
+          <a href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
             class="rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-sand hover:text-ink transition">
             Carteles
           </a>
@@ -930,8 +929,7 @@
           Presenta investigaciones y proyectos. Se publicará <b>resumen y cartel</b> en la memoria del evento con ISBN.
         </p>
       </div>
-      <a id="btnCarteles3"
-            href="https://encuentro-ca.itsx.edu.mx/registrar-cartel"
+      <a href="https://encuentro-ca.itsx.edu.mx/registrar-cartel" target="_blank" rel="noopener noreferrer"
         class="mt-3 md:mt-0 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-extrabold text-white hover:bg-sand hover:text-ink transition">
         Registrar cartel
       </a>
