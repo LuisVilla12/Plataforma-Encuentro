@@ -104,6 +104,7 @@
                     <option {{ $dato->tematica == "Sistema de Gestión Económico Administrativo y Sociedad" ? 'selected' : '' }} value="Sistema de Gestión Económico Administrativo y Sociedad">Sistema de Gestión Económico Administrativo y Sociedad</option>
                     <option {{ $dato->tematica == "Tecnología de la información y comunicación" ? 'selected' : '' }} value="Tecnología de la información y comunicación">Tecnología de la información y comunicación</option>
                     <option {{ $dato->tematica == "Innovación en Alimentos, Nutrición y Bienestar" ? 'selected' : '' }} value="Innovación en Alimentos, Nutrición y Bienestar">Innovación en Alimentos, Nutrición y Bienestar</option>
+                    <option {{ $dato->tematica == "Por asignar" ? 'selected' : '' }} value="Por asignar">Por asignar</option>
                 </select>
                 @error('tematica')
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>

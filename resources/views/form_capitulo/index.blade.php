@@ -13,6 +13,8 @@
                             <th class="p-2 text-white">N° </th>
                             <th class="p-2 text-white">Autores </th>
                             <th class="p-2 text-white">Instituto</th>
+                            <th class="p-2 text-white">Correo</th>
+                            <th class="p-2 text-white">Tematica</th>
                             <th class="p-2 text-white">Capitulo</th>
                             <th class="p-2 text-white">Resumen</th>
                             <th class="p-2">Acciones</th>
@@ -33,6 +35,12 @@
                                 </td>
                                 <td class="p-2">
                                     {{ $dato->institucion }}
+                                </td>
+                                <td class="p-2">
+                                    {{ $dato->correo }}
+                                </td>
+                                <td class="p-2">
+                                    {{ $dato->tematica }}
                                 </td>
                                 <td class="p-2">
                                     <a href="{{ asset('storage/' . $dato->url_capitulo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
