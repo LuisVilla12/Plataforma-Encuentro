@@ -35,6 +35,8 @@ class FormularioCartelExport implements FromCollection, WithHeadings
         $asistente->id,
         $autoresFormateados,
         $asistente->institucion,
+        $asistente->correo,
+        $asistente->tematica,
     ];
 });
     }
@@ -44,6 +46,8 @@ class FormularioCartelExport implements FromCollection, WithHeadings
             'Id',
             'Autores',
             'Institución',
+            'Correo',
+            'Tematica',
         ];
     }
 
