@@ -93,7 +93,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     //Formulario para registro de carteles
     Route::get('/registrar-cartel', [FormularioCartelController::class, 'create'])->name('formulario_cartel.create');
     Route::post('/registrar-cartel', [FormularioCartelController::class, 'store'])->name('formulario_cartel.store');
-
     });
 
 // Rutas para formulario de capitulos

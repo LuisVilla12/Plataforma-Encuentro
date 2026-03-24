@@ -78,6 +78,37 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            {{-- Correo --}}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Correo institucional: *
+                </label>
+                <input type="email" name="correo" id="correo" value="{{ $dato->correo }}" required
+                    placeholder="Ingrese su correo institucional"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('correo')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Temática: *
+                </label>
+                <select name="tematica" id="tematica" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <option value="" disabled selected>Selecciona la temática</option>
+                    <option {{ $dato->tematica == "Procesos productivos, energías renovables, electromovilidad y semiconductores" ? 'selected' : '' }} value="Procesos productivos, energías renovables, electromovilidad y semiconductores">
+                        Procesos productivos, energías renovables, electromovilidad y semiconductores
+                    </option>
+                    <option {{ $dato->tematica == "Medio Ambiente, Biotecnología y Sustentabilidad" ? 'selected' : '' }} value="Medio Ambiente, Biotecnología y Sustentabilidad">Medio Ambiente, Biotecnología y Sustentabilidad</option>
+                    <option {{ $dato->tematica == "Sistema de Gestión Económico Administrativo y Sociedad" ? 'selected' : '' }} value="Sistema de Gestión Económico Administrativo y Sociedad">Sistema de Gestión Económico Administrativo y Sociedad</option>
+                    <option {{ $dato->tematica == "Tecnología de la información y comunicación" ? 'selected' : '' }} value="Tecnología de la información y comunicación">Tecnología de la información y comunicación</option>
+                    <option {{ $dato->tematica == "Innovación en Alimentos, Nutrición y Bienestar" ? 'selected' : '' }} value="Innovación en Alimentos, Nutrición y Bienestar">Innovación en Alimentos, Nutrición y Bienestar</option>
+                </select>
+                @error('tematica')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             <div class="flex items-center gap-4">
                 <label class="block text-sm font-semibold text-gray-700">
                     Resumen de cartel (máx 1MB):*

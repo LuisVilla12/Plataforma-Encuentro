@@ -117,6 +117,8 @@ class FormularioCartelController extends Controller
             'url_zip' => 'nullable|file|mimes:zip',
             'url_cesion_derechos' => 'nullable|file|mimes:pdf',
             'url_ine' => 'nullable|file|mimes:pdf',
+            'correo' => 'nullable|string|max:255',
+            'tematica' => 'nullable|string|max:255',
         ]);
 
         if ($request->eliminar_resumen) {
@@ -184,10 +186,13 @@ class FormularioCartelController extends Controller
 
         $dato->autores = $request->autores;
         $dato->institucion = $request->institucion;
-
+        $dato->correo = $request->correo;
+        $dato->tematica = $request->tematica;
         $dato->save();
-
-        return redirect()->back()->with('success', 'Registro actualizado correctamente');
+        // return redirect()->back()->with('success', 'Registro actualizado correctamente');
+        return redirect()
+            ->route('formulario_cartel.index')
+            ->with('success', 'Registro actualizado correctamente');
     }
 
     /**
