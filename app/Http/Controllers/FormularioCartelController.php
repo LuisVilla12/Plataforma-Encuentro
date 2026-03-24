@@ -219,21 +219,21 @@ class FormularioCartelController extends Controller
     $dato = FormularioCartel::findOrFail($dato);
     if($tipo == 'cartel'){
         $ruta = storage_path('app/public/' . $dato->url_cartel);
-        $nombrePersonalizado = 'Cartel_' . $dato->id . '.pptx';
+        $nombrePersonalizado =  $dato->id .'_E3CA_Cartel_'  . $dato->institucion .'.pptx';
     }elseif($tipo == 'resumen'){
         $ruta = storage_path('app/public/' . $dato->url_resumen);
-        $nombrePersonalizado = 'Resumen_' . $dato->id . '.docx';
+        $nombrePersonalizado = $dato->id .'_3ECA_Resumen_' . $dato->institucion . '.docx';
     }elseif($tipo == 'zip'){
         $ruta = storage_path('app/public/' . $dato->url_zip);
-        $nombrePersonalizado = 'Material_' . $dato->id . '.zip';
+        $nombrePersonalizado = $dato->id .'_E3CA_Material_'  . $dato->institucion . '.zip';
     }elseif($tipo == 'cesion'){
         $ruta = storage_path('app/public/' . $dato->url_cesion_derechos);
-        $nombrePersonalizado = 'Cesion_Derechos_' . $dato->id . '.pdf';
+        $nombrePersonalizado = $dato->id .'_E3CA_Cesion_' . $dato->institucion . '.pdf';
     }elseif($tipo == 'ine'){
         $ruta = storage_path('app/public/' . $dato->url_ine);
-        $nombrePersonalizado = 'INE_' . $dato->id . '.pdf';
+        $nombrePersonalizado = $dato->id .'_E3CA_INE_' . $dato->institucion . '.pdf';
     }else{
-         return redirect()->back()->with('error', 'Tipo de archivo no válido');
+        return redirect()->back()->with('error', 'Tipo de archivo no válido');
     }
 
     return response()->download($ruta, $nombrePersonalizado);
