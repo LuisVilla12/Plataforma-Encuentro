@@ -45,6 +45,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     //Prototipos de investigación
     Route::get('/prototipos-registrados', [FormularioPrototipoController::class, 'index'])->name('formulario_prototipo.index');
+    Route::get('/prototipos/excel', [FormularioPrototipoController::class, 'exportExcel'])->name('formulario_prototipo.excel');
+
     Route::get('/prototipo/{dato}', [FormularioPrototipoController::class, 'show'])->name('formulario_prototipo.show');
     Route::get('/prototipo/{dato}/edit', [FormularioPrototipoController::class, 'edit'])->name('formulario_prototipo.edit');
     Route::put('/prototipo/{dato}', [FormularioPrototipoController::class, 'update'])->name('formulario_prototipo.update');
@@ -52,6 +54,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     //Carteles
     Route::get('/carteles-registrados', [FormularioCartelController::class, 'index'])->name('formulario_cartel.index');
+        //EXCEL
+    Route::get('/carteles/excel', [FormularioCartelController::class, 'exportExcel'])->name('formulario_cartel.excel');
+    Route::get('/asistentes/{dato}', [FormularioAsistenciaController::class, 'show'])->name('formulario_asistencia.show');
     Route::get('/cartel/{dato}/edit', [FormularioCartelController::class, 'edit'])->name('formulario_cartel.edit');
     Route::put('/cartel/{dato}', [FormularioCartelController::class, 'update'])->name('formulario_cartel.update');
     Route::get('/cartel/{dato}', [FormularioCartelController::class, 'show'])->name('formulario_cartel.show');
@@ -72,6 +77,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/asignar-revisor', [AsignacionRevisionController::class, 'store'])->name('asignar.create');
     //Litado de asistentes
     Route::get('/asistentes', [FormularioAsistenciaController::class, 'index'])->name('formulario_asistencia.index');
+    Route::get('/asistente/excel', [FormularioAsistenciaController::class, 'exportExcel'])->name('formulario_asistencia.excel');
+    //EXCEL
     Route::get('/asistentes/{dato}', [FormularioAsistenciaController::class, 'show'])->name('formulario_asistencia.show');
     Route::delete('/asistentes/{dato}', [FormularioAsistenciaController::class, 'destroy'])->name('formulario_asistencia.destroy');
 

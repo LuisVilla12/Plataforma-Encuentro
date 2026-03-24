@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormularioCartel;
+use App\Exports\FormularioCartelExport;
 use App\Models\Instituto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class FormularioCartelController extends Controller
 {
@@ -200,5 +203,9 @@ class FormularioCartelController extends Controller
                 'success',
                 'El registro se ha eliminado correctamente.'
             );
+    }
+    public function exportExcel()
+    {
+    return Excel::download(new FormularioCartelExport(), 'carteles.xlsx');
     }
 }

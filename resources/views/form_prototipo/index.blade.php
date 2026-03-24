@@ -30,6 +30,10 @@
             class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
             Registrar prototipo
         </a>
+        <a href="{{ route('formulario_prototipo.excel') }}"
+            class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
+            Exportar datos
+        </a>
     </div>
 
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">

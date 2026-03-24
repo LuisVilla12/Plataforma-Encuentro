@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\FormularioAsistenciaExport;
 use App\Models\FormularioAsistencia;
 use App\Models\Instituto;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class FormularioAsistenciaController extends Controller
 {
@@ -119,5 +122,9 @@ class FormularioAsistenciaController extends Controller
             ->with(
                 'success', 'El registro se ha eliminado correctamente.'
         );
+    }
+    public function exportExcel()
+    {
+    return Excel::download(new FormularioAsistenciaExport(), 'asistencia.xlsx');
     }
 }

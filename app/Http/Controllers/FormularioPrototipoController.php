@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\FormularioPrototipo;
 use App\Models\Instituto;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\FormularioPrototipoExport;
+
 
 class FormularioPrototipoController extends Controller
 {
@@ -113,5 +116,9 @@ class FormularioPrototipoController extends Controller
                 'El registro se ha eliminado correctamente.'
             );
 
+    }
+ public function exportExcel()
+    {
+    return Excel::download(new FormularioPrototipoExport(), 'prototipos.xlsx');
     }
 }
