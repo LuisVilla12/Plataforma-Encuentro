@@ -25,7 +25,7 @@ class FormularioCartelController extends Controller
             });
         })
         ->orderBy('id', 'desc')
-        ->paginate(10)
+        ->paginate(70)
         ->withQueryString(); // ← mantiene el search en la paginación
 
         return view('form_cartel.index', [

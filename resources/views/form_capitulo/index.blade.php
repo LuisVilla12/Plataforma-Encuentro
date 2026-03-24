@@ -36,7 +36,12 @@
                                 <td class="p-2">
                                     {{ $dato->institucion }}
                                 </td>
-
+                                <td class="p-2">
+                                    {{ $dato->correo }}
+                                </td>
+                                <td class="p-2">
+                                    {{ $dato->tematica }}
+                                </td>
                                 <td class="p-2">
                                     <a href="{{ asset('storage/' . $dato->url_capitulo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>

@@ -24,7 +24,7 @@ class FormularioPrototipoController extends Controller
             });
         })
         ->orderBy('id', 'desc')
-        ->paginate(10)
+        ->paginate(40)
         ->withQueryString(); // ← mantiene el search en la paginación
 
         return view('form_prototipo.index', [
