@@ -203,45 +203,45 @@
         // Validar tamaño de archivo
         document.getElementById('url_resumen').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 1 * 1024 * 1024; // 1MB
+            const maxSize = 2 * 1024 * 1024; // 2MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 1MB");
+                alert("El archivo no puede ser mayor a 2MB");
                 this.value = "";
             }
         });
         // Validar tamaño de archivo
         document.getElementById('url_cartel').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 5 * 1024 * 1024; // 5MB
+            const maxSize = 10 * 1024 * 1024; // 10MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 5MB");
+                alert("El archivo no puede ser mayor a 10MB");
                 this.value = "";
             }
         });
         // Validar tamaño de archivo
         document.getElementById('url_zip').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 5 * 1024 * 1024; // 5MB
+            const maxSize = 7 * 1024 * 1024; // 7MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 5MB");
+                alert("El archivo no puede ser mayor a 7MB");
                 this.value = "";
             }
         });
         // sesion
         document.getElementById('url_cesion_derechos').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 1 * 1024 * 1024; // 1MB
+            const maxSize = 2 * 1024 * 1024; // 2MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 1MB");
+                alert("El archivo no puede ser mayor a 2MB");
                 this.value = "";
             }
         });
         // Validar tamaño de archivo
         document.getElementById('url_ine').addEventListener('change', function() {
             const file = this.files[0];
-            const maxSize = 1 * 1024 * 1024; // 1MB
+            const maxSize = 3 * 1024 * 1024; // 3MB
             if (file && file.size > maxSize) {
-                alert("El archivo no puede ser mayor a 1MB");
+                alert("El archivo no puede ser mayor a 3MB");
                 this.value = "";
             }
         });
