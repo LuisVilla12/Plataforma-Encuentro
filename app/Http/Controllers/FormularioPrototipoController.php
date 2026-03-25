@@ -121,4 +121,19 @@ class FormularioPrototipoController extends Controller
     {
     return Excel::download(new FormularioPrototipoExport(), 'prototipos.xlsx');
     }
+public function descargar($dato,$tipo)
+{
+    $dato = FormularioPrototipo::findOrFail($dato);
+    if($tipo == 'prototipo'){
+        $ruta = storage_path('app/public/' . $dato->url_prototipo);
+        $nombrePersonalizado =  $dato->id .'_3ECA_Prototipo_'  . $dato->institucion .'.docx';
+    }elseif($tipo == 'resumen'){
+        $ruta = storage_path('app/public/' . $dato->url_resumen);
+        $nombrePersonalizado = $dato->id .'_3ECA_Resumen_' . $dato->institucion . '.docx';
+    }else{
+        return redirect()->back()->with('error', 'Tipo de archivo no válido');
+    }
+
+    return response()->download($ruta, $nombrePersonalizado);
 }
+    }

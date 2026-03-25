@@ -67,11 +67,14 @@
                                     {{ $dato->institucion }}
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_prototipo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
+                                    {{-- <a href="{{ asset('storage/' . $dato->url_prototipo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a> --}}
+                                    <a href="{{ route('formulario_prototipo.descargar',['dato' => $dato,'tipo' => 'prototipo']) }}"
+                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>
                                  <td class="p-2">
-                                    <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" />
-</a>
+                                    {{-- <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" /> --}}
+                                    <a href="{{ route('formulario_prototipo.descargar',['dato' => $dato,'tipo' => 'resumen']) }}"
+                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">

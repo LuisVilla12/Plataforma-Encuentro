@@ -123,4 +123,5 @@ Route::get('/registrar-asistencia', [FormularioAsistenciaController::class, 'cre
 Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
 
 Route::get('/cartel/{dato}/{tipo}', [FormularioCartelController::class, 'descargar'])->name('formulario_cartel.descargar');
+Route::get('/prototipo/{dato}/{tipo}', [FormularioPrototipoController::class, 'descargar'])->name('formulario_prototipo.descargar');
 require __DIR__ . '/auth.php';
