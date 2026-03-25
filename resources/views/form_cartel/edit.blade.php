@@ -78,6 +78,31 @@
                     <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
+            {{-- Nombre --}}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Nombre del cartel: *
+                </label>
+                <input type="text" name="nombre" id="nombre" value="{{ $dato->nombre }}" required
+                    placeholder="Ingrese el nombre del cartel"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('nombre')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            {{-- Correo --}}
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                    Correo institucional: *
+                </label>
+                <input type="email" name="correo" id="correo" value="{{ $dato->correo }}" required
+                    placeholder="Ingrese su correo institucional"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                @error('correo')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
             {{-- Correo --}}
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">

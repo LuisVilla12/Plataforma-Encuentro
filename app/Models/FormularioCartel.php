@@ -9,6 +9,7 @@ class FormularioCartel extends Model
     //
     protected $fillable = [
         'autores',
+        'nombre',
         'carteles',
         'correo',
         'tematica',

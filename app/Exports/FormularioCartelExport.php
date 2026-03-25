@@ -35,6 +35,7 @@ class FormularioCartelExport implements FromCollection, WithHeadings
         $asistente->id,
         $autoresFormateados,
         $asistente->institucion,
+        $asistente->nombre,
         $asistente->correo,
         $asistente->tematica,
     ];

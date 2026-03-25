@@ -119,6 +119,7 @@ class FormularioCartelController extends Controller
             'url_ine' => 'nullable|file|mimes:pdf',
             'correo' => 'nullable|string|max:255',
             'tematica' => 'nullable|string|max:255',
+            'nombre' => 'nullable|string|max:255',
         ]);
 
         if ($request->eliminar_resumen) {
@@ -185,6 +186,7 @@ class FormularioCartelController extends Controller
         }
 
         $dato->autores = $request->autores;
+        $dato->nombre = $request->nombre;
         $dato->institucion = $request->institucion;
         $dato->correo = $request->correo;
         $dato->tematica = $request->tematica;
