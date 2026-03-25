@@ -8,9 +8,15 @@ use App\Models\Instituto;
 class InstitutoController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        $datos = Instituto::orderBy('nombre', 'asc')->get();
+        // $datos = Instituto::orderBy('nombre', 'asc')->get();
+        $search = $request->get('search');
+        $datos = Instituto::when($search, function ($query, $search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('nombre', 'like', "%{$search}%");            });
+        })
+        ->orderBy('nombre', 'asc')->get();
         return view('instituto.index', compact('datos'));
     }
 
