@@ -63,6 +63,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/institutos/{instituto}/edit', [InstitutoController::class, 'edit'])->name('instituto.edit');
     Route::put('/institutos/{instituto}', [InstitutoController::class, 'update'])->name('instituto.update');
     Route::delete('/institutos/{instituto}', [InstitutoController::class, 'destroy'])->name('instituto.destroy');
+    Route::get('/institutos/excel', [InstitutoController::class, 'exportExcel'])->name('instituto.excel');
+
 
     //EXCEL
     Route::get('/carteles/excel', [FormularioCartelController::class, 'exportExcel'])->name('formulario_cartel.excel');

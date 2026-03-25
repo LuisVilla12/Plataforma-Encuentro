@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Instituto;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\InstituoExport;
 
 class InstitutoController extends Controller
 {
@@ -48,5 +50,9 @@ class InstitutoController extends Controller
     public function destroy(Instituto $instituto){
         $instituto->delete();
         return redirect()->route('instituto.index')->with('success', 'Instituto eliminado exitosamente.');
+    }
+     public function exportExcel()
+    {
+    return Excel::download(new InstituoExport(), 'institutos.xlsx');
     }
 }
