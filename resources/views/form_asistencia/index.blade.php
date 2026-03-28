@@ -56,7 +56,7 @@
                         @foreach ($datos as $dato)
                             <tr class="border-t">
                                 <td class="p-2 text-center">
-                                    {{ $loop->iteration }}
+                                    {{ $dato->id }}
                                 </td>
                                 <td class="p-2 text-center">
                                     {{ $dato->nombre . ' ' . $dato->apellidoP . ' ' . $dato->apellidoM }}
@@ -73,14 +73,14 @@
                                 <td class="p-2">
                                     {{ $dato->nombre_oficio }}
                                 </td>
-                                <td class="p-2">
+                                {{-- <td class="p-2">
                                     @foreach ($dato->modalidad_participacion as $modalidad)
                                         <span
                                             class="block text-center bg-gray-200 text-gray-800 text-xs mb-2 px-2 py-1 rounded-full">
                                             {{ $modalidad }}
                                         </span>
                                     @endforeach
-                                </td>
+                                </td> --}}
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
                                         {{-- Ver --}}
