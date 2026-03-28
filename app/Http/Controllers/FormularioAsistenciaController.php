@@ -61,15 +61,15 @@ class FormularioAsistenciaController extends Controller
             'requiere_oficio' => 'required|string|max:3',
             'confirmacion' => 'accepted',
         ]);
-        if($request->institucion=='Otra')
-        Instituto::create(attributes: [
-            'nombre' => $request->otra_institucion,
-        ]);
-        if($request->institucion === "Otra"){
-            $request->merge(['institucion' => $request->otra_institucion]);
-        }
+        // if($request->institucion=='Otra')
+        // Instituto::create(attributes: [
+        //     'nombre' => $request->otra_institucion,
+        // ]);
+        // if($request->institucion === "Otra"){
+        //     $request->merge(['institucion' => $request->otra_institucion]);
+        // }
 
-        FormularioAsistencia::create($request->all());
+        // FormularioAsistencia::create($request->all());
         return redirect()->route('formulario_asistencia.create')->with('success', 'Formulario de asistencia registrado exitosamente.');
     }
 
