@@ -1,14 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200">
-            Registro de prototipos de investigación
+            Asistentes registrados al 3er. Encuentro de CA's
         </h2>
     </x-slot>
+
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-4">
         {{-- Buscador --}}
-        <form method="GET" action="{{ route('formulario_prototipo.index') }}" class="w-full md:w-1/3">
+        <form method="GET" action="{{ route('instituto.index') }}" class="w-full md:w-1/3">
             <div class="relative">
-                <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar asistente..."
+                <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar instituto..."
                     class="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
 
                 <svg class="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
@@ -19,34 +20,31 @@
             </div>
 
             @if (request('search'))
-                <a href="{{ route('formulario_prototipo.index') }}"
+                <a href="{{ route('instituto.index') }}"
                     class="inline-block mt-1 text-sm text-gray-500 hover:text-indigo-600">
                     Limpiar búsqueda
                 </a>
             @endif
         </form>
         {{-- Botón --}}
-        <a href="{{ route('formulario_prototipo.create') }}"
+        <a href="{{ route('instituto.create') }}"
             class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
-            Registrar prototipo
+            Registrar instituto
         </a>
-        <a href="{{ route('formulario_prototipo.excel') }}"
+<a href="{{ route('instituto.excel') }}"
             class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-md text-md font-medium shadow transition whitespace-nowrap">
             Exportar datos
         </a>
-    </div>
 
+    </div>
     <div class="shadow-md overflow-x-auto rounded-lg mt-5">
         @if ($datos->count() > 0)
             <div class="hidden md:block">
                 <table class="w-full border bg-white shadow rounded">
                     <thead class="bg-[#611232]">
                         <tr>
-                            <th class="p-2 text-white">N°</th>
-                            <th class="p-2 text-white">Autores </th>
-                            <th class="p-2 text-white">Instituto</th>
-                            <th class="p-2 text-white">Prototipo</th>
-                            <th class="p-2 text-white">Resumen</th>
+                            <th class="p-2 text-white">N° </th>
+                            <th class="p-2 text-white">Nombre completo </th>
                             <th class="p-2 text-white">Acciones</th>
                         </tr>
                     </thead>
@@ -57,36 +55,12 @@
                                     {{ $loop->iteration }}
                                 </td>
                                 <td class="p-2 text-center">
-                                    @foreach ($dato->autores as $autor)
-                                        <span class="block bg-gray-200 mb-2 text-gray-800 text-xs px-2 py-1 rounded-full">
-                                            {{ $autor }}
-                                        </span>
-                                    @endforeach
-                                </td>
-                                <td class="p-2">
-                                    {{ $dato->institucion }}
-                                </td>
-                                <td class="p-2">
-                                    {{-- <a href="{{ asset('storage/' . $dato->url_prototipo) }}" target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a> --}}
-                                    <a href="{{ route('formulario_prototipo.descargar',['dato' => $dato,'tipo' => 'prototipo']) }}"
-                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
-                                </td>
-                                 <td class="p-2">
-                                    {{-- <a href="{{ asset('storage/' . $dato->url_resumen) }}" target="_blank"> <x-heroicon-o-document-text class="w-4 h-4" /> --}}
-                                    <a href="{{ route('formulario_prototipo.descargar',['dato' => $dato,'tipo' => 'resumen']) }}"
-                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
+                                    {{ $dato->nombre }}
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-700">
                                     <div class="flex justify-center items-center gap-4">
-                                        {{-- Ver --}}
-                                        {{-- <a href="{{ route('formulario_prototipo.show', $dato) }}"
-                                            class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
-                                            <x-heroicon-o-eye class="w-4 h-4" />
-                                            <span class="hidden sm:inline">Ver</span>
-                                        </a>
-                                        <span class="hidden sm:inline text-gray-300">•</span> --}}
                                         {{-- Editar --}}
-                                        <a href="{{ route('formulario_prototipo.edit', ['dato' => $dato]) }}"
+                                        <a href="{{ route('instituto.edit', ['instituto' => $dato]) }}"
                                             class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                             <x-heroicon-o-pencil-square class="w-4 h-4" />
                                             <span class="hidden sm:inline">Editar</span>
@@ -94,7 +68,8 @@
                                         <span class="hidden sm:inline text-gray-300">•</span>
 
                                         {{-- Eliminar --}}
-                                        <form action="{{ route('formulario_prototipo.destroy', $dato) }}" method="POST" class="inline">
+                                        <form action="{{ route('instituto.destroy', ['instituto' => $dato]) }}"
+                                            method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
 
@@ -118,14 +93,10 @@
                     <div class="border rounded-lg shadow bg-white p-4">
                         <div class="mt-2">
                             <div class="mb-2 text-sm text-gray-500">
-                                <span>Autores:</span>
-                                <td class="p-2 text-center">
-                                    @foreach ($dato->autores as $autor)
-                                        <span class="block bg-gray-200 mb-2 text-gray-800 text-xs px-2 py-1 rounded-full">
-                                            {{ $autor }}
-                                        </span>
-                                    @endforeach
-                                </td>
+                                <span>Nombre completo:</span>
+                                <span class="font-medium text-gray-800">
+                                    {{ $dato->nombre }}
+                                </span>
                             </div>
                             <div class="">
                                 <p class="mb-2 text-sm">Institución:
@@ -134,44 +105,50 @@
                                     </span>
                                 </p>
                             </div>
+                            <div class="">
+                                <p class="mb-2 text-sm">Correo electrónico:
+                                    <span class="font-semibold">
+                                        {{ $dato->correo }}
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                         <div class="flex flex-wrap items-center justify-end mt-4 gap-4">
                             {{-- Ver --}}
-                            <a href="{{ route('formulario_prototipo.show', $dato) }}"
+                            <a href="{{ route('formulario_asistencia.show', ['dato' => $dato]) }}"
                                 class="inline-flex items-center gap-1 text-gray-600 hover:text-blue-600 transition">
                                 <x-heroicon-o-eye class="w-4 h-4" />
                                 <span class="hidden sm:inline">Ver</span>
                             </a>
-                            <span class="hidden sm:inline text-gray-300">•</span>
                             {{-- Editar --}}
-                            <a href=""
+                            <a href="{{ route('formulario_asistencia.edit', ['dato' => $dato]) }}"
                                 class="inline-flex items-center gap-1 text-gray-600 hover:text-indigo-600 transition">
                                 <x-heroicon-o-pencil-square class="w-4 h-4" />
                                 <span class="hidden sm:inline">Editar</span>
                             </a>
                             <span class="hidden sm:inline text-gray-300">•</span>
-                             {{-- Eliminar --}}
-                                        <form action="{{ route('formulario_prototipo.destroy',$dato) }}" method="POST" class="inline">
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit"
-                                                class="inline-flex items-center gap-1 text-gray-500 hover:text-red-600 transition"
-                                                onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
-                                                <x-heroicon-o-trash class="w-4 h-4" />
-                                                <span class="hidden sm:inline">Eliminar</span>
-                                            </button>
-                                        </form>
+                            {{-- Eliminar --}}
+                            <form action="{{ route('formulario_asistencia.destroy', ['dato' => $dato]) }}"
+                                method="POST" class="inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    class="inline-flex items-center gap-1 text-gray-500 hover:text-red-600 transition"
+                                    onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
+                                    <x-heroicon-o-trash class="w-4 h-4" />
+                                    <span class="hidden sm:inline">Eliminar</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 @endforeach
             </div>
         @else
             <div class="bg-white py-4 mt-3">
-                <p class="text-sm text-gray-600 ml-6 text-center"> No hay prototipos registrados</p>
+                <p class="text-sm text-gray-600 ml-6 text-center"> No hay registros</p>
             </div>
         @endif
-        @if ($datos->count() > 0)
+        {{-- @if ($datos->count() > 0)
             <div class="bg-white py-4 my-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <p class="text-sm text-gray-600 ml-6">
                     Mostrando
@@ -184,7 +161,7 @@
                 </p>
                 {{ $datos->links() }}
             </div>
-        @endif
+        @endif --}}
 
     </div>
 

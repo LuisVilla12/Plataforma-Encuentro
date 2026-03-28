@@ -48,6 +48,11 @@
                             {{ __('Carteles') }}
                         </x-nav-link>
                     </div>
+                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('instituto.index')" class="text-white " :active="request()->routeIs('instituto.index')">
+                            {{ __('Institutos') }}
+                        </x-nav-link>
+                    </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('revisores.index')" class="text-white " :active="request()->routeIs('revisores.index')">
                             {{ __('Revisores') }}

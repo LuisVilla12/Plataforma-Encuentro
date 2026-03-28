@@ -8,10 +8,11 @@ use App\Http\Controllers\FormularioCartelController;
 use App\Http\Controllers\FormularioCursosController;
 use App\Http\Controllers\FormularioPrototipoController;
 use App\Http\Controllers\ObservacionesDocumentoController;
+use App\Http\Controllers\InstitutoController;
 use App\Http\Controllers\PaseListaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RevisoresController;
-use App\Models\AsignacionRevision;
+;
 
 Route::get('/', function () {
     return view(view: 'welcome');
@@ -54,7 +55,18 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     //Carteles
     Route::get('/carteles-registrados', [FormularioCartelController::class, 'index'])->name('formulario_cartel.index');
-        //EXCEL
+
+    //Institutos
+    Route::get('/institutos', [InstitutoController::class, 'index'])->name('instituto.index');
+    Route::get('/institutos/create', [InstitutoController::class, 'create'])->name('instituto.create');
+    Route::post('/institutos', [InstitutoController::class, 'store'])->name('instituto.store');
+    Route::get('/institutos/{instituto}/edit', [InstitutoController::class, 'edit'])->name('instituto.edit');
+    Route::put('/institutos/{instituto}', [InstitutoController::class, 'update'])->name('instituto.update');
+    Route::delete('/institutos/{instituto}', [InstitutoController::class, 'destroy'])->name('instituto.destroy');
+    Route::get('/institutos/excel', [InstitutoController::class, 'exportExcel'])->name('instituto.excel');
+
+
+    //EXCEL
     Route::get('/carteles/excel', [FormularioCartelController::class, 'exportExcel'])->name('formulario_cartel.excel');
     Route::get('/asistentes/{dato}', [FormularioAsistenciaController::class, 'show'])->name('formulario_asistencia.show');
     Route::get('/cartel/{dato}/edit', [FormularioCartelController::class, 'edit'])->name('formulario_cartel.edit');
@@ -111,4 +123,5 @@ Route::get('/registrar-asistencia', [FormularioAsistenciaController::class, 'cre
 Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'store'])->name('formulario_asistencia.store');
 
 Route::get('/cartel/{dato}/{tipo}', [FormularioCartelController::class, 'descargar'])->name('formulario_cartel.descargar');
+Route::get('/prototipo/{dato}/{tipo}', [FormularioPrototipoController::class, 'descargar'])->name('formulario_prototipo.descargar');
 require __DIR__ . '/auth.php';
