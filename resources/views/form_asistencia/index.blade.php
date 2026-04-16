@@ -56,7 +56,7 @@
                         @foreach ($datos as $dato)
                             <tr class="border-t">
                                 <td class="p-2 text-center">
-                                    {{ $dato->iteration }}
+                                    {{ $loop->iteration }}
                                 </td>
                                 <td class="p-2 text-center">
                                     {{ $dato->nombre . ' ' . $dato->apellidoP . ' ' . $dato->apellidoM }}
