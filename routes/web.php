@@ -10,6 +10,7 @@ use App\Http\Controllers\FormularioPrototipoController;
 use App\Http\Controllers\ObservacionesDocumentoController;
 use App\Http\Controllers\InstitutoController;
 use App\Http\Controllers\PaseListaController;
+use App\Http\Controllers\ConstanciasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RevisoresController;
 ;
@@ -114,7 +115,6 @@ Route::post('/registrar-capitulo', [FormularioCapituloController::class, 'store'
 Route::get('/registrar-prototipo', [FormularioPrototipoController::class, 'create'])->name('formulario_prototipo.create');
 Route::post('/registrar-prototipo', [FormularioPrototipoController::class, 'store'])->name('formulario_prototipo.store');
 
-
 //Formulario para registro de cursos
 Route::get('/registrar-cursos', [FormularioCursosController::class, 'create'])->name('formulario_cursos.create');
 Route::post('/registrar-cursos', [FormularioCursosController::class, 'store'])->name('formulario_cursos.store');
@@ -124,4 +124,7 @@ Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'sto
 
 Route::get('/cartel/{dato}/{tipo}', [FormularioCartelController::class, 'descargar'])->name('formulario_cartel.descargar');
 Route::get('/prototipo/{dato}/{tipo}', [FormularioPrototipoController::class, 'descargar'])->name('formulario_prototipo.descargar');
+
+Route::get('/constancias', action: [ConstanciasController::class, 'index'])->name('constancias.index');
+
 require __DIR__ . '/auth.php';

@@ -13,10 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
-
+</body><body class="bg-gray-100 font-sans">
     <div class="max-w-xl mx-auto mt-12 bg-white shadow-md rounded-lg px-8 py-6">
-
         {{-- <img src="Encabezado.jpeg" alt="encabezado" class="w-full h-20 object-cover my-4"> --}}
         @if (session('success'))
     <script>
@@ -170,7 +168,7 @@
 
     </div>
 
-</body>
+
 
 </html>
 
