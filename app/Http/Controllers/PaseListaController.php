@@ -20,7 +20,7 @@ class PaseListaController extends Controller
             });
         })
         ->orderBy('apellidoP', 'asc')
-        ->paginate(10)
+        ->paginate(500)
         ->withQueryString();
 
         // $datos = FormularioAsistencia::all();
