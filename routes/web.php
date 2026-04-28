@@ -124,6 +124,8 @@ Route::post('registrar-asistencia', [FormularioAsistenciaController::class, 'sto
 
 Route::get('/cartel/{dato}/{tipo}', [FormularioCartelController::class, 'descargar'])->name('formulario_cartel.descargar');
 Route::get('/prototipo/{dato}/{tipo}', [FormularioPrototipoController::class, 'descargar'])->name('formulario_prototipo.descargar');
+Route::get('/constancias/{dato}/{tipo}', [ConstanciasController::class, 'descargar'])->name('constancias.descargar');
+
 
 Route::get('/constancias', action: [ConstanciasController::class, 'index'])->name('constancias.index');
 

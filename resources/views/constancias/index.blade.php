@@ -222,8 +222,10 @@
                                 </td>
                                 <td class="p-2"> Asistencia</td>
                                 <td class="p-2">
-                                    {{ $dato->url_constancias }}
+                                    <a href="{{ route('constancias.descargar',['dato' => $dato,'tipo' => 'asistente']) }}"
+                                        target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
                                 </td>
+
                             </tr>
                         @endforeach
                     </tbody>

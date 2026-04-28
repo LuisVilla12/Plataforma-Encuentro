@@ -75,6 +75,7 @@
                                 <td class="p-2">
                                     {{ $dato->tematica }}
                                 </td>
+                                
                                 <td class="p-2">
                                     <a href="{{ route('formulario_cartel.descargar',['dato' => $dato,'tipo' => 'cartel']) }}"
                                         target="_blank"><x-heroicon-o-document-text class="w-4 h-4" /></a>
